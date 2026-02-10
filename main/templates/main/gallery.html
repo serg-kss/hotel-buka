@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Gallery</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url "main:index" %}">Home</a></li>
+            <li class="current">Gallery</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="hotel-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All Photos</li>
+            <li data-filter=".filter-rooms">Rooms</li>
+            <li data-filter=".filter-amenities">Amenities</li>
+            <li data-filter=".filter-dining">Dining</li>
+            <li data-filter=".filter-exterior">Exterior</li>
+          </ul><!-- End Hotel Gallery Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-rooms">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/room-1.webp" %}" class="img-fluid" alt="Deluxe Room">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/room-1.webp" %}" class="glightbox" title="Deluxe Room with City View">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-8 col-md-6 gallery-item isotope-item filter-amenities">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/amenities-1.webp" %}" class="img-fluid" alt="Swimming Pool">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/amenities-1.webp" %}" class="glightbox" title="Outdoor Swimming Pool with Deck">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-dining">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/dining-2.webp" %}" class="img-fluid" alt="Restaurant">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/dining-2.webp" %}" class="glightbox" title="Fine Dining Restaurant">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-rooms">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/room-5.webp" %}" class="img-fluid" alt="Executive Suite">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/room-5.webp" %}" class="glightbox" title="Executive Suite with Ocean View">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-8 col-md-6 gallery-item isotope-item filter-exterior">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/showcase-3.webp" %}" class="img-fluid" alt="Hotel Exterior">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/showcase-3.webp" %}" class="glightbox" title="Hotel Exterior at Sunset">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-amenities">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/amenities-3.webp" %}" class="img-fluid" alt="Spa">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/amenities-3.webp" %}" class="glightbox" title="Luxury Spa Treatment Room">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-dining">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/dining-4.webp" %}" class="img-fluid" alt="Bar Lounge">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/dining-4.webp" %}" class="glightbox" title="Rooftop Bar &amp; Lounge">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-rooms">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/room-8.webp" %}" class="img-fluid" alt="Presidential Suite">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/room-8.webp" %}" class="glightbox" title="Presidential Suite Living Area">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-amenities">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/amenities-7.webp" %}" class="img-fluid" alt="Fitness Center">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/amenities-7.webp" %}" class="glightbox" title="State-of-the-Art Fitness Center">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-exterior">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/location-2.webp" %}" class="img-fluid" alt="Garden View">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/location-2.webp" %}" class="glightbox" title="Hotel Gardens &amp; Landscaping">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-dining">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/dining-7.webp" %}" class="img-fluid" alt="Breakfast Area">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/dining-7.webp" %}" class="glightbox" title="Continental Breakfast Dining Area">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-rooms">
+              <div class="gallery-wrapper">
+                <img src="{% static "assets/img/hotel/room-12.webp" %}" class="img-fluid" alt="Junior Suite">
+                <div class="gallery-overlay">
+                  <a href="{% static "assets/img/hotel/room-12.webp" %}" class="glightbox" title="Junior Suite with Modern Amenities">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+          </div><!-- End Hotel Gallery Items Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+{% endblock content %}
+
