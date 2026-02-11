@@ -33,26 +33,24 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="{% url "main:index" %}" class="active">Home</a></li>
-            <li><a href="{% url "main:about" %}">About</a></li>
-            <li><a href="{% url "main:rooms" %}">Rooms</a></li>
-            <li><a href="{% url "main:amenities" %}">Amenities</a></li>
-            <li><a href="{% url "main:location" %}">Location</a></li>
-            <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="{% url "main:index" %}" class="active">{% trans "Home" %}</a></li>
+            <li><a href="{% url "main:about" %}">{% trans "About" %}</a></li>
+            <li><a href="{% url "main:rooms" %}">{% trans "Rooms" %}</a></li>
+            <li><a href="{% url "main:amenities" %}">{% trans "Amenities" %}</a></li>
+            <li><a href="{% url "main:location" %}">{% trans "Location" %}</a></li>
+            <li class="dropdown"><a href="#"><span>{% trans "Info" %}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="room-details.html">Room Details</a></li>
-                <li><a href="restaurant.html">Restaurant</a></li>
-                <li><a href="offers.html">Offers</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="{% url "main:gallery" %}">Gallery</a></li>
-                <li><a href="{% url "booking:booking" %}">Booking</a></li>
-                <li><a href="{% url "main:terms" %}">Terms Page</a></li>
-                <li><a href="{% url "main:privacy" %}">Privacy Page</a></li>
-                <li><a href="404.html">404 Page</a></li>
-                <li><a href="starter-page.html">Starter Page</a></li>
+                <li><a href="room-details.html">{% trans "Room Details" %}</a></li>
+                <li><a href="restaurant.html">{% trans "Restaurant" %}</a></li>
+                <li><a href="offers.html">{% trans "Offers" %}</a></li>
+                <li><a href="events.html">{% trans "Events" %}</a></li>
+                <li><a href="{% url "main:gallery" %}">{% trans "Gallery" %}</a></li>
+                <li><a href="{% url "booking:booking" %}">{% trans "Booking" %}</a></li>
+                <li><a href="{% url "main:terms" %}">{% trans "Terms Page" %}</a></li>
+                <li><a href="{% url "main:privacy" %}">{% trans "Privacy Page" %}</a></li>
               </ul>
             </li>
-            <li><a href="{% url "main:contact" %}">Contact</a></li>
+            <li><a href="{% url "main:contact" %}">{% trans "Contact" %}</a></li>
 
             {% include "includes/language_switch.html" %}
 
