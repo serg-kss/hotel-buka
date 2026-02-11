@@ -1,5 +1,6 @@
 from django.urls import path
 from main import views
+from .views import RoomListView
 
 
 app_name = 'main'
@@ -7,7 +8,7 @@ app_name = 'main'
 urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
-    path("rooms/", views.rooms, name="rooms"),
+    path("rooms/", RoomListView.as_view(), name="rooms"),
     path("amenities/", views.amenities, name="amenities"),
     path("location/", views.location, name="location"),
     path("terms/", views.terms, name="terms"),

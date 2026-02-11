@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
+from django.utils import translation
+
 
 class Room(models.Model):
 
@@ -11,6 +13,20 @@ class Room(models.Model):
     # --- Описание ---
     description_uk = models.TextField(_("Опис (укр)"))
     description_en = models.TextField(_("Опис (англ)"))
+
+    @property
+    def name(self):
+        lang = translation.get_language()
+        if lang == "uk":
+            return self.room_name_uk
+        return self.room_name_en
+
+    @property
+    def description(self):
+        lang = translation.get_language()
+        if lang == "uk":
+            return self.description_uk
+        return self.description_en
 
     # --- Цена ---
     price = models.DecimalField(_("Ціна"), max_digits=10, decimal_places=2)
@@ -89,6 +105,14 @@ class Amenity(models.Model):
     name_uk = models.CharField(_("Назва (укр)"), max_length=100)
     name_en = models.CharField(_("Назва (англ)"), max_length=100)
 
+    @property
+    def name(self):
+        lang = translation.get_language()
+        if lang == "uk":
+            return self.name_uk
+        return self.name_en
+
+
     icon_class = models.CharField(
         _("CSS іконка (bi class)"),
         max_length=100,
@@ -146,7 +170,7 @@ class BookingRequest(models.Model):
         verbose_name_plural = _("Заявки на бронювання")
         ordering = ["-created_at"]
 
-        
+
 class SiteSettings(models.Model):
 
     address_uk = models.TextField(_("Address (Ukrainian)"))

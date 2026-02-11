@@ -23,287 +23,87 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="room-filters" data-aos="fade-up" data-aos-delay="200">
-          <div class="row g-3 align-items-center">
-            <div class="col-lg-3 col-md-6">
-              <label class="form-label">Price Range</label>
-              <select class="form-select">
-                <option>All Prices</option>
-                <option>$100 - $200</option>
-                <option>$200 - $350</option>
-                <option>$350+</option>
-              </select>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <label class="form-label">Guest Capacity</label>
-              <select class="form-select">
-                <option>Any Capacity</option>
-                <option>1-2 Guests</option>
-                <option>3-4 Guests</option>
-                <option>5+ Guests</option>
-              </select>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <label class="form-label">View Type</label>
-              <select class="form-select">
-                <option>All Views</option>
-                <option>Ocean View</option>
-                <option>City View</option>
-                <option>Garden View</option>
-              </select>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <label class="form-label">Sort By</label>
-              <select class="form-select">
-                <option>Popularity</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Room Size</option>
-              </select>
-            </div>
-          </div>
-        </div>
+        <form method="get">
+          <div class="room-filters">
+        <div class="row g-3 align-items-center">
+
+    <!-- Price -->
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label">Price Range</label>
+      <select name="price" class="form-select" onchange="this.form.submit()">
+        <option value="">All Prices</option>
+        <option value="100-200" {% if current_price == "100-200" %}selected{% endif %}>$100 - $200</option>
+        <option value="200-350" {% if current_price == "200-350" %}selected{% endif %}>$200 - $350</option>
+        <option value="350+" {% if current_price == "350+" %}selected{% endif %}>$350+</option>
+      </select>
+    </div>
+
+    <!-- Capacity -->
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label">Guest Capacity</label>
+      <select name="capacity" class="form-select" onchange="this.form.submit()">
+        <option value="">Any Capacity</option>
+        <option value="1-2" {% if current_capacity == "1-2" %}selected{% endif %}>1-2 Guests</option>
+        <option value="3-4" {% if current_capacity == "3-4" %}selected{% endif %}>3-4 Guests</option>
+        <option value="5+" {% if current_capacity == "5+" %}selected{% endif %}>5+ Guests</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+</form>
+
 
         <div class="rooms-grid" data-aos="fade-up" data-aos-delay="300">
           <div class="row g-4">
 
+            {% for room in rooms %}
             <div class="col-xl-4 col-lg-6">
               <div class="room-card">
                 <div class="room-image">
                   <img src="{% static "assets/img/hotel/room-1.webp" %}" alt="Deluxe Ocean Suite" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge ocean">Ocean View</span>
-                    <span class="feature-badge popular">Popular</span>
-                  </div>
                 </div>
                 <div class="room-content">
                   <div class="room-header">
-                    <h3>Deluxe Ocean Suite</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
+                    <h3>{{room.name}}</h3>
                   </div>
-                  <p class="room-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="room-description">{{room.description}}</p>
                   <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 4 guests</span>
-                    <span><i class="bi bi-wifi"></i> Free WiFi</span>
-                    <span><i class="bi bi-tv"></i> Smart TV</span>
+                    <span><i class="bi bi-people"></i> {% trans "Up to" %} {{room.capacity}} {% trans "guests" %}</span>
+                    {% for item in room.amenities.all %}
+                    <span><i class="{{item.icon_class}}"></i> {{item.name}}</span>
+                    {% endfor %}
                   </div>
                   <div class="room-footer">
                     <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$289</span>
-                      <span class="price-period">/ night</span>
+                      <span class="price-from">{% trans "From" %}</span>
+                      <span class="price-amount">{{room.price}}</span>
+                      <span class="price-period">/ {% trans "night" %}</span>
                     </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
+                    <a href="room-details.html" class="btn-room-details">{% trans "View Details" %}</a>
                   </div>
                 </div>
               </div>
             </div><!-- End Room Card -->
-
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-3.webp" %}" alt="Executive Business Suite" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge business">Business</span>
-                  </div>
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>Executive Business Suite</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
-                    </div>
-                  </div>
-                  <p class="room-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 2 guests</span>
-                    <span><i class="bi bi-laptop"></i> Work Desk</span>
-                    <span><i class="bi bi-telephone"></i> Business Phone</span>
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$199</span>
-                      <span class="price-period">/ night</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-7.webp" %}" alt="Family Garden Room" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge family">Family Friendly</span>
-                    <span class="feature-badge garden">Garden View</span>
-                  </div>
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>Family Garden Room</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star"></i>
-                    </div>
-                  </div>
-                  <p class="room-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 5 guests</span>
-                    <span><i class="bi bi-cup-hot"></i> Mini Kitchen</span>
-                    <span><i class="bi bi-controller"></i> Game Console</span>
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$159</span>
-                      <span class="price-period">/ night</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-12.webp" %}" alt="Romantic Honeymoon Suite" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge romantic">Romantic</span>
-                    <span class="feature-badge premium">Premium</span>
-                  </div>
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>Romantic Honeymoon Suite</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <p class="room-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 2 guests</span>
-                    <span><i class="bi bi-heart"></i> King Bed</span>
-                    <span><i class="bi bi-water"></i> Jacuzzi</span>
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$349</span>
-                      <span class="price-period">/ night</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-15.webp" %}" alt="Standard City Room" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge city">City View</span>
-                  </div>
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>Standard City Room</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
-                      <i class="bi bi-star"></i>
-                    </div>
-                  </div>
-                  <p class="room-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 2 guests</span>
-                    <span><i class="bi bi-wifi"></i> Free WiFi</span>
-                    <span><i class="bi bi-car-front"></i> Parking</span>
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$129</span>
-                      <span class="price-period">/ night</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-18.webp" %}" alt="Premium Ocean View" class="img-fluid">
-                  <div class="room-features">
-                    <span class="feature-badge ocean">Ocean View</span>
-                    <span class="feature-badge luxury">Luxury</span>
-                  </div>
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>Premium Ocean View</h3>
-                    <div class="room-rating">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <p class="room-description">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> Up to 3 guests</span>
-                    <span><i class="bi bi-cup-hot"></i> Coffee Machine</span>
-                    <span><i class="bi bi-safe"></i> Safe</span>
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">From</span>
-                      <span class="price-amount">$259</span>
-                      <span class="price-period">/ night</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-
+            {% endfor %}
           </div>
         </div>
 
-        <div class="load-more-section" data-aos="fade-up" data-aos-delay="400">
-          <div class="text-center">
-            <button class="btn-load-more">
-              <i class="bi bi-arrow-down-circle"></i>
-              Load More Rooms
-            </button>
-          </div>
-        </div>
+
+        {% if has_more %}
+        <div class="load-more-section text-center col-xl-2 col-lg-3 mt-4">
+          <a href="?limit={{ limit|add:6 }}
+              {% if current_price %}&price={{ current_price }}{% endif %}
+              {% if current_capacity %}&capacity={{ current_capacity }}{% endif %}
+              {% if current_sort %}&sort={{ current_sort }}{% endif %}"
+            class="btn-load-more">
+        <i class="bi bi-arrow-down-circle"></i>
+        {% trans "Load More Rooms" %}
+    </a>
+</div>
+{% endif %}
+
+
 
       </div>
 
