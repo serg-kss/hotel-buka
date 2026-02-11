@@ -11,10 +11,10 @@
               <span class="sitename">Grandoria</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>{% trans "A108 Adam Street" %}</p>
-              <p>{% trans "New York, NY 535022" %}</p>
-              <p class="mt-3"><strong>{% trans "Phone:" %}</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
+              <p>{{ site_address| default:"A108 Adam Street" }}</p>
+              <p>{{ site_city| default:"New York, NY 535022" }}</p>
+              <p class="mt-3"><strong>{% trans "Phone:" %}</strong> <span>{{ site_phone| default:""}}</span></p>
+              <p><strong>Email:</strong> <span>{{site_email| default:""}}</span></p>
             </div>
           </div>
 
@@ -84,10 +84,10 @@
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="{{site_twitter| default:"#"}}"><i class="bi bi-twitter-x"></i></a>
+          <a href="{{site_facebook| default:"#"}}"><i class="bi bi-facebook"></i></a>
+          <a href="{{site_instagram| default:"#"}}"><i class="bi bi-instagram"></i></a>
+          <a href="{{site_linkedin| default:"#"}}"><i class="bi bi-linkedin"></i></a>
         </div>
 
       </div>

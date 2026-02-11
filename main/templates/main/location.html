@@ -6,11 +6,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Location</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Location" %}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url "main:index" %}">Home</a></li>
-            <li class="current">Location</li>
+            <li class="current">{% trans "Location" %}</li>
           </ol>
         </nav>
       </div>
@@ -40,8 +40,8 @@
                     <i class="bi bi-building"></i>
                   </div>
                   <div class="info-text">
-                    <h6>Address</h6>
-                    <p>789 Madison Street<br>Chicago, IL 60601</p>
+                    <h6>{% trans "Address" %}</h6>
+                    <p>{{ site_address|default:"" }}<br>{{ site_city|default:"" }}</p>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@
                     <i class="bi bi-airplane"></i>
                   </div>
                   <div class="info-text">
-                    <h6>Airport Access</h6>
+                    <h6>{% trans "Train Access" %}</h6>
                     <p>O'Hare - 35 min<br>Midway - 25 min</p>
                   </div>
                 </div>
@@ -60,8 +60,8 @@
                     <i class="bi bi-telephone"></i>
                   </div>
                   <div class="info-text">
-                    <h6>Contact</h6>
-                    <p>+1 (555) 876-5432<br>reservations@example.com</p>
+                    <h6>{% trans "Contact" %}</h6>
+                    <p>{{site_phone| default:""}}<br>{{site_email| default:"test@gmail.com"}}</p>
                   </div>
                 </div>
 
@@ -70,14 +70,13 @@
                     <i class="bi bi-clock"></i>
                   </div>
                   <div class="info-text">
-                    <h6>Check-in</h6>
-                    <p>3:00 PM - 11:00 PM<br>Check-out: 11:00 AM</p>
+                    <h6>{% trans "Check-in" %}</h6>
+                    <p>{{site_check_in| default:"3:00 PM - 11:00 PM"}}<br>{% trans "Check-out" %}: {{site_check_out| default:"11:00 AM"}}</p>
                   </div>
                 </div>
               </div>
 
               <div class="action-buttons">
-                <a href="#" class="btn btn-primary">View on Map</a>
                 <a href="#" class="btn btn-outline">Book Now</a>
               </div>
             </div>
@@ -86,7 +85,7 @@
           <!-- Interactive Map -->
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="300">
             <div class="map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-87.623177!3d41.881832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              {{site_map|safe}}
               <div class="map-overlay">
                 <div class="hotel-marker">
                   <i class="bi bi-building"></i>

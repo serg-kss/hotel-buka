@@ -14,25 +14,25 @@
 
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1>Luxury Redefined in Every Stay</h1>
-              <p class="lead">Experience unparalleled comfort and sophistication at our premium hotel. From elegant suites to world-class amenities, every moment of your stay is crafted to perfection.</p>
+              <h1>{% trans "Luxury Redefined in Every Stay" %}</h1>
+              <p class="lead">{% trans "Experience unparalleled comfort and sophistication at our premium hotel. From elegant suites to world-class amenities, every moment of your stay is crafted to perfection." %}</p>
               <div class="hero-features">
                 <div class="feature-item">
                   <i class="bi bi-wifi"></i>
-                  <span>Complimentary WiFi</span>
+                  <span>{% trans "Complimentary" %} WiFi</span>
                 </div>
                 <div class="feature-item">
                   <i class="bi bi-car-front"></i>
-                  <span>Valet Parking</span>
+                  <span>{% trans "Valet Parking" %}</span>
                 </div>
                 <div class="feature-item">
                   <i class="bi bi-cup-hot"></i>
-                  <span>24/7 Room Service</span>
+                  <span>24/7 {% trans "Room Service" %}</span>
                 </div>
               </div>
               <div class="hero-buttons">
-                <a href="booking.html" class="btn btn-primary">Book Now</a>
-                <a href="rooms.html" class="btn btn-outline">View Rooms</a>
+                <a href="booking.html" class="btn btn-primary">{% trans "Book Now" %}</a>
+                <a href="rooms.html" class="btn btn-outline">{% trans "View Rooms" %}</a>
               </div>
             </div>
           </div>
@@ -63,35 +63,6 @@
 
         </div>
 
-        <div class="hero-stats" data-aos="fade-up">
-          <div class="row text-center">
-            <div class="col-md-3 col-6">
-              <div class="stat-item">
-                <span class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1">150</span>
-                <span class="stat-label">Luxury Rooms</span>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-item">
-                <span class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1">5</span>
-                <span class="stat-label">Star Rating</span>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-item">
-                <span class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1">24</span>
-                <span class="stat-label">Hour Service</span>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-item">
-                <span class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1">98</span>
-                <span class="stat-label">Guest Satisfaction</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </section><!-- /Hotel Hero Section -->
@@ -105,10 +76,10 @@
 
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="about-content">
-              <h2>Welcome to Grandoria Resort</h2>
-              <p class="lead">Where luxury meets tranquility in the heart of nature's paradise.</p>
-              <p>Nestled among rolling hills and pristine landscapes, Grandview Resort has been offering exceptional hospitality for over three decades. Our commitment to excellence and attention to detail creates an unforgettable experience for discerning travelers seeking both comfort and adventure.</p>
-              <p>From our elegantly appointed suites to our world-class amenities, every aspect of your stay is designed to exceed expectations. Discover breathtaking views, exquisite dining, and personalized service that makes every moment special.</p>
+              <h2>{% trans "Welcome to Grandoria Resort" %}</h2>
+              <p class="lead">{% trans "Where luxury meets tranquility in the heart of nature's paradise." %}</p>
+              <p>{% trans "Nestled among rolling hills and pristine landscapes, Grandview Resort has been offering exceptional hospitality for over three decades. Our commitment to excellence and attention to detail creates an unforgettable experience for discerning travelers seeking both comfort and adventure." %}</p>
+              <p>{% trans "From our elegantly appointed suites to our world-class amenities, every aspect of your stay is designed to exceed expectations. Discover breathtaking views, exquisite dining, and personalized service that makes every moment special." %}</p>
 
               <div class="stats-row">
                 <div class="stat-item">
@@ -124,11 +95,6 @@
                   <div class="stat-label">Years of Excellence</div>
                 </div>
               </div><!-- End Stats Row -->
-
-              <div class="about-actions">
-                <a href="about.html" class="btn-primary">Our Story</a>
-                <a href="rooms.html" class="btn-secondary">View Rooms</a>
-              </div>
             </div>
           </div><!-- End About Content -->
 
@@ -305,104 +271,6 @@
             </div>
           </div>
 
-        </div>
-
-        <div class="row mt-6">
-          <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="minimal-room-card">
-              <div class="room-image">
-                <img src="{% static "assets/img/hotel/room-1.webp" %}" alt="Classic Room" class="img-fluid">
-                <div class="hover-overlay">
-                  <a href="room-details.html" class="view-room">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="room-summary">
-                <h5>Classic Double</h5>
-                <div class="price-tag">$189<span>/night</span></div>
-                <div class="basic-amenities">
-                  <i class="bi bi-wifi"></i>
-                  <i class="bi bi-tv"></i>
-                  <i class="bi bi-telephone"></i>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Minimal Room -->
-
-          <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="450">
-            <div class="minimal-room-card">
-              <div class="room-image">
-                <img src="{% static "assets/img/hotel/room-5.webp" %}" alt="Superior Room" class="img-fluid">
-                <div class="hover-overlay">
-                  <a href="room-details.html" class="view-room">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="room-summary">
-                <h5>Superior King</h5>
-                <div class="price-tag">$249<span>/night</span></div>
-                <div class="basic-amenities">
-                  <i class="bi bi-wifi"></i>
-                  <i class="bi bi-cup-hot"></i>
-                  <i class="bi bi-snow"></i>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Minimal Room -->
-
-          <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="minimal-room-card">
-              <div class="room-image">
-                <img src="{% static "assets/img/hotel/room-8.webp" %}" alt="Premium Room" class="img-fluid">
-                <div class="hover-overlay">
-                  <a href="room-details.html" class="view-room">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="room-summary">
-                <h5>Premium Ocean View</h5>
-                <div class="price-tag">$359<span>/night</span></div>
-                <div class="basic-amenities">
-                  <i class="bi bi-water"></i>
-                  <i class="bi bi-door-open"></i>
-                  <i class="bi bi-award"></i>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Minimal Room -->
-
-          <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="550">
-            <div class="minimal-room-card">
-              <div class="room-image">
-                <img src="{% static "assets/img/hotel/room-17.webp" %}" alt="Luxury Suite" class="img-fluid">
-                <div class="hover-overlay">
-                  <a href="room-details.html" class="view-room">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="room-summary">
-                <h5>Luxury Penthouse</h5>
-                <div class="price-tag">$1,199<span>/night</span></div>
-                <div class="basic-amenities">
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-house"></i>
-                  <i class="bi bi-gem"></i>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Minimal Room -->
-
-        </div>
-
-        <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-          <a href="rooms.html" class="explore-all-link">
-            <span>Explore All Accommodations</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
         </div>
 
       </div>
@@ -740,83 +608,9 @@
 
         </div>
 
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="offer-banner" data-aos="fade-up" data-aos-delay="500">
-              <div class="row align-items-center">
-                <div class="col-lg-8">
-                  <div class="banner-content">
-                    <h2>Limited Time Offer</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                  <div class="banner-action">
-                    <div class="countdown" data-count="2025/12/15">
-                      <div>
-                        <span class="count-days"></span>
-                        <label>Days</label>
-                      </div>
-                      <div>
-                        <span class="count-hours"></span>
-                        <label>Hours</label>
-                      </div>
-                      <div>
-                        <span class="count-minutes"></span>
-                        <label>Minutes</label>
-                      </div>
-                    </div>
-                    <a href="#" class="btn-cta">Claim Offer</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </section><!-- /Offer Cards Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="content">
-              <h2>Experience Luxury Like Never Before</h2>
-              <p>Immerse yourself in unparalleled comfort and sophistication at our premium hotel. From elegantly appointed rooms to world-class amenities, every detail is crafted to exceed your expectations. Book your extraordinary stay today and create unforgettable memories.</p>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle"></i> Complimentary breakfast and Wi-Fi</li>
-                <li><i class="bi bi-check-circle"></i> 24/7 concierge and room service</li>
-                <li><i class="bi bi-check-circle"></i> State-of-the-art spa and fitness center</li>
-                <li><i class="bi bi-check-circle"></i> Prime location with stunning city views</li>
-              </ul>
-              <div class="cta-buttons">
-                <a href="#" class="btn-primary">Book Your Stay</a>
-                <a href="#" class="btn-secondary">View Rooms</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="image-wrapper">
-              <img src="{% static "assets/img/hotel/showcase-9.webp" %}" alt="Luxury Hotel Experience" class="img-fluid">
-              <div class="overlay-content">
-                <div class="special-offer">
-                  <span class="label">Special Offer</span>
-                  <span class="discount">Save 30%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Call To Action Section -->
 
     <!-- Events Cards Section -->
     <section id="events-cards" class="events-cards section">
@@ -1119,8 +913,8 @@
                 </div>
               </div>
 
-              <a href="location.html" class="location-guide-btn">
-                <span>View Full Location Guide</span>
+              <a href="{% url "main:location" %}" class="location-guide-btn">
+                <span>{% trans "View Full Location Guide" %}</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -1237,8 +1031,8 @@
         </div>
 
         <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-          <a href="gallery.html" class="btn btn-gallery">
-            <i class="bi bi-collection me-2"></i>Discover Our Full Gallery
+          <a href="{% url "main:gallery" %}" class="btn btn-gallery">
+            <i class="bi bi-collection me-2"></i>{% trans "Discover Our Full Gallery" %}
           </a>
         </div>
 
