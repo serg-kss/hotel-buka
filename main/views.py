@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import View
 from django.views.generic import ListView, DetailView
-from .models import Room
+from .models import Room, ContactMessages
 
 
 def index(request):
@@ -108,5 +109,17 @@ def privacy(request):
 def gallery(request):
     return render(request, 'main/gallery.html')
 
-def contact(request):
-    return render(request, 'main/contact.html')
+class Contact(View):
+
+    def get(self, request):
+        return render(request, "main/contact.html")
+    
+    def post(self, request):
+        ContactMessages.objects.create(
+            name = request.POST.get("name"),
+            email = request.POST.get("email"),
+            subject = request.POST.get("subject"),
+            message = request.POST.get("message")
+        )
+
+        return redirect("main:contact")

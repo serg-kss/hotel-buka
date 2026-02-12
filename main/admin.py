@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SiteSettings, SocialMedia, BookingRequest, RoomImage, Room, Amenity
+from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages
 from .admin_mixins import SingletonAdmin
 
 
@@ -11,21 +11,6 @@ class SiteSettingsAdmin(SingletonAdmin):
 @admin.register(SocialMedia)
 class SocialMediaAdmin(SingletonAdmin):
     pass
-
-
-@admin.register(BookingRequest)
-class BookingRequestAdmin(admin.ModelAdmin):
-    list_display = (
-        "full_name",
-        "room",
-        "check_in",
-        "check_out",
-        "status",
-        "created_at",
-    )
-    list_filter = ("status", "room")
-    search_fields = ("full_name", "email", "phone")
-
 
 class RoomImageInline(admin.TabularInline):
     model = RoomImage
@@ -56,3 +41,12 @@ class AmenityAdmin(admin.ModelAdmin):
 
     list_display = ("name_uk", "name_en", "icon_class")
     search_fields = ("name_uk", "name_en")
+
+
+@admin.register(ContactMessages)
+class ContactMessagesAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "email",
+        "subject",
+    )

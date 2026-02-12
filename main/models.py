@@ -126,50 +126,19 @@ class Amenity(models.Model):
         verbose_name = _("Зручність")
         verbose_name_plural = _("Зручності")
 
-class BookingRequest(models.Model):
+class ContactMessages(models.Model):
 
-    STATUS_CHOICES = [
-        ("new", _("Нова")),
-        ("contacted", _("Зв’язались")),
-        ("confirmed", _("Підтверджено")),
-        ("cancelled", _("Скасовано")),
-    ]
-
-    room = models.ForeignKey(
-        "Room",
-        on_delete=models.CASCADE,
-        related_name="booking_requests",
-        verbose_name=_("Номер")
-    )
-
-    full_name = models.CharField(_("ПІБ"), max_length=200)
-    email = models.EmailField(_("Email"))
-    phone = models.CharField(_("Телефон"), max_length=50)
-
-    check_in = models.DateField(_("Дата заїзду"))
-    check_out = models.DateField(_("Дата виїзду"))
-
-    guests = models.PositiveIntegerField(_("Кількість гостей"), default=1)
-
-    message = models.TextField(_("Додаткове повідомлення"), blank=True)
-
-    status = models.CharField(
-        max_length=20,
-        choices=STATUS_CHOICES,
-        default="new",
-        verbose_name=_("Статус")
-    )
-
-    created_at = models.DateTimeField(auto_now_add=True)
+    name = models.CharField(_("Client's name"), max_length=20)
+    email = models.EmailField("Email")
+    subject = models.CharField(_("Subject"), max_length=200)
+    message = models.TextField(_("Message"))
 
     def __str__(self):
-        return f"{self.full_name} — {self.room}"
-
+        return self.subject
+    
     class Meta:
-        verbose_name = _("Заявка на бронювання")
-        verbose_name_plural = _("Заявки на бронювання")
-        ordering = ["-created_at"]
-
+        verbose_name = _("Повідомлення")
+        verbose_name_plural = _("Повідомлення")
 
 class SiteSettings(models.Model):
 

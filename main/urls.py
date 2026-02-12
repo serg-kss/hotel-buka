@@ -1,6 +1,6 @@
 from django.urls import path
 from main import views
-from .views import RoomListView, RoomDetailView
+from .views import RoomListView, RoomDetailView, Contact
 
 
 app_name = 'main'
@@ -15,5 +15,5 @@ urlpatterns = [
     path("terms/", views.terms, name="terms"),
     path("privacy/", views.privacy, name="privacy"),
     path("gallery/", views.gallery, name="gallery"),
-    path("contact/", views.contact, name="contact"),
+    path("contact/", Contact.as_view(), name="contact"),
 ]

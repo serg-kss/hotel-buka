@@ -7,11 +7,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Contact</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Contact" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "main:index" %}">Home</a></li>
-            <li class="current">Contact</li>
+            <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
+            <li class="current">{% trans "Contact" %}</li>
           </ol>
         </nav>
       </div>
@@ -59,9 +59,10 @@
         <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-10">
             <div class="contact-form-wrapper">
-              <h2 class="text-center mb-4">Send a Message</h2>
+              <h2 class="text-center mb-4">{% trans "Send a Message" %}</h2>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="{% url "main:contact" %}" method="POST" class="php-email-form">
+                {% csrf_token %}
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
