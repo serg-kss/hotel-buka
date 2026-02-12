@@ -1,3 +1,98 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+
+{% block content %}
+<!-- Page Title -->
+  <div class="page-title light-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">{% trans "Reservation Sent" %}</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'main:index' %}">{% trans "Home" %}</a></li>
+          <li class="current">{% trans "Booking Confirmation" %}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Success Section -->
+  <section class="section light-background">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="card shadow-sm border-0 p-5 text-center">
+
+            <div class="mb-4">
+              <i class="bi bi-check-circle-fill"
+                 style="font-size: 64px; color: var(--accent-color);"></i>
+            </div>
+
+            <h2 class="mb-3">{% trans "Thank you for your reservation request!" %}</h2>
+
+            <p class="mb-4 text-muted">
+              {% trans "Our team will contact you shortly to confirm availability." %}
+            </p>
+
+            <hr class="my-4">
+
+            <!-- Booking Summary -->
+            <div class="text-start">
+
+              <h4 class="mb-3">{% trans "Reservation Details" %}</h4>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Room" %}:</div>
+                <div class="col-6">{{ booking.room.name }}</div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Check-in" %}:</div>
+                <div class="col-6">{{ booking.check_in }}</div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Check-out" %}:</div>
+                <div class="col-6">{{ booking.check_out }}</div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Guests" %}:</div>
+                <div class="col-6">{{ booking.guests }}</div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Name" %}:</div>
+                <div class="col-6">{{ booking.full_name }}</div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-6 fw-semibold">{% trans "Email" %}:</div>
+                <div class="col-6">{{ booking.email }}</div>
+              </div>
+
+              {% if booking.message %}
+              <div class="row mt-3">
+                <div class="col-12 fw-semibold">{% trans "Additional Notes" %}:</div>
+                <div class="col-12 text-muted">{{ booking.message }}</div>
+              </div>
+              {% endif %}
+
+            </div>
+
+            <div class="mt-5">
+              <a href="{% url 'main:index' %}" class="btn btn-room-details">
+                {% trans "Back to Rooms" %}
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock content %}

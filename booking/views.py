@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from .models import Room
 from booking.models import Booking
-from django.views.generic import TemplateView
+from django.views.generic import DetailView
 
 
 class BookingView(View):
@@ -14,7 +14,7 @@ class BookingView(View):
     def post(self, request, slug):
         room = get_object_or_404(Room, slug=slug, is_active=True)
 
-        Booking.objects.create(
+        booking = Booking.objects.create(
             room=room,
             full_name=request.POST.get("full_name"),
             email=request.POST.get("email"),
@@ -25,8 +25,11 @@ class BookingView(View):
             message=request.POST.get("message"),
         )
 
-        return redirect("booking:booking_success")
+        return redirect("booking:booking_success", pk=booking.pk)
 
 
-class BookingSuccessView(TemplateView):
+
+class BookingSuccessView(DetailView):
+    model = Booking
     template_name = "booking/booking_success.html"
+    context_object_name = "booking"
