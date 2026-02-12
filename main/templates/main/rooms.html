@@ -2,17 +2,16 @@
 {% load static %}
 {% load i18n %}
 
-
 {% block content %}
 
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Rooms</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Rooms" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "main:index" %}">Home</a></li>
-            <li class="current">Rooms</li>
+            <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
+            <li class="current">{% trans "Rooms" %}</li>
           </ol>
         </nav>
       </div>
@@ -20,72 +19,38 @@
 
     <!-- Rooms 2 Section -->
     <section id="rooms-2" class="rooms-2 section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <form method="get">
           <div class="room-filters">
-        <div class="row g-3 align-items-center">
+            <div class="row g-3 align-items-center">
+              <!-- Price -->
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">{% trans "Price Range" %}</label>
+                <select name="price" class="form-select" onchange="this.form.submit()">
+                  <option value="">{% trans "All Prices" %}</option>
+                  <option value="100-200" {% if current_price == "100-200" %}selected{% endif %}>$100 - $200</option>
+                  <option value="200-350" {% if current_price == "200-350" %}selected{% endif %}>$200 - $350</option>
+                  <option value="350+" {% if current_price == "350+" %}selected{% endif %}>$350+</option>
+                </select>
+              </div>
 
-    <!-- Price -->
-    <div class="col-lg-3 col-md-6">
-      <label class="form-label">Price Range</label>
-      <select name="price" class="form-select" onchange="this.form.submit()">
-        <option value="">All Prices</option>
-        <option value="100-200" {% if current_price == "100-200" %}selected{% endif %}>$100 - $200</option>
-        <option value="200-350" {% if current_price == "200-350" %}selected{% endif %}>$200 - $350</option>
-        <option value="350+" {% if current_price == "350+" %}selected{% endif %}>$350+</option>
-      </select>
-    </div>
-
-    <!-- Capacity -->
-    <div class="col-lg-3 col-md-6">
-      <label class="form-label">Guest Capacity</label>
-      <select name="capacity" class="form-select" onchange="this.form.submit()">
-        <option value="">Any Capacity</option>
-        <option value="1-2" {% if current_capacity == "1-2" %}selected{% endif %}>1-2 Guests</option>
-        <option value="3-4" {% if current_capacity == "3-4" %}selected{% endif %}>3-4 Guests</option>
-        <option value="5+" {% if current_capacity == "5+" %}selected{% endif %}>5+ Guests</option>
-      </select>
-    </div>
-
-  </div>
-</div>
-</form>
-
+              <!-- Capacity -->
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">{% trans "Guest Capacity" %}</label>
+                <select name="capacity" class="form-select" onchange="this.form.submit()">
+                  <option value="">{% trans "Any Capacity" %}</option>
+                  <option value="1-2" {% if current_capacity == "1-2" %}selected{% endif %}>1-2 Guests</option>
+                  <option value="3-4" {% if current_capacity == "3-4" %}selected{% endif %}>3-4 Guests</option>
+                  <option value="5+" {% if current_capacity == "5+" %}selected{% endif %}>5+ Guests</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
 
         <div class="rooms-grid" data-aos="fade-up" data-aos-delay="300">
           <div class="row g-4">
-
-            {% for room in rooms %}
-            <div class="col-xl-4 col-lg-6">
-              <div class="room-card">
-                <div class="room-image">
-                  <img src="{% static "assets/img/hotel/room-1.webp" %}" alt="Deluxe Ocean Suite" class="img-fluid">
-                </div>
-                <div class="room-content">
-                  <div class="room-header">
-                    <h3>{{room.name}}</h3>
-                  </div>
-                  <p class="room-description">{{room.description}}</p>
-                  <div class="room-amenities">
-                    <span><i class="bi bi-people"></i> {% trans "Up to" %} {{room.capacity}} {% trans "guests" %}</span>
-                    {% for item in room.amenities.all %}
-                    <span><i class="{{item.icon_class}}"></i> {{item.name}}</span>
-                    {% endfor %}
-                  </div>
-                  <div class="room-footer">
-                    <div class="room-price">
-                      <span class="price-from">{% trans "From" %}</span>
-                      <span class="price-amount">{{room.price}}</span>
-                      <span class="price-period">/ {% trans "night" %}</span>
-                    </div>
-                    <a href="room-details.html" class="btn-room-details">{% trans "View Details" %}</a>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Room Card -->
-            {% endfor %}
+            {% include "main/includes/room_cards_loop.html" %}
           </div>
         </div>
 
@@ -97,14 +62,11 @@
               {% if current_capacity %}&capacity={{ current_capacity }}{% endif %}
               {% if current_sort %}&sort={{ current_sort }}{% endif %}"
             class="btn-load-more">
-        <i class="bi bi-arrow-down-circle"></i>
-        {% trans "Load More Rooms" %}
-    </a>
-</div>
-{% endif %}
-
-
-
+            <i class="bi bi-arrow-down-circle"></i>
+            {% trans "Load More Rooms" %}
+          </a>
+        </div>
+        {% endif %}
       </div>
 
     </section><!-- /Rooms 2 Section -->

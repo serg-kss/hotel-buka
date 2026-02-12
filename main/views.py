@@ -1,16 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Room
 
 
 def index(request):
     return render(request, 'main/index.html')
 
+
 def about(request):
     return render(request, 'main/about.html')
-
-from django.views.generic import ListView
-from .models import Room
 
 
 class RoomListView(ListView):
@@ -78,6 +76,21 @@ class RoomListView(ListView):
         context["current_sort"] = self.request.GET.get("sort", "")
 
         return context
+
+
+class RoomDetailView(DetailView):
+    model = Room
+    template_name = "main/room.html"
+    context_object_name = "room"
+    slug_field = "slug"
+    slug_url_kwarg = "slug"
+
+    def get_queryset(self):
+        return (
+            Room.objects
+            .filter(is_active=True)
+            .prefetch_related("amenities", "images")
+        )
 
 
 def amenities(request):

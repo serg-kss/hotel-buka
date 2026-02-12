@@ -1,0 +1,32 @@
+{% load static %}
+{% load i18n %}
+
+            {% for room in rooms %}
+            <div class="col-xl-4 col-lg-6">
+              <div class="room-card">
+                <div class="room-image">
+                  <img src="{% static "assets/img/hotel/room-1.webp" %}" alt="Deluxe Ocean Suite" class="img-fluid">
+                </div>
+                <div class="room-content">
+                  <div class="room-header">
+                    <h3>{{room.name}}</h3>
+                  </div>
+                  <p class="room-description">{{room.description}}</p>
+                  <div class="room-amenities">
+                    <span><i class="bi bi-people"></i> {% trans "Up to" %} {{room.capacity}} {% trans "guests" %}</span>
+                    {% for item in room.amenities.all %}
+                    <span><i class="{{item.icon_class}}"></i> {{item.name}}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="room-footer">
+                    <div class="room-price">
+                      <span class="price-from">{% trans "From" %}</span>
+                      <span class="price-amount">{{room.price}}</span>
+                      <span class="price-period">/ {% trans "night" %}</span>
+                    </div>
+                    <a href="{% url 'main:room' room.slug %}" class="btn-room-details">{% trans "View Details" %}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}

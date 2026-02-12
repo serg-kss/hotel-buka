@@ -1,0 +1,100 @@
+{% load i18n %}
+
+<form class="reservation-form"
+      method="POST"
+      action="{% url 'booking:booking' room.slug %}">
+
+  {% csrf_token %}
+
+  <!-- Booking Details -->
+  <div class="form-section">
+    <h4>{% trans "Booking Details" %}</h4>
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label class="form-label">{% trans "Arrival Date" %}</label>
+        <input type="date"
+               class="form-control"
+               name="check_in"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">{% trans "Departure Date" %}</label>
+        <input type="date"
+               class="form-control"
+               name="check_out"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">{% trans "Total Guests" %}</label>
+        <select class="form-select"
+                name="guests"
+                required>
+          <option value="">{% trans "Choose guests" %}</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Guest Information -->
+  <div class="form-section">
+    <h4>{% trans "Guest Information" %}</h4>
+
+    <div class="form-grid">
+
+      <div class="form-group full-width">
+        <label class="form-label">{% trans "Full Name" %}</label>
+        <input type="text"
+               class="form-control"
+               name="full_name"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">{% trans "Email Address" %}</label>
+        <input type="email"
+               class="form-control"
+               name="email"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">{% trans "Contact Number" %}</label>
+        <input type="tel"
+               class="form-control"
+               name="phone"
+               required>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Additional Message -->
+  <div class="form-section">
+    <div class="form-group">
+      <label class="form-label">{% trans "Additional Requirements" %}</label>
+      <textarea class="form-control"
+                name="message"
+                rows="3"
+                placeholder="{% trans 'Any special requests?' %}">
+      </textarea>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-calendar-plus me-2"></i>
+      {% trans "Submit Reservation Request" %}
+    </button>
+  </div>
+
+</form>
