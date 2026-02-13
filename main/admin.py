@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages
+from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages, Testimonials
 from .admin_mixins import SingletonAdmin
 
 
@@ -50,3 +50,17 @@ class ContactMessagesAdmin(admin.ModelAdmin):
         "email",
         "subject",
     )
+
+
+@admin.register(Testimonials)
+class TestimonialsAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+    )
+    MAX_OBJECTS = 4
+
+    def has_add_permission(self, request):
+        count = Testimonials.objects.count()
+        if count >= self.MAX_OBJECTS:
+            return False
+        return super().has_add_permission(request)

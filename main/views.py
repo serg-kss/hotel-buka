@@ -1,11 +1,25 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from django.views.generic import ListView, DetailView
-from .models import Room, ContactMessages
+from django.views.generic import ListView, DetailView, TemplateView
+from .models import Room, ContactMessages, Testimonials
+from django.db import DatabaseError
 
 
-def index(request):
-    return render(request, 'main/index.html')
+class MainPageView(TemplateView):
+    template_name = "main/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        try:
+            testimonials = Testimonials.objects.all()
+        except DatabaseError:
+            testimonials = []
+
+        context["testimonials"] = testimonials
+        return context
+
+
 
 
 def about(request):

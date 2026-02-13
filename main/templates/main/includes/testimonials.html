@@ -1,0 +1,47 @@
+{% load static %}
+{% load i18n %}
+
+    <!-- Testimonials Section -->
+    {% if testimonials %}
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">{% trans "Testimonials" %}</span>
+        <h2>{% trans "Testimonials" %}</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonials-wrapper">
+
+          <div class="row g-4">
+
+            {% for item in testimonials %}
+            <!-- Testimonial Item -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-card">
+                <div class="quote-mark">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="testimonial-content">
+                  <p>{{item.message}}</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4>{{item.name}}</h4>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->     
+    {% endif %}

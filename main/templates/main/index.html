@@ -14,8 +14,8 @@
 
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1>{% trans "Luxury Redefined in Every Stay" %}</h1>
-              <p class="lead">{% trans "Experience unparalleled comfort and sophistication at our premium hotel. From elegant suites to world-class amenities, every moment of your stay is crafted to perfection." %}</p>
+              <h1>{% trans "Luxury Redefined in Nature" %}</h1>
+              <p class="lead">{% trans "Experience the perfect balance of comfort, privacy, and natural beauty at Wood Life. Wake up surrounded by forest silence, breathe in fresh mountain air, and unwind in your private wooden retreat. Every detail is designed to make your stay peaceful, cozy, and unforgettable." %}</p>
               <div class="hero-features">
                 <div class="feature-item">
                   <i class="bi bi-wifi"></i>
@@ -23,16 +23,15 @@
                 </div>
                 <div class="feature-item">
                   <i class="bi bi-car-front"></i>
-                  <span>{% trans "Valet Parking" %}</span>
+                  <span>{% trans "Free Parking" %}</span>
                 </div>
                 <div class="feature-item">
-                  <i class="bi bi-cup-hot"></i>
-                  <span>24/7 {% trans "Room Service" %}</span>
+                  <i class="bi bi-fire"></i>
+                  <span>{% trans "Wood-Fired Sauna" %}</span>
                 </div>
               </div>
               <div class="hero-buttons">
-                <a href="booking.html" class="btn btn-primary">{% trans "Book Now" %}</a>
-                <a href="rooms.html" class="btn btn-outline">{% trans "View Rooms" %}</a>
+                <a href="{% url "main:rooms" %}" class="btn btn-outline">{% trans "View Cottages" %}</a>
               </div>
             </div>
           </div>
@@ -40,23 +39,16 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="hero-images">
               <div class="main-image">
-                <img src="{% static "assets/img/hotel/showcase-3.webp" %}" alt="Luxury Hotel" class="img-fluid">
+                <img src="{% static "assets/img/hotel/hotel-hero-main.png" %}" alt="Luxury Hotel" class="img-fluid">
               </div>
               <div class="floating-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="card-content">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <h6>Exceptional Experience</h6>
-                  <p>"Absolutely stunning hotel! The service was impeccable and the views breathtaking."</p>
-                  <div class="guest-info">
-                    <img src="{% static "assets/img/person/person-f-3.webp" %}" alt="Guest" class="guest-avatar">
-                    <span>Sarah Johnson</span>
-                  </div>
-                </div>
+               <div class="d-flex justify-content-center align-items-center">
+                <h6 class="d-flex align-items-center gap-2 m-0">
+                  {% trans "Crafted for Comfort" %}
+                  <i class="bi bi-house-heart"></i>
+                </h6>
+               </div>
+
               </div>
             </div>
           </div>
@@ -76,23 +68,23 @@
 
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="about-content">
-              <h2>{% trans "Welcome to Grandoria Resort" %}</h2>
-              <p class="lead">{% trans "Where luxury meets tranquility in the heart of nature's paradise." %}</p>
-              <p>{% trans "Nestled among rolling hills and pristine landscapes, Grandview Resort has been offering exceptional hospitality for over three decades. Our commitment to excellence and attention to detail creates an unforgettable experience for discerning travelers seeking both comfort and adventure." %}</p>
-              <p>{% trans "From our elegantly appointed suites to our world-class amenities, every aspect of your stay is designed to exceed expectations. Discover breathtaking views, exquisite dining, and personalized service that makes every moment special." %}</p>
+              <h2>{% trans "About Wood Life" %}</h2>
+              <p class="lead">{% trans "Wood Life is a private retreat nestled in nature, where handcrafted wooden cabins meet fresh mountain air and peaceful forest surroundings." %}</p>
+              <p>{% trans "For over 10 years, we’ve been welcoming guests who seek comfort, privacy, and a genuine escape from the city rush. Our log cabins are built from natural wood, creating a warm and eco-friendly atmosphere that helps you truly unwind." %}</p>
+              <p>{% trans "On our private territory, you’ll find everything you need for a perfect stay — wood-fired sauna, cozy gazebos, barbecue areas, and quiet spaces to relax under the trees. Here, mornings begin with birdsong, evenings end by the fire, and every stay feels personal." %}</p>
 
               <div class="stats-row">
                 <div class="stat-item">
-                  <div class="stat-number">185</div>
-                  <div class="stat-label">Luxury Rooms</div>
+                  <div class="stat-number">5</div>
+                  <div class="stat-label">{% trans "Luxury Cottages" %}</div>
                 </div>
                 <div class="stat-item">
-                  <div class="stat-number">98%</div>
-                  <div class="stat-label">Guest Satisfaction</div>
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">{% trans "Private Territory" %}</div>
                 </div>
                 <div class="stat-item">
-                  <div class="stat-number">30</div>
-                  <div class="stat-label">Years of Excellence</div>
+                  <div class="stat-number">Eco</div>
+                  <div class="stat-label">{% trans "Natural Wood Cabins" %}</div>
                 </div>
               </div><!-- End Stats Row -->
             </div>
@@ -101,15 +93,15 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-images">
               <div class="main-image">
-                <img src="{% static "assets/img/hotel/showcase-8.webp" %}" alt="Grandview Resort Main View" class="img-fluid">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="wood life room" class="img-fluid">
               </div>
               <div class="secondary-image">
-                <img src="{% static "assets/img/hotel/room-12.webp" %}" alt="Luxury Suite Interior" class="img-fluid">
+                <img src="{% static "assets/img/hotel/main-page-about-left.png" %}" alt="wood life territory with girl" class="img-fluid">
               </div>
               <div class="experience-badge">
                 <div class="badge-content">
-                  <span class="badge-number">30+</span>
-                  <span class="badge-text">Years<br>Experience</span>
+                  <span class="badge-number">10+</span>
+                  <span class="badge-text">{% trans "Years" %}<br>{% trans "Experience" %}</span>
                 </div>
               </div>
             </div>
@@ -126,9 +118,9 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Rooms</span>
-        <h2>Rooms</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">{% trans "Our Wooden Cottages" %}</span>
+        <h2>{% trans "Our Wooden Cottages" %}</h2>
+        <p>{% trans "Escape to cozy wooden cabins surrounded by nature. Each cabin is thoughtfully designed to provide comfort, privacy, and a warm atmosphere — perfect for relaxing weekends, romantic getaways, or peaceful family stays." %}</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -282,9 +274,9 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Amenities</span>
-        <h2>Amenities</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">{% trans "Amenities" %}</span>
+        <h2>{% trans "Amenities" %}</h2>
+        <p>{% trans "Everything you need for a comfortable and relaxing stay surrounded by nature. From fully equipped wooden cabins and high-speed Wi-Fi to wood-fired sauna, hot tubs, gazebos, and barbecue areas — every detail is designed to help you unwind and enjoy your time in the mountains." %}</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -294,17 +286,18 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="facility-card">
               <div class="facility-image">
-                <img src="{% static "assets/img/hotel/amenities-1.webp" %}" alt="Wireless Internet" class="img-fluid">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="Wireless Internet" class="img-fluid">
                 <div class="facility-overlay">
                   <i class="bi bi-wifi"></i>
                 </div>
               </div>
               <div class="facility-info">
-                <h4>High-Speed Internet</h4>
-                <p>Complimentary wireless internet access throughout the hotel premises with enterprise-grade security and unlimited bandwidth for all your connectivity needs.</p>
+                <h4>{% trans "Fully Equipped Cabins" %}</h4>
+                <p>{% trans "Our wooden cabins are designed for comfortable stays in any season. Each cottage includes high-speed Wi-Fi, a private bathroom, and a fully equipped kitchenette — everything you need to feel at home while surrounded by nature." %}</p>
                 <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> 24/7 Available</span>
-                  <span><i class="bi bi-check-circle"></i> High Speed</span>
+                  <span><i class="bi bi-wifi"></i> {% trans "High-Speed" %} Wi-Fi</span>
+                  <span><i class="bi bi-cup-straw"></i> {% trans "Kitchenette" %}</span>
+                  <span><i class="bi bi-bath"></i> {% trans "Private Bathroom" %}</span>
                 </div>
               </div>
             </div>
@@ -313,17 +306,17 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
             <div class="facility-card">
               <div class="facility-image">
-                <img src="{% static "assets/img/hotel/amenities-3.webp" %}" alt="Swimming Pool" class="img-fluid">
+                <img src="{% static "assets/img/hotel/pool.png" %}" alt="Swimming Pool" class="img-fluid">
                 <div class="facility-overlay">
                   <i class="bi bi-droplet"></i>
                 </div>
               </div>
               <div class="facility-info">
-                <h4>Rooftop Pool</h4>
-                <p>Luxurious rooftop swimming pool with breathtaking city skyline views. Features heated water, poolside service, and premium lounging areas for ultimate relaxation.</p>
+                <h4>{% trans "Wood-Fired Sauna &amp; Hot Tubs" %}</h4>
+                <p>{% trans "Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by nature. Warm water, fresh forest air, and the quiet of the mountains create the perfect atmosphere to unwind after an active day." %}</p>
                 <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> Heated Pool</span>
-                  <span><i class="bi bi-check-circle"></i> City Views</span>
+                  <span><i class="bi bi-fire"></i> {% trans "Wood-Fired Sauna" %}</span>
+                  <span><i class="bi bi bi-water"></i> {% trans "Outdoor Hot Tubs" %}</span>
                 </div>
               </div>
             </div>
@@ -332,74 +325,17 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="facility-card">
               <div class="facility-image">
-                <img src="{% static "assets/img/hotel/amenities-5.webp" %}" alt="Valet Parking" class="img-fluid">
+                <img src="{% static "assets/img/hotel/parking.png" %}" alt="Valet Parking" class="img-fluid">
                 <div class="facility-overlay">
                   <i class="bi bi-car-front"></i>
                 </div>
               </div>
               <div class="facility-info">
-                <h4>Valet Parking</h4>
-                <p>Premium valet parking service with secure underground facility. Professional attendants ensure your vehicle is safely parked and readily available upon request.</p>
+                <h4>{% trans "Free Secure Parking" %}</h4>
+                <p>{% trans "We offer complimentary on-site parking within our private territory. Your vehicle stays safely parked just steps away from your cabin, so you can relax and enjoy your stay without any worries." %}</p>
                 <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> Secure</span>
-                  <span><i class="bi bi-check-circle"></i> Valet Service</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Facility Card -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="facility-card">
-              <div class="facility-image">
-                <img src="{% static "assets/img/hotel/amenities-2.webp" %}" alt="Fitness Center" class="img-fluid">
-                <div class="facility-overlay">
-                  <i class="bi bi-heart-pulse"></i>
-                </div>
-              </div>
-              <div class="facility-info">
-                <h4>Modern Fitness Center</h4>
-                <p>Cutting-edge fitness facility featuring premium equipment, personal training services, and wellness programs designed to maintain your health routine while traveling.</p>
-                <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> 24/7 Access</span>
-                  <span><i class="bi bi-check-circle"></i> Personal Training</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Facility Card -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="facility-card">
-              <div class="facility-image">
-                <img src="{% static "assets/img/hotel/dining-2.webp" %}" alt="Fine Dining" class="img-fluid">
-                <div class="facility-overlay">
-                  <i class="bi bi-cup-hot"></i>
-                </div>
-              </div>
-              <div class="facility-info">
-                <h4>Signature Restaurant</h4>
-                <p>Award-winning culinary experience featuring international cuisine crafted by renowned chefs. Elegant atmosphere with extensive wine selection and impeccable service.</p>
-                <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> Fine Dining</span>
-                  <span><i class="bi bi-check-circle"></i> Wine Selection</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Facility Card -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
-            <div class="facility-card">
-              <div class="facility-image">
-                <img src="{% static "assets/img/hotel/amenities-4.webp" %}" alt="Spa Services" class="img-fluid">
-                <div class="facility-overlay">
-                  <i class="bi bi-flower1"></i>
-                </div>
-              </div>
-              <div class="facility-info">
-                <h4>Luxury Spa</h4>
-                <p>Tranquil sanctuary offering therapeutic treatments, rejuvenating massages, and holistic wellness experiences. Escape the everyday stress in our serene environment.</p>
-                <div class="facility-features">
-                  <span><i class="bi bi-check-circle"></i> Full Service</span>
-                  <span><i class="bi bi-check-circle"></i> Wellness Programs</span>
+                  <span><i class="bi bi-check-circle"></i> {% trans "Free of charge" %}</span>
+                  <span><i class="bi bi-shield-check"></i> {% trans "Private &amp; Secure Area" %}</span>
                 </div>
               </div>
             </div>
@@ -411,206 +347,7 @@
 
     </section><!-- /Amenities Cards Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Testimonials</span>
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="testimonials-wrapper">
-
-          <div class="row g-4">
-
-            <!-- Testimonial Item 1 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="testimonial-card">
-                <div class="quote-mark">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="testimonial-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed non mauris vitae erat consequat auctor eu in elit.</p>
-                </div>
-                <div class="testimonial-author">
-                  <img src="{% static "assets/img/person/person-m-5.webp" %}" alt="Client" class="img-fluid rounded-circle" loading="lazy">
-                  <div class="author-info">
-                    <h4>Robert Johnson</h4>
-                    <span>Chief Executive Officer</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <!-- Testimonial Item 2 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="testimonial-card">
-                <div class="quote-mark">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="testimonial-content">
-                  <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-                </div>
-                <div class="testimonial-author">
-                  <img src="{% static "assets/img/person/person-f-7.webp" %}" alt="Client" class="img-fluid rounded-circle" loading="lazy">
-                  <div class="author-info">
-                    <h4>Sarah Williams</h4>
-                    <span>Marketing Director</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <!-- Testimonial Item 3 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="testimonial-card">
-                <div class="quote-mark">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="testimonial-content">
-                  <p>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</p>
-                </div>
-                <div class="testimonial-author">
-                  <img src="{% static "assets/img/person/person-m-9.webp" %}" alt="Client" class="img-fluid rounded-circle" loading="lazy">
-                  <div class="author-info">
-                    <h4>Michael Davis</h4>
-                    <span>Product Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <!-- Testimonial Item 4 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-              <div class="testimonial-card">
-                <div class="quote-mark">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <div class="testimonial-content">
-                  <p>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore.</p>
-                </div>
-                <div class="testimonial-author">
-                  <img src="{% static "assets/img/person/person-f-3.webp" %}" alt="Client" class="img-fluid rounded-circle" loading="lazy">
-                  <div class="author-info">
-                    <h4>Emily Thompson</h4>
-                    <span>Design Lead</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Offer Cards Section -->
-    <section id="offer-cards" class="offer-cards section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Offers</span>
-        <h2>Offers</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="offer-card" data-aos="zoom-in" data-aos-delay="200">
-              <div class="offer-badge">
-                <span class="discount">25% OFF</span>
-              </div>
-              <div class="offer-image">
-                <img src="{% static "assets/img/hotel/showcase-3.webp" %}" alt="Weekend Getaway" class="img-fluid">
-              </div>
-              <div class="offer-content">
-                <h3>Weekend Getaway</h3>
-                <p>Escape the ordinary with our exclusive weekend package. Includes complimentary breakfast and late checkout until 2 PM.</p>
-                <div class="offer-details">
-                  <div class="price-info">
-                    <span class="original-price">$299</span>
-                    <span class="offer-price">$224</span>
-                    <span class="per-night">per night</span>
-                  </div>
-                  <div class="validity">
-                    <i class="bi bi-calendar-check"></i>
-                    <span>Valid until Dec 31, 2024</span>
-                  </div>
-                </div>
-                <a href="#" class="btn-book">Book Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="offer-card featured" data-aos="zoom-in" data-aos-delay="300">
-              <div class="offer-badge">
-                <span class="discount">BEST VALUE</span>
-              </div>
-              <div class="offer-image">
-                <img src="{% static "assets/img/hotel/showcase-7.webp" %}" alt="Extended Stay Deal" class="img-fluid">
-              </div>
-              <div class="offer-content">
-                <h3>Extended Stay Deal</h3>
-                <p>Stay 5 nights or more and enjoy significant savings. Perfect for business travelers and extended vacations with premium amenities.</p>
-                <div class="offer-details">
-                  <div class="price-info">
-                    <span class="original-price">$189</span>
-                    <span class="offer-price">$149</span>
-                    <span class="per-night">per night</span>
-                  </div>
-                  <div class="validity">
-                    <i class="bi bi-calendar-check"></i>
-                    <span>Book by Jan 15, 2025</span>
-                  </div>
-                </div>
-                <a href="#" class="btn-book">Reserve Today</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="offer-card" data-aos="zoom-in" data-aos-delay="400">
-              <div class="offer-badge">
-                <span class="discount">EARLY BIRD</span>
-              </div>
-              <div class="offer-image">
-                <img src="{% static "assets/img/hotel/showcase-11.webp" %}" alt="Advance Booking" class="img-fluid">
-              </div>
-              <div class="offer-content">
-                <h3>Advance Booking</h3>
-                <p>Plan ahead and save more! Book your stay 30 days in advance and enjoy exclusive rates with free cancellation up to 7 days.</p>
-                <div class="offer-details">
-                  <div class="price-info">
-                    <span class="original-price">$249</span>
-                    <span class="offer-price">$199</span>
-                    <span class="per-night">per night</span>
-                  </div>
-                  <div class="validity">
-                    <i class="bi bi-calendar-check"></i>
-                    <span>Available year-round</span>
-                  </div>
-                </div>
-                <a href="#" class="btn-book">Book Early</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Offer Cards Section -->
+    {% include "main/includes/testimonials.html" %}
 
     <!-- Events Cards Section -->
     <section id="events-cards" class="events-cards section">

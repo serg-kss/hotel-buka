@@ -4,6 +4,17 @@ from django.utils.text import slugify
 from django.utils import translation
 
 
+class Testimonials(models.Model):
+    name = models.CharField(_("Name"), max_length=30)
+    message = models.TextField(_("Message"))
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _("Коментар")
+        verbose_name_plural = _("Коментарі")
+
 class Room(models.Model):
 
     # --- Название ---
@@ -99,7 +110,6 @@ class RoomImage(models.Model):
         verbose_name = _("Фото номера")
         verbose_name_plural = _("Фото номерів")
 
-
 class Amenity(models.Model):
 
     name_uk = models.CharField(_("Назва (укр)"), max_length=100)
@@ -160,9 +170,8 @@ class SiteSettings(models.Model):
         return "Site Settings"
 
     class Meta:
-        verbose_name = _("Site Settings")
-        verbose_name_plural = _("Site Settings")
-
+        verbose_name = _("Настройка сайту")
+        verbose_name_plural = _("Настройки сайту")
 
 class SocialMedia(models.Model):
 
@@ -172,8 +181,8 @@ class SocialMedia(models.Model):
     linkedin = models.CharField("Linked In", max_length=100, blank=True)
 
     def __str__(self):
-        return "Social Media"
+        return "Соц-мережі"
 
     class Meta:
-        verbose_name = _("Social Media")
-        verbose_name_plural = _("Social Media")
+        verbose_name = _("Соц-мережі")
+        verbose_name_plural = _("Соц-мережі")

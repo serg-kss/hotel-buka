@@ -26,16 +26,14 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="{% url "main:index" %}" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">Grandoria</h1>
+          <img src="{% static "assets/img/logo.png" %}" alt="Wood Life" width="220" height="100">
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="{% url "main:index" %}" class="active">{% trans "Home" %}</a></li>
             <li><a href="{% url "main:about" %}">{% trans "About" %}</a></li>
-            <li><a href="{% url "main:rooms" %}">{% trans "Rooms" %}</a></li>
+            <li><a href="{% url "main:rooms" %}">{% trans "Cottages" %}</a></li>
             <li><a href="{% url "main:amenities" %}">{% trans "Amenities" %}</a></li>
             <li><a href="{% url "main:location" %}">{% trans "Location" %}</a></li>
             <li class="dropdown"><a href="#"><span>{% trans "Info" %}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>

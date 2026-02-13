@@ -1,15 +1,15 @@
 from django.urls import path
 from main import views
-from .views import RoomListView, RoomDetailView, Contact
+from .views import RoomListView, RoomDetailView, Contact, MainPageView
 
 
 app_name = 'main'
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", MainPageView.as_view(), name="index"),
     path("about/", views.about, name="about"),
-    path("rooms/", RoomListView.as_view(), name="rooms"),
-    path("rooms/<slug:slug>/", RoomDetailView.as_view(), name="room"),
+    path("сottages/", RoomListView.as_view(), name="rooms"),
+    path("сottages/<slug:slug>/", RoomDetailView.as_view(), name="room"),
     path("amenities/", views.amenities, name="amenities"),
     path("location/", views.location, name="location"),
     path("terms/", views.terms, name="terms"),
