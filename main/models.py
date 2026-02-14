@@ -5,8 +5,25 @@ from django.utils import translation
 
 
 class Testimonials(models.Model):
-    name = models.CharField(_("Name"), max_length=30)
-    message = models.TextField(_("Message"))
+    name_uk = models.CharField(_("Name"), max_length=30, default="")
+    message_uk = models.TextField(_("Message"), default="")
+
+    name_en = models.CharField(_("Name_en"), max_length=30, default="")
+    message_en = models.TextField(_("Message_en"), default="")
+
+    @property
+    def name(self):
+        lang = translation.get_language()
+        if lang == "uk":
+            return self.name_uk
+        return self.name_en
+
+    @property
+    def message(self):
+        lang = translation.get_language()
+        if lang == "uk":
+            return self.message_uk
+        return self.message_en
 
     def __str__(self):
         return self.name
@@ -17,11 +34,9 @@ class Testimonials(models.Model):
 
 class Room(models.Model):
 
-    # --- Название ---
     room_name_uk = models.CharField(_("Назва номера (укр)"), max_length=200)
     room_name_en = models.CharField(_("Назва номера (англ)"), max_length=200)
 
-    # --- Описание ---
     description_uk = models.TextField(_("Опис (укр)"))
     description_en = models.TextField(_("Опис (англ)"))
 

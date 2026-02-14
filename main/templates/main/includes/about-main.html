@@ -1,0 +1,56 @@
+{% load static %}
+{% load i18n %}
+
+
+    <section id="about-home" class="about-home section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-content">
+              <h2>{% trans "About Wood Life" %}</h2>
+              <p class="lead">{% trans "Wood Life is a private retreat nestled in nature, where handcrafted wooden cabins meet fresh mountain air and peaceful forest surroundings." %}</p>
+              <p>{% trans "For over 10 years, we’ve been welcoming guests who seek comfort, privacy, and a genuine escape from the city rush. Our log cabins are built from natural wood, creating a warm and eco-friendly atmosphere that helps you truly unwind." %}</p>
+              <p>{% trans "On our private territory, you’ll find everything you need for a perfect stay — wood-fired sauna, cozy gazebos, barbecue areas, and quiet spaces to relax under the trees. Here, mornings begin with birdsong, evenings end by the fire, and every stay feels personal." %}</p>
+
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-number">5</div>
+                  <div class="stat-label">{% trans "Luxury Cottages" %}</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">{% trans "Private Territory" %}</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">Eco</div>
+                  <div class="stat-label">{% trans "Natural Wood Cabins" %}</div>
+                </div>
+              </div><!-- End Stats Row -->
+            </div>
+          </div><!-- End About Content -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-images">
+              <div class="main-image">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="wood life room" class="img-fluid">
+              </div>
+              <div class="secondary-image">
+                <img src="{% static "assets/img/hotel/main-page-about-left.png" %}" alt="wood life territory with girl" class="img-fluid">
+              </div>
+              <div class="experience-badge">
+                <div class="badge-content">
+                  <span class="badge-number">10+</span>
+                  <span class="badge-text">{% trans "Years" %}<br>{% trans "Experience" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End About Images -->
+
+        </div>
+
+      </div>
+
+    </section>

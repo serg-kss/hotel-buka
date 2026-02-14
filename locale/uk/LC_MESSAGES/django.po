@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-11 12:08+0200\n"
+"POT-Creation-Date: 2026-02-14 17:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,93 +21,727 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: hotel/settings.py:116
+#: booking/templates/booking/booking.html:9
+#: booking/templates/booking/booking.html:13
+msgid "Booking"
+msgstr "Бронювання"
+
+#: booking/templates/booking/booking.html:12
+#: booking/templates/booking/booking_success.html:12
+#: main/templates/main/contact.html:13 main/templates/main/room.html:12
+#: main/templates/main/rooms.html:13 templates/includes/footer.html:24
+#: templates/includes/header.html:34
+msgid "Home"
+msgstr "Головна"
+
+#: booking/templates/booking/booking_success.html:9
+msgid "Reservation Sent"
+msgstr "Запит на бронювання надіслано"
+
+#: booking/templates/booking/booking_success.html:13
+msgid "Booking Confirmation"
+msgstr "Підтвердження бронювання"
+
+#: booking/templates/booking/booking_success.html:33
+msgid "Thank you for your reservation request!"
+msgstr "Дякуємо за ваш запит на бронювання!"
+
+#: booking/templates/booking/booking_success.html:36
+msgid "Our team will contact you shortly to confirm availability."
+msgstr "Наша команда зв’яжеться з вами найближчим часом, щоб підтвердити наявність котеджу."
+
+#: booking/templates/booking/booking_success.html:44
+msgid "Reservation Details"
+msgstr "Деталі бронювання"
+
+#: booking/templates/booking/booking_success.html:47
+#, fuzzy
+#| msgid "Rooms"
+msgid "Room"
+msgstr "Номери"
+
+#: booking/templates/booking/booking_success.html:52
+#: main/templates/main/location.html:73
+msgid "Check-in"
+msgstr "Дата заїзду"
+
+#: booking/templates/booking/booking_success.html:57
+#: main/templates/main/location.html:74
+msgid "Check-out"
+msgstr "Дата виїзду"
+
+#: booking/templates/booking/booking_success.html:62
+msgid "Guests"
+msgstr "Кількість гостей"
+
+#: booking/templates/booking/booking_success.html:67 main/models.py:8
+msgid "Name"
+msgstr "Ім’я"
+
+#: booking/templates/booking/booking_success.html:72 main/models.py:177
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: booking/templates/booking/booking_success.html:78
+msgid "Additional Notes"
+msgstr "Додаткові побажання"
+
+#: booking/templates/booking/booking_success.html:87
+msgid "Back to Main Page"
+msgstr "Повернутися на головну"
+
+#: booking/templates/booking/includes/booking_form.html:11
+msgid "Booking Details"
+msgstr "Деталі бронювання"
+
+#: booking/templates/booking/includes/booking_form.html:16
+msgid "Arrival Date"
+msgstr "Дата заїзду"
+
+#: booking/templates/booking/includes/booking_form.html:24
+msgid "Departure Date"
+msgstr "Дата виїзду"
+
+#: booking/templates/booking/includes/booking_form.html:32
+msgid "Total Guests"
+msgstr "Кількість гостей"
+
+#: booking/templates/booking/includes/booking_form.html:36
+msgid "Choose guests"
+msgstr "Оберіть кількість гостей"
+
+#: booking/templates/booking/includes/booking_form.html:50
+msgid "Guest Information"
+msgstr "Інформація про гостя"
+
+#: booking/templates/booking/includes/booking_form.html:55
+msgid "Full Name"
+msgstr "Повне ім’я"
+
+#: booking/templates/booking/includes/booking_form.html:63
+msgid "Email Address"
+msgstr "Електронна пошта"
+
+#: booking/templates/booking/includes/booking_form.html:71
+msgid "Contact Number"
+msgstr "Контактний номер"
+
+#: booking/templates/booking/includes/booking_form.html:84
+msgid "Additional Requirements"
+msgstr "Додаткові побажання"
+
+#: booking/templates/booking/includes/booking_form.html:88
+msgid "Any special requests?"
+msgstr "Маєте особливі побажання?"
+
+#: booking/templates/booking/includes/booking_form.html:96
+msgid "Submit Reservation Request"
+msgstr "Надіслати запит на бронювання"
+
+#: hotel/settings.py:122
 msgid "Ukrainian"
-msgstr ""
+msgstr "Українська"
 
-#: hotel/settings.py:117
+#: hotel/settings.py:123
 msgid "English"
+msgstr "English"
+
+#: main/models.py:9 main/models.py:159
+msgid "Message"
+msgstr "Повідомлення"
+
+#: main/models.py:11
+msgid "Name_en"
+msgstr "Ім’я (англійською)"
+
+#: main/models.py:12
+msgid "Message_en"
+msgstr "Повідомлення (англійською)"
+
+#: main/models.py:32
+msgid "Коментар"
 msgstr ""
 
-#: templates/includes/footer.html:14
-msgid "A108 Adam Street"
+#: main/models.py:33
+msgid "Коментарі"
 msgstr ""
 
-#: templates/includes/footer.html:15
-msgid "New York, NY 535022"
+#: main/models.py:37
+msgid "Назва номера (укр)"
 msgstr ""
+
+#: main/models.py:38
+msgid "Назва номера (англ)"
+msgstr ""
+
+#: main/models.py:40
+msgid "Опис (укр)"
+msgstr ""
+
+#: main/models.py:41
+msgid "Опис (англ)"
+msgstr ""
+
+#: main/models.py:58
+msgid "Ціна"
+msgstr ""
+
+#: main/models.py:59
+msgid "Знижка (%)"
+msgstr ""
+
+#: main/models.py:62
+msgid "Площа (м²)"
+msgstr ""
+
+#: main/models.py:65
+msgid "Кількість гостей"
+msgstr ""
+
+#: main/models.py:69
+msgid "Головне фото"
+msgstr ""
+
+#: main/models.py:78 main/models.py:152
+msgid "Зручності"
+msgstr ""
+
+#: main/models.py:86
+msgid "Активний"
+msgstr ""
+
+#: main/models.py:104
+msgid "Номер"
+msgstr ""
+
+#: main/models.py:105
+msgid "Номери"
+msgstr ""
+
+#: main/models.py:117
+msgid "Фото"
+msgstr ""
+
+#: main/models.py:125
+msgid "Фото номера"
+msgstr ""
+
+#: main/models.py:126
+msgid "Фото номерів"
+msgstr ""
+
+#: main/models.py:130
+msgid "Назва (укр)"
+msgstr ""
+
+#: main/models.py:131
+msgid "Назва (англ)"
+msgstr ""
+
+#: main/models.py:142
+msgid "CSS іконка (bi class)"
+msgstr ""
+
+#: main/models.py:151
+msgid "Зручність"
+msgstr ""
+
+#: main/models.py:156
+msgid "Client's name"
+msgstr "Ім'я клієнта"
+
+#: main/models.py:158
+msgid "Subject"
+msgstr "Тема"
+
+#: main/models.py:165 main/models.py:166
+msgid "Повідомлення"
+msgstr ""
+
+#: main/models.py:170
+msgid "Address (Ukrainian)"
+msgstr "Адреса (українською)"
+
+#: main/models.py:171
+msgid "Address (English)"
+msgstr "Адреса (англійською)"
+
+#: main/models.py:173
+msgid "City (Ukrainian)"
+msgstr "Місто (українською)"
+
+#: main/models.py:174
+msgid "City (English)"
+msgstr "Місто (англійською)"
+
+#: main/models.py:176
+msgid "Phone"
+msgstr "Тел:"
+
+#: main/models.py:179
+msgid "Check-in time"
+msgstr "Час заїзду"
+
+#: main/models.py:180
+msgid "Check-out time"
+msgstr "Час виїзду"
+
+#: main/models.py:182
+msgid "Google Maps link"
+msgstr "Посилання на Google Maps"
+
+#: main/models.py:188
+msgid "Настройка сайту"
+msgstr ""
+
+#: main/models.py:189
+msgid "Настройки сайту"
+msgstr ""
+
+#: main/models.py:202 main/models.py:203
+msgid "Соц-мережі"
+msgstr ""
+
+#: main/templates/main/contact.html:10 main/templates/main/contact.html:14
+#: main/templates/main/location.html:63 templates/includes/header.html:45
+msgid "Contact"
+msgstr "Контакти"
+
+#: main/templates/main/contact.html:38 main/templates/main/location.html:9
+#: main/templates/main/location.html:13 templates/includes/footer.html:27
+#: templates/includes/header.html:37
+msgid "Location"
+msgstr "Локація"
+
+#: main/templates/main/contact.html:62
+msgid "Send a Message"
+msgstr "Надіслати повідомлення"
+
+#: main/templates/main/includes/about-main.html:13
+msgid "About Wood Life"
+msgstr "Про Wood Life"
+
+#: main/templates/main/includes/about-main.html:14
+msgid "Wood Life is a private retreat nestled in nature, where handcrafted wooden cabins meet fresh mountain air and peaceful forest surroundings."
+msgstr "Wood Life — це приватна садиба серед природи, де затишні дерев’яні котеджі поєднуються зі свіжим гірським повітрям і тишею лісу."
+
+#: main/templates/main/includes/about-main.html:15
+msgid "For over 10 years, we’ve been welcoming guests who seek comfort, privacy, and a genuine escape from the city rush. Our log cabins are built from natural wood, creating a warm and eco-friendly atmosphere that helps you truly unwind."
+msgstr "Понад 10 років ми приймаємо гостей, які цінують комфорт, приватність та справжній відпочинок подалі від міської метушні. Наші котеджі з натурального дерева створюють теплу та екологічну атмосферу для повного релаксу."
+
+#: main/templates/main/includes/about-main.html:16
+msgid "On our private territory, you’ll find everything you need for a perfect stay — wood-fired sauna, cozy gazebos, barbecue areas, and quiet spaces to relax under the trees. Here, mornings begin with birdsong, evenings end by the fire, and every stay feels personal."
+msgstr "На нашій приватній території є все для ідеального відпочинку — баня на дровах, затишні альтанки, мангальні зони та спокійні місця для релаксу серед дерев. Тут ранок починається зі співу птахів, вечір — біля вогню, а кожен відпочинок стає особливим."
+
+#: main/templates/main/includes/about-main.html:21
+msgid "Luxury Cottages"
+msgstr "Комфортні котеджі"
+
+#: main/templates/main/includes/about-main.html:25
+msgid "Private Territory"
+msgstr "Приватна територія"
+
+#: main/templates/main/includes/about-main.html:29
+msgid "Natural Wood Cabins"
+msgstr "Дерев’яні котеджі"
+
+#: main/templates/main/includes/about-main.html:46
+msgid "Years"
+msgstr "Років"
+
+#: main/templates/main/includes/about-main.html:46
+msgid "Experience"
+msgstr "Досвіду"
+
+#: main/templates/main/includes/amenities.html:12
+msgid "Everything you need for a comfortable and relaxing stay surrounded by nature. From fully equipped wooden cabins and high-speed Wi-Fi to wood-fired sauna, hot tubs, gazebos, and barbecue areas — every detail is designed to help you unwind and enjoy your time in the mountains."
+msgstr "Усе необхідне для комфортного та спокійного відпочинку серед природи. Від повністю обладнаних дерев’яних котеджів і швидкісного Wi-Fi до бані на дровах, чанів, альтанок і мангальних зон — кожна деталь продумана для вашого релаксу в горах."
+
+#: main/templates/main/includes/amenities.html:28
+msgid "Fully Equipped Cabins"
+msgstr "Котеджі з усіма зручностями"
+
+#: main/templates/main/includes/amenities.html:29
+msgid "Our wooden cabins are designed for comfortable stays in any season. Each cottage includes high-speed Wi-Fi, a private bathroom, and a fully equipped kitchenette — everything you need to feel at home while surrounded by nature."
+msgstr "Наші дерев’яні котеджі створені для комфортного відпочинку у будь-яку пору року. У кожному будиночку є швидкісний Wi-Fi, власна ванна кімната та обладнана кухня — усе, щоб ви почувалися як удома серед природи."
+
+#: main/templates/main/includes/amenities.html:31
+msgid "High-Speed"
+msgstr "Швидкісний Wi-Fi"
+
+#: main/templates/main/includes/amenities.html:32
+msgid "Kitchenette"
+msgstr "Кухня"
+
+#: main/templates/main/includes/amenities.html:33
+msgid "Private Bathroom"
+msgstr "Власна ванна кімната"
+
+#: main/templates/main/includes/amenities.html:48
+msgid "Wood-Fired Sauna &amp; Hot Tubs"
+msgstr "Баня на дровах та чани"
+
+#: main/templates/main/includes/amenities.html:49
+msgid "Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by nature. Warm water, fresh forest air, and the quiet of the mountains create the perfect atmosphere to unwind after an active day."
+msgstr "Відпочиньте у традиційній бані на дровах та чанах просто неба серед природи. Тепла вода, свіже лісове повітря та тиша гір створюють ідеальну атмосферу для релаксу після активного дня."
+
+#: main/templates/main/includes/amenities.html:51
+#: main/templates/main/includes/events-main.html:69
+#: main/templates/main/includes/hero-main.html:25
+msgid "Wood-Fired Sauna"
+msgstr "Баня на дровах"
+
+#: main/templates/main/includes/amenities.html:52
+msgid "Outdoor Hot Tubs"
+msgstr "Чани для купання"
+
+#: main/templates/main/includes/amenities.html:67
+msgid "Free Secure Parking"
+msgstr "Безкоштовна охоронювана парковка"
+
+#: main/templates/main/includes/amenities.html:68
+msgid "We offer complimentary on-site parking within our private territory. Your vehicle stays safely parked just steps away from your cabin, so you can relax and enjoy your stay without any worries."
+msgstr "Ми пропонуємо безкоштовну парковку на приватній території садиби. Ваш автомобіль знаходиться поруч із котеджем під наглядом, щоб ви могли спокійно насолоджуватися відпочинком."
+
+#: main/templates/main/includes/amenities.html:70
+msgid "Free of charge"
+msgstr "Безкоштовно"
+
+#: main/templates/main/includes/amenities.html:71
+msgid "Private &amp; Secure Area"
+msgstr "Закрита територія"
+
+#: main/templates/main/includes/cottages-main.html:8
+#: main/templates/main/includes/cottages-main.html:9
+msgid "Our Wooden Cottages"
+msgstr "Наші дерев’яні котеджі"
+
+#: main/templates/main/includes/cottages-main.html:10
+msgid "Escape to cozy wooden cabins surrounded by nature. Each cabin is thoughtfully designed to provide comfort, privacy, and a warm atmosphere — perfect for relaxing weekends, romantic getaways, or peaceful family stays."
+msgstr "Затишні дерев’яні котеджі серед природи створені для комфортного та спокійного відпочинку. Кожен будиночок продуманий до деталей, щоб забезпечити приватність, тепло та атмосферу затишку — ідеально для романтичних вікендів, сімейного відпочинку чи втечі від міської метушні."
+
+#: main/templates/main/includes/events-main.html:9
+#: main/templates/main/includes/events-main.html:10
+msgid "Events"
+msgstr "Події"
+
+#: main/templates/main/includes/events-main.html:11
+msgid "Celebrate special moments surrounded by nature. From private gatherings to corporate retreats, Wood Life offers a cozy and атмосферic mountain setting for unforgettable experiences."
+msgstr "Святкуйте особливі моменти серед природи. Від приватних зустрічей до корпоративного відпочинку — Wood Life створює затишну гірську атмосферу для незабутніх подій."
+
+#: main/templates/main/includes/events-main.html:27
+msgid "Private Celebrations"
+msgstr "Приватні святкування"
+
+#: main/templates/main/includes/events-main.html:28
+msgid "Perfect for birthdays, small weddings, anniversaries, and family gatherings in a cozy mountain atmosphere. Enjoy privacy, nature, and warm evenings by the fire."
+msgstr "Ідеальне місце для днів народження, камерних весіль, річниць та сімейних зустрічей у затишній гірській атмосфері. Насолоджуйтеся приватністю, природою та теплими вечорами біля вогню."
+
+#: main/templates/main/includes/events-main.html:30
+msgid "Private Events"
+msgstr "Приватні заходи"
+
+#: main/templates/main/includes/events-main.html:31
+msgid "BBQ &amp; Outdoor Area"
+msgstr "Мангальна зона та відпочинок на природі"
+
+#: main/templates/main/includes/events-main.html:46
+msgid "Corporate &amp; Team Retreats"
+msgstr "Корпоративи та тімбілдінг"
+
+#: main/templates/main/includes/events-main.html:47
+msgid "An inspiring mountain setting for team building, strategy sessions, and relaxing getaways. Fresh air, forest surroundings, and peaceful privacy create the ideal environment for productive gatherings."
+msgstr "Натхненна гірська атмосфера для тімбілдінгу, стратегічних зустрічей та перезавантаження команди. Свіже повітря, ліс і тиша створюють ідеальні умови для продуктивного відпочинку."
+
+#: main/templates/main/includes/events-main.html:49
+msgid "Team Building"
+msgstr "Тімбілдінг"
+
+#: main/templates/main/includes/events-main.html:50
+msgid "Outdoor Activities"
+msgstr "Активний відпочинок"
+
+#: main/templates/main/includes/events-main.html:65
+msgid "Wellness &amp; Relax Days"
+msgstr "Релакс та відновлення"
+
+#: main/templates/main/includes/events-main.html:66
+msgid "Recharge in our wood-fired sauna and traditional hot tubs under the open sky. A perfect escape from city stress in the heart of the Carpathians."
+msgstr "Відновіть сили у бані на дровах та традиційних чанах просто неба. Ідеальна втеча від міського стресу в самому серці Карпат."
+
+#: main/templates/main/includes/events-main.html:68
+msgid "Hot Tubs"
+msgstr "Чани для купання"
+
+#: main/templates/main/includes/gallery-main.html:109
+msgid "Discover Our Full Gallery"
+msgstr "Переглянути всю галерею"
+
+#: main/templates/main/includes/hero-main.html:12
+msgid "Luxury Redefined in Nature"
+msgstr "Розкіш у гармонії з природою"
+
+#: main/templates/main/includes/hero-main.html:13
+msgid "Experience the perfect balance of comfort, privacy, and natural beauty at Wood Life. Wake up surrounded by forest silence, breathe in fresh mountain air, and unwind in your private wooden retreat. Every detail is designed to make your stay peaceful, cozy, and unforgettable."
+msgstr "Відчуйте ідеальний баланс комфорту, приватності та краси природи в Wood Life. Прокидайтеся в тиші лісу, вдихайте свіже гірське повітря та відпочивайте у власному дерев’яному котеджі. Кожна деталь створена для спокійного, затишного та незабутнього відпочинку."
+
+#: main/templates/main/includes/hero-main.html:17
+msgid "Complimentary"
+msgstr "Безкоштовно"
+
+#: main/templates/main/includes/hero-main.html:21
+msgid "Free Parking"
+msgstr "Парковка"
+
+#: main/templates/main/includes/hero-main.html:29
+msgid "View Cottages"
+msgstr "Переглянути котеджі"
+
+#: main/templates/main/includes/hero-main.html:42
+msgid "Crafted for Comfort"
+msgstr "Створено для комфорту"
+
+#: main/templates/main/includes/location-main.html:8
+#: main/templates/main/includes/location-main.html:9
+msgid "Location &amp; Activities"
+msgstr "Локація та активності"
+
+#: main/templates/main/includes/location-main.html:10
+msgid "Discover the beauty of the Carpathians just minutes from Wood Life. From scenic waterfalls and mountain trails to famous resorts and cultural spots — every day here brings a new adventure."
+msgstr "Відкрийте красу Карпат всього за кілька хвилин від Wood Life. Водоспади, гірські маршрути, курорти та атмосферні локації — кожен день дарує нові враження."
+
+#: main/templates/main/includes/location-main.html:24
+msgid "10 min by car"
+msgstr "10 хв на авто"
+
+#: main/templates/main/includes/location-main.html:28
+msgid "Yaremche (famous mountain resort)"
+msgstr "Яремче (відомий гірський курорт)"
+
+#: main/templates/main/includes/location-main.html:29
+msgid "A popular tourist town with scenic nature, waterfalls, markets and cultural spots"
+msgstr "Популярне туристичне місто з мальовничою природою, водоспадами, ринками та культурними локаціями"
+
+#: main/templates/main/includes/location-main.html:31
+msgid "Nature &amp; Waterfalls"
+msgstr "Природа та водоспади"
+
+#: main/templates/main/includes/location-main.html:32
+msgid "Ski &amp; Outdoor Activities"
+msgstr "Лижі та активний відпочинок"
+
+#: main/templates/main/includes/location-main.html:44
+#: main/templates/main/includes/location-main.html:84
+msgid "min by car"
+msgstr "хв на авто"
+
+#: main/templates/main/includes/location-main.html:48
+msgid "Maiden’s Tears Waterfall"
+msgstr "Водоспад Дівочі сльози"
+
+#: main/templates/main/includes/location-main.html:49
+msgid "A picturesque Carpathian waterfall hidden in the forest near Yaremche. An easy and scenic stop just minutes from Wood Life."
+msgstr "Мальовничий карпатський водоспад, захований у лісі поблизу Яремче. Легка та приємна прогулянка всього за кілька хвилин від Wood Life."
+
+#: main/templates/main/includes/location-main.html:51
+msgid "Natural Waterfall"
+msgstr "Природний водоспад"
+
+#: main/templates/main/includes/location-main.html:52
+msgid "Photo Spot"
+msgstr "Фото-локація"
+
+#: main/templates/main/includes/location-main.html:64
+msgid "by min car"
+msgstr "хв на авто"
+
+#: main/templates/main/includes/location-main.html:68
+msgid "Chemehivskyi Canyon"
+msgstr "Чемегівський каньйон"
+
+#: main/templates/main/includes/location-main.html:69
+msgid "A breathtaking natural canyon with crystal-clear mountain water, rock formations, and peaceful forest surroundings."
+msgstr "Вражаючий природний каньйон із кришталево чистою гірською водою, скелями та спокійною лісовою атмосферою."
+
+#: main/templates/main/includes/location-main.html:71
+msgid "Mountain River"
+msgstr "Гірська річка"
+
+#: main/templates/main/includes/location-main.html:72
+msgid "Scenic Photo Spot"
+msgstr "Мальовнича фото-локація"
+
+#: main/templates/main/includes/location-main.html:88
+msgid "Zhenetskyi Huk Waterfall"
+msgstr "Женецький Гук"
+
+#: main/templates/main/includes/location-main.html:89
+msgid "One of the most impressive waterfalls in the Carpathians, cascading from a height of around 15 meters."
+msgstr "Один із найвражаючих водоспадів Карпат висотою близько 15 метрів."
+
+#: main/templates/main/includes/location-main.html:91
+msgid "15m Waterfall"
+msgstr "Висота ~15 м"
+
+#: main/templates/main/includes/location-main.html:92
+msgid "Forest Trail"
+msgstr "Лісова стежка"
+
+#: main/templates/main/includes/location-main.html:106
+msgid "Prime Location in the Heart of the Carpathians"
+msgstr "Вигідне розташування в самому серці Карпат"
+
+#: main/templates/main/includes/location-main.html:107
+msgid "Wood Life is located in Mykulychyn — a peaceful mountain village surrounded by forests, rivers, and breathtaking landscapes. Close to popular туристических локаций, yet away from city noise."
+msgstr "Wood Life розташований у Микуличині — затишному гірському селі серед лісів, річок та мальовничих краєвидів. Поруч із популярними туристичними місцями, але подалі від міської метушні."
+
+#: main/templates/main/includes/location-main.html:116
+msgid "Close to Yaremche"
+msgstr "Поруч з Яремче"
+
+#: main/templates/main/includes/location-main.html:117
+msgid "Only 10 minutes by car to the famous mountain resort with waterfalls, markets and restaurants."
+msgstr "Лише 10 хвилин на авто до відомого гірського курорту з водоспадами, ринками та ресторанами."
+
+#: main/templates/main/includes/location-main.html:126
+msgid "Nature &amp; Waterfalls Nearby"
+msgstr "Природа та водоспади поруч"
+
+#: main/templates/main/includes/location-main.html:127
+msgid "Devychi Slozy and other scenic waterfalls just 5–15 minutes away."
+msgstr "Водоспад Дівочі сльози та інші мальовничі локації — всього 5–15 хвилин їзди."
+
+#: main/templates/main/includes/location-main.html:136
+msgid "Mountain &amp; Forest Surroundings"
+msgstr "Гори та ліс навколо"
+
+#: main/templates/main/includes/location-main.html:137
+msgid "Direct access to hiking trails, fresh air and panoramic views."
+msgstr "Прямий доступ до гірських маршрутів, свіже повітря та панорамні краєвиди."
+
+#: main/templates/main/includes/location-main.html:146
+msgid "Free Private Parking"
+msgstr "Безкоштовна парковка на території"
+
+#: main/templates/main/includes/location-main.html:147
+msgid "Secure on-site parking available for all guests."
+msgstr "Охоронювана парковка на території доступна для всіх гостей."
+
+#: main/templates/main/includes/location-main.html:153
+msgid "View Full Location Guide"
+msgstr "Переглянути всі локації"
+
+#: main/templates/main/includes/room_cards_loop.html:16
+msgid "Up to"
+msgstr "До"
+
+#: main/templates/main/includes/room_cards_loop.html:16
+msgid "guests"
+msgstr "гостей"
+
+#: main/templates/main/includes/room_cards_loop.html:23
+msgid "From"
+msgstr "Від"
+
+#: main/templates/main/includes/room_cards_loop.html:25
+msgid "night"
+msgstr "за ніч"
+
+#: main/templates/main/includes/room_cards_loop.html:27
+msgid "View Details"
+msgstr "Детальніше"
+
+#: main/templates/main/includes/testimonials.html:10
+msgid "Testimonials"
+msgstr "Відгуки"
+
+#: main/templates/main/includes/testimonials.html:11
+msgid "What Our Guests Say"
+msgstr "Що кажуть наші гості"
+
+#: main/templates/main/includes/testimonials.html:12
+msgid "The most valuable reward for us is the experience of our guests. Thank you for your trust, kind words, and unforgettable moments spent at Wood Life."
+msgstr "Найцінніше для нас — це враження наших гостей. Дякуємо за довіру, теплі слова та незабутні моменти, проведені в Wood Life."
+
+#: main/templates/main/location.html:43
+msgid "Address"
+msgstr "Адреса"
+
+#: main/templates/main/location.html:53
+msgid "Train Access"
+msgstr "Залізничне сполучення"
+
+#: main/templates/main/room.html:9 main/templates/main/room.html:13
+msgid "Room Details"
+msgstr "Деталі котеджу"
+
+#: main/templates/main/room.html:56
+msgid "Book Now"
+msgstr "Забронювати"
+
+#: main/templates/main/rooms.html:10 main/templates/main/rooms.html:14
+msgid "Rooms"
+msgstr "Номери"
+
+#: main/templates/main/rooms.html:28
+msgid "Price Range"
+msgstr "Ціновий діапазон"
+
+#: main/templates/main/rooms.html:30
+msgid "All Prices"
+msgstr "Усі ціни"
+
+#: main/templates/main/rooms.html:39
+msgid "Guest Capacity"
+msgstr "Кількість гостей"
+
+#: main/templates/main/rooms.html:41
+msgid "Any Capacity"
+msgstr "Будь-яка кількість"
+
+#: main/templates/main/rooms.html:66
+msgid "Load More Rooms"
+msgstr "Показати більше котеджів"
 
 #: templates/includes/footer.html:16
 msgid "Phone:"
 msgstr "Тел:"
 
-#: templates/includes/footer.html:24 templates/includes/header.html:36
-msgid "Home"
-msgstr "Головна"
+#: templates/includes/footer.html:22
+msgid "Useful Links"
+msgstr "Корисні посилання"
 
-#: templates/includes/footer.html:25 templates/includes/header.html:37
-msgid "About"
-msgstr "О нас"
+#: templates/includes/footer.html:25 templates/includes/header.html:35
+msgid "Cottages"
+msgstr "Котеджі"
 
-#: templates/includes/footer.html:26 templates/includes/header.html:39
-msgid "Amenities"
-msgstr "Оснащення"
+#: templates/includes/footer.html:33
+msgid "Legal"
+msgstr "Правова інформація"
 
-#: templates/includes/footer.html:27 templates/includes/header.html:40
-msgid "Location"
-msgstr "Локація"
-
-#: templates/includes/footer.html:28
+#: templates/includes/footer.html:35
 msgid "Terms of service"
 msgstr "Умови користування"
 
-#: templates/includes/footer.html:29
+#: templates/includes/footer.html:36
 msgid "Privacy policy"
 msgstr "Політика конфіденційності"
 
 #: templates/includes/header.html:38
-msgid "Rooms"
-msgstr "Номери"
-
-#: templates/includes/header.html:41
 msgid "Info"
 msgstr "Інформація"
 
-#: templates/includes/header.html:43
-msgid "Room Details"
-msgstr ""
-
-#: templates/includes/header.html:44
-msgid "Restaurant"
-msgstr "Ресторан"
-
-#: templates/includes/header.html:45
-msgid "Offers"
-msgstr "Пропозиції"
-
-#: templates/includes/header.html:46
-msgid "Events"
-msgstr "Події"
-
-#: templates/includes/header.html:47
+#: templates/includes/header.html:40
 msgid "Gallery"
 msgstr "Галерея"
 
-#: templates/includes/header.html:48
-msgid "Booking"
-msgstr "Бронювання"
-
-#: templates/includes/header.html:49
+#: templates/includes/header.html:41
 msgid "Terms Page"
 msgstr "Сторінка умов"
 
-#: templates/includes/header.html:50
+#: templates/includes/header.html:42
 msgid "Privacy Page"
 msgstr "Сторінка конфіденційності"
-
-#: templates/includes/header.html:53
-msgid "Contact"
-msgstr "Контакти"
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -1332,3 +1966,12 @@ msgstr ""
 #: venv/lib/python3.11/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "About"
+#~ msgstr "О нас"
+
+#~ msgid "Restaurant"
+#~ msgstr "Ресторан"
+
+#~ msgid "Offers"
+#~ msgstr "Пропозиції"

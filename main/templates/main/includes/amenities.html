@@ -1,0 +1,81 @@
+{% load static %}
+{% load i18n %}
+
+
+    <!-- Amenities Cards Section -->
+    <section id="amenities-cards" class="amenities-cards section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">{% trans "Amenities" %}</span>
+        <h2>{% trans "Amenities" %}</h2>
+        <p>{% trans "Everything you need for a comfortable and relaxing stay surrounded by nature. From fully equipped wooden cabins and high-speed Wi-Fi to wood-fired sauna, hot tubs, gazebos, and barbecue areas — every detail is designed to help you unwind and enjoy your time in the mountains." %}</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="Wireless Internet" class="img-fluid">
+                <div class="facility-overlay">
+                  <i class="bi bi-wifi"></i>
+                </div>
+              </div>
+              <div class="facility-info">
+                <h4>{% trans "Fully Equipped Cabins" %}</h4>
+                <p>{% trans "Our wooden cabins are designed for comfortable stays in any season. Each cottage includes high-speed Wi-Fi, a private bathroom, and a fully equipped kitchenette — everything you need to feel at home while surrounded by nature." %}</p>
+                <div class="facility-features">
+                  <span><i class="bi bi-wifi"></i> {% trans "High-Speed" %} Wi-Fi</span>
+                  <span><i class="bi bi-cup-straw"></i> {% trans "Kitchenette" %}</span>
+                  <span><i class="bi bi-bath"></i> {% trans "Private Bathroom" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Facility Card -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="{% static "assets/img/hotel/pool.png" %}" alt="Swimming Pool" class="img-fluid">
+                <div class="facility-overlay">
+                  <i class="bi bi-droplet"></i>
+                </div>
+              </div>
+              <div class="facility-info">
+                <h4>{% trans "Wood-Fired Sauna &amp; Hot Tubs" %}</h4>
+                <p>{% trans "Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by nature. Warm water, fresh forest air, and the quiet of the mountains create the perfect atmosphere to unwind after an active day." %}</p>
+                <div class="facility-features">
+                  <span><i class="bi bi-fire"></i> {% trans "Wood-Fired Sauna" %}</span>
+                  <span><i class="bi bi bi-water"></i> {% trans "Outdoor Hot Tubs" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Facility Card -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="{% static "assets/img/hotel/parking.png" %}" alt="Valet Parking" class="img-fluid">
+                <div class="facility-overlay">
+                  <i class="bi bi-car-front"></i>
+                </div>
+              </div>
+              <div class="facility-info">
+                <h4>{% trans "Free Secure Parking" %}</h4>
+                <p>{% trans "We offer complimentary on-site parking within our private territory. Your vehicle stays safely parked just steps away from your cabin, so you can relax and enjoy your stay without any worries." %}</p>
+                <div class="facility-features">
+                  <span><i class="bi bi-check-circle"></i> {% trans "Free of charge" %}</span>
+                  <span><i class="bi bi-shield-check"></i> {% trans "Private &amp; Secure Area" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Facility Card -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Amenities Cards Section -->

@@ -1,0 +1,115 @@
+{% load static %}
+{% load i18n %}
+
+    <section id="gallery-showcase" class="gallery-showcase section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="gallery-carousel swiper init-swiper" data-aos="fade-up" data-aos-delay="200">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "centeredSlides": true,
+              "breakpoints": {
+                "576": {
+                  "slidesPerView": 2,
+                  "centeredSlides": false
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "centeredSlides": false
+                },
+                "992": {
+                  "slidesPerView": 4,
+                  "centeredSlides": false
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "centeredSlides": false
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-1.png" %}" alt="Luxurious Suite" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-1.png" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-2.jpg" %}" alt="Modern Lobby" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-2.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-3.jpg" %}" alt="Elegant Dining Area" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-3.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-4.jpg" %}" alt="Grand Ballroom Setup" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-4.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-5.jpg" %}" alt="Relaxing Poolside" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-5.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-6.jpg" %}" alt="Cozy Guest Room" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-6.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-7.jpg" %}" alt="Spa and Wellness Center" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-7.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-item">
+                <img src="{% static "assets/img/hotel/main-gal-8.jpg" %}" alt="Conference Facilities" class="img-fluid" loading="lazy">
+                <a href="{% static "assets/img/hotel/main-gal-8.jpg" %}" class="gallery-overlay glightbox">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+          <a href="{% url "main:gallery" %}" class="btn btn-gallery">
+            <i class="bi bi-collection me-2"></i>{% trans "Discover Our Full Gallery" %}
+          </a>
+        </div>
+
+      </div>
+
+    </section>

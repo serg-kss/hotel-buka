@@ -7,7 +7,6 @@ app_name = 'main'
 
 urlpatterns = [
     path("", MainPageView.as_view(), name="index"),
-    path("about/", views.about, name="about"),
     path("сottages/", RoomListView.as_view(), name="rooms"),
     path("сottages/<slug:slug>/", RoomDetailView.as_view(), name="room"),
     path("amenities/", views.amenities, name="amenities"),

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-11 12:08+0200\n"
+"POT-Creation-Date: 2026-02-14 17:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,92 +18,789 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: hotel/settings.py:116
+#: booking/templates/booking/booking.html:9
+#: booking/templates/booking/booking.html:13
+msgid "Booking"
+msgstr ""
+
+#: booking/templates/booking/booking.html:12
+#: booking/templates/booking/booking_success.html:12
+#: main/templates/main/contact.html:13 main/templates/main/room.html:12
+#: main/templates/main/rooms.html:13 templates/includes/footer.html:24
+#: templates/includes/header.html:34
+msgid "Home"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:9
+msgid "Reservation Sent"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:13
+msgid "Booking Confirmation"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:33
+msgid "Thank you for your reservation request!"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:36
+msgid "Our team will contact you shortly to confirm availability."
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:44
+msgid "Reservation Details"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:47
+msgid "Room"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:52
+#: main/templates/main/location.html:73
+msgid "Check-in"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:57
+#: main/templates/main/location.html:74
+msgid "Check-out"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:62
+msgid "Guests"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:67 main/models.py:8
+msgid "Name"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:72 main/models.py:177
+msgid "Email"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:78
+msgid "Additional Notes"
+msgstr ""
+
+#: booking/templates/booking/booking_success.html:87
+msgid "Back to Main Page"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:11
+msgid "Booking Details"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:16
+msgid "Arrival Date"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:24
+msgid "Departure Date"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:32
+msgid "Total Guests"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:36
+msgid "Choose guests"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:50
+msgid "Guest Information"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:55
+msgid "Full Name"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:63
+msgid "Email Address"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:71
+msgid "Contact Number"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:84
+msgid "Additional Requirements"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:88
+msgid "Any special requests?"
+msgstr ""
+
+#: booking/templates/booking/includes/booking_form.html:96
+msgid "Submit Reservation Request"
+msgstr ""
+
+#: hotel/settings.py:122
 msgid "Ukrainian"
 msgstr ""
 
-#: hotel/settings.py:117
+#: hotel/settings.py:123
 msgid "English"
 msgstr ""
 
-#: templates/includes/footer.html:14
-msgid "A108 Adam Street"
+#: main/models.py:9 main/models.py:159
+msgid "Message"
 msgstr ""
 
-#: templates/includes/footer.html:15
-msgid "New York, NY 535022"
+#: main/models.py:11
+msgid "Name_en"
+msgstr ""
+
+#: main/models.py:12
+msgid "Message_en"
+msgstr ""
+
+#: main/models.py:32
+msgid "Коментар"
+msgstr ""
+
+#: main/models.py:33
+msgid "Коментарі"
+msgstr ""
+
+#: main/models.py:37
+msgid "Назва номера (укр)"
+msgstr ""
+
+#: main/models.py:38
+msgid "Назва номера (англ)"
+msgstr ""
+
+#: main/models.py:40
+msgid "Опис (укр)"
+msgstr ""
+
+#: main/models.py:41
+msgid "Опис (англ)"
+msgstr ""
+
+#: main/models.py:58
+msgid "Ціна"
+msgstr ""
+
+#: main/models.py:59
+msgid "Знижка (%)"
+msgstr ""
+
+#: main/models.py:62
+msgid "Площа (м²)"
+msgstr ""
+
+#: main/models.py:65
+msgid "Кількість гостей"
+msgstr ""
+
+#: main/models.py:69
+msgid "Головне фото"
+msgstr ""
+
+#: main/models.py:78 main/models.py:152
+msgid "Зручності"
+msgstr ""
+
+#: main/models.py:86
+msgid "Активний"
+msgstr ""
+
+#: main/models.py:104
+msgid "Номер"
+msgstr ""
+
+#: main/models.py:105
+msgid "Номери"
+msgstr ""
+
+#: main/models.py:117
+msgid "Фото"
+msgstr ""
+
+#: main/models.py:125
+msgid "Фото номера"
+msgstr ""
+
+#: main/models.py:126
+msgid "Фото номерів"
+msgstr ""
+
+#: main/models.py:130
+msgid "Назва (укр)"
+msgstr ""
+
+#: main/models.py:131
+msgid "Назва (англ)"
+msgstr ""
+
+#: main/models.py:142
+msgid "CSS іконка (bi class)"
+msgstr ""
+
+#: main/models.py:151
+msgid "Зручність"
+msgstr ""
+
+#: main/models.py:156
+msgid "Client's name"
+msgstr ""
+
+#: main/models.py:158
+msgid "Subject"
+msgstr ""
+
+#: main/models.py:165 main/models.py:166
+msgid "Повідомлення"
+msgstr ""
+
+#: main/models.py:170
+msgid "Address (Ukrainian)"
+msgstr ""
+
+#: main/models.py:171
+msgid "Address (English)"
+msgstr ""
+
+#: main/models.py:173
+msgid "City (Ukrainian)"
+msgstr ""
+
+#: main/models.py:174
+msgid "City (English)"
+msgstr ""
+
+#: main/models.py:176
+msgid "Phone"
+msgstr ""
+
+#: main/models.py:179
+msgid "Check-in time"
+msgstr ""
+
+#: main/models.py:180
+msgid "Check-out time"
+msgstr ""
+
+#: main/models.py:182
+msgid "Google Maps link"
+msgstr ""
+
+#: main/models.py:188
+msgid "Настройка сайту"
+msgstr ""
+
+#: main/models.py:189
+msgid "Настройки сайту"
+msgstr ""
+
+#: main/models.py:202 main/models.py:203
+msgid "Соц-мережі"
+msgstr ""
+
+#: main/templates/main/contact.html:10 main/templates/main/contact.html:14
+#: main/templates/main/location.html:63 templates/includes/header.html:45
+msgid "Contact"
+msgstr ""
+
+#: main/templates/main/contact.html:38 main/templates/main/location.html:9
+#: main/templates/main/location.html:13 templates/includes/footer.html:27
+#: templates/includes/header.html:37
+msgid "Location"
+msgstr ""
+
+#: main/templates/main/contact.html:62
+msgid "Send a Message"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:13
+msgid "About Wood Life"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:14
+msgid ""
+"Wood Life is a private retreat nestled in nature, where handcrafted wooden "
+"cabins meet fresh mountain air and peaceful forest surroundings."
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:15
+msgid ""
+"For over 10 years, we’ve been welcoming guests who seek comfort, privacy, "
+"and a genuine escape from the city rush. Our log cabins are built from "
+"natural wood, creating a warm and eco-friendly atmosphere that helps you "
+"truly unwind."
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:16
+msgid ""
+"On our private territory, you’ll find everything you need for a perfect stay "
+"— wood-fired sauna, cozy gazebos, barbecue areas, and quiet spaces to relax "
+"under the trees. Here, mornings begin with birdsong, evenings end by the "
+"fire, and every stay feels personal."
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:21
+msgid "Luxury Cottages"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:25
+msgid "Private Territory"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:29
+msgid "Natural Wood Cabins"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:46
+msgid "Years"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:46
+msgid "Experience"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:10
+#: main/templates/main/includes/amenities.html:11
+#: templates/includes/footer.html:26 templates/includes/header.html:36
+msgid "Amenities"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:12
+msgid ""
+"Everything you need for a comfortable and relaxing stay surrounded by "
+"nature. From fully equipped wooden cabins and high-speed Wi-Fi to wood-fired "
+"sauna, hot tubs, gazebos, and barbecue areas — every detail is designed to "
+"help you unwind and enjoy your time in the mountains."
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:28
+msgid "Fully Equipped Cabins"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:29
+msgid ""
+"Our wooden cabins are designed for comfortable stays in any season. Each "
+"cottage includes high-speed Wi-Fi, a private bathroom, and a fully equipped "
+"kitchenette — everything you need to feel at home while surrounded by nature."
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:31
+msgid "High-Speed"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:32
+msgid "Kitchenette"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:33
+msgid "Private Bathroom"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:48
+msgid "Wood-Fired Sauna &amp; Hot Tubs"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:49
+msgid ""
+"Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by "
+"nature. Warm water, fresh forest air, and the quiet of the mountains create "
+"the perfect atmosphere to unwind after an active day."
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:51
+#: main/templates/main/includes/events-main.html:69
+#: main/templates/main/includes/hero-main.html:25
+msgid "Wood-Fired Sauna"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:52
+msgid "Outdoor Hot Tubs"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:67
+msgid "Free Secure Parking"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:68
+msgid ""
+"We offer complimentary on-site parking within our private territory. Your "
+"vehicle stays safely parked just steps away from your cabin, so you can "
+"relax and enjoy your stay without any worries."
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:70
+msgid "Free of charge"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:71
+msgid "Private &amp; Secure Area"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:8
+#: main/templates/main/includes/cottages-main.html:9
+msgid "Our Wooden Cottages"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:10
+msgid ""
+"Escape to cozy wooden cabins surrounded by nature. Each cabin is "
+"thoughtfully designed to provide comfort, privacy, and a warm atmosphere — "
+"perfect for relaxing weekends, romantic getaways, or peaceful family stays."
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:9
+#: main/templates/main/includes/events-main.html:10
+msgid "Events"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:11
+msgid ""
+"Celebrate special moments surrounded by nature. From private gatherings to "
+"corporate retreats, Wood Life offers a cozy and атмосферic mountain setting "
+"for unforgettable experiences."
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:27
+msgid "Private Celebrations"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:28
+msgid ""
+"Perfect for birthdays, small weddings, anniversaries, and family gatherings "
+"in a cozy mountain atmosphere. Enjoy privacy, nature, and warm evenings by "
+"the fire."
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:30
+msgid "Private Events"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:31
+msgid "BBQ &amp; Outdoor Area"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:46
+msgid "Corporate &amp; Team Retreats"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:47
+msgid ""
+"An inspiring mountain setting for team building, strategy sessions, and "
+"relaxing getaways. Fresh air, forest surroundings, and peaceful privacy "
+"create the ideal environment for productive gatherings."
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:49
+msgid "Team Building"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:50
+msgid "Outdoor Activities"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:65
+msgid "Wellness &amp; Relax Days"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:66
+msgid ""
+"Recharge in our wood-fired sauna and traditional hot tubs under the open "
+"sky. A perfect escape from city stress in the heart of the Carpathians."
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:68
+msgid "Hot Tubs"
+msgstr ""
+
+#: main/templates/main/includes/gallery-main.html:109
+msgid "Discover Our Full Gallery"
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:12
+msgid "Luxury Redefined in Nature"
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:13
+msgid ""
+"Experience the perfect balance of comfort, privacy, and natural beauty at "
+"Wood Life. Wake up surrounded by forest silence, breathe in fresh mountain "
+"air, and unwind in your private wooden retreat. Every detail is designed to "
+"make your stay peaceful, cozy, and unforgettable."
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:17
+msgid "Complimentary"
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:21
+msgid "Free Parking"
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:29
+msgid "View Cottages"
+msgstr ""
+
+#: main/templates/main/includes/hero-main.html:42
+msgid "Crafted for Comfort"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:8
+#: main/templates/main/includes/location-main.html:9
+msgid "Location &amp; Activities"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:10
+msgid ""
+"Discover the beauty of the Carpathians just minutes from Wood Life. From "
+"scenic waterfalls and mountain trails to famous resorts and cultural spots — "
+"every day here brings a new adventure."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:24
+msgid "10 min by car"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:28
+msgid "Yaremche (famous mountain resort)"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:29
+msgid ""
+"A popular tourist town with scenic nature, waterfalls, markets and cultural "
+"spots"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:31
+msgid "Nature &amp; Waterfalls"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:32
+msgid "Ski &amp; Outdoor Activities"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:44
+#: main/templates/main/includes/location-main.html:84
+msgid "min by car"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:48
+msgid "Maiden’s Tears Waterfall"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:49
+msgid ""
+"A picturesque Carpathian waterfall hidden in the forest near Yaremche. An "
+"easy and scenic stop just minutes from Wood Life."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:51
+msgid "Natural Waterfall"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:52
+msgid "Photo Spot"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:64
+msgid "by min car"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:68
+msgid "Chemehivskyi Canyon"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:69
+msgid ""
+"A breathtaking natural canyon with crystal-clear mountain water, rock "
+"formations, and peaceful forest surroundings."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:71
+msgid "Mountain River"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:72
+msgid "Scenic Photo Spot"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:88
+msgid "Zhenetskyi Huk Waterfall"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:89
+msgid ""
+"One of the most impressive waterfalls in the Carpathians, cascading from a "
+"height of around 15 meters."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:91
+msgid "15m Waterfall"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:92
+msgid "Forest Trail"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:106
+msgid "Prime Location in the Heart of the Carpathians"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:107
+msgid ""
+"Wood Life is located in Mykulychyn — a peaceful mountain village surrounded "
+"by forests, rivers, and breathtaking landscapes. Close to popular "
+"туристических локаций, yet away from city noise."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:116
+msgid "Close to Yaremche"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:117
+msgid ""
+"Only 10 minutes by car to the famous mountain resort with waterfalls, "
+"markets and restaurants."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:126
+msgid "Nature &amp; Waterfalls Nearby"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:127
+msgid "Devychi Slozy and other scenic waterfalls just 5–15 minutes away."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:136
+msgid "Mountain &amp; Forest Surroundings"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:137
+msgid "Direct access to hiking trails, fresh air and panoramic views."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:146
+msgid "Free Private Parking"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:147
+msgid "Secure on-site parking available for all guests."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:153
+msgid "View Full Location Guide"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:16
+msgid "Up to"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:16
+msgid "guests"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:23
+msgid "From"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:25
+msgid "night"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:27
+msgid "View Details"
+msgstr ""
+
+#: main/templates/main/includes/testimonials.html:10
+msgid "Testimonials"
+msgstr ""
+
+#: main/templates/main/includes/testimonials.html:11
+msgid "What Our Guests Say"
+msgstr ""
+
+#: main/templates/main/includes/testimonials.html:12
+msgid ""
+"The most valuable reward for us is the experience of our guests. Thank you "
+"for your trust, kind words, and unforgettable moments spent at Wood Life."
+msgstr ""
+
+#: main/templates/main/location.html:43
+msgid "Address"
+msgstr ""
+
+#: main/templates/main/location.html:53
+msgid "Train Access"
+msgstr ""
+
+#: main/templates/main/room.html:9 main/templates/main/room.html:13
+msgid "Room Details"
+msgstr ""
+
+#: main/templates/main/room.html:56
+msgid "Book Now"
+msgstr ""
+
+#: main/templates/main/rooms.html:10 main/templates/main/rooms.html:14
+msgid "Rooms"
+msgstr ""
+
+#: main/templates/main/rooms.html:28
+msgid "Price Range"
+msgstr ""
+
+#: main/templates/main/rooms.html:30
+msgid "All Prices"
+msgstr ""
+
+#: main/templates/main/rooms.html:39
+msgid "Guest Capacity"
+msgstr ""
+
+#: main/templates/main/rooms.html:41
+msgid "Any Capacity"
+msgstr ""
+
+#: main/templates/main/rooms.html:66
+msgid "Load More Rooms"
 msgstr ""
 
 #: templates/includes/footer.html:16
 msgid "Phone:"
 msgstr ""
 
-#: templates/includes/footer.html:24 templates/includes/header.html:36
-msgid "Home"
+#: templates/includes/footer.html:22
+msgid "Useful Links"
 msgstr ""
 
-#: templates/includes/footer.html:25 templates/includes/header.html:37
-msgid "About"
+#: templates/includes/footer.html:25 templates/includes/header.html:35
+msgid "Cottages"
 msgstr ""
 
-#: templates/includes/footer.html:26 templates/includes/header.html:39
-msgid "Amenities"
+#: templates/includes/footer.html:33
+msgid "Legal"
 msgstr ""
 
-#: templates/includes/footer.html:27 templates/includes/header.html:40
-msgid "Location"
-msgstr ""
-
-#: templates/includes/footer.html:28
+#: templates/includes/footer.html:35
 msgid "Terms of service"
 msgstr ""
 
-#: templates/includes/footer.html:29
+#: templates/includes/footer.html:36
 msgid "Privacy policy"
 msgstr ""
 
 #: templates/includes/header.html:38
-msgid "Rooms"
-msgstr ""
-
-#: templates/includes/header.html:41
 msgid "Info"
 msgstr ""
 
-#: templates/includes/header.html:43
-msgid "Room Details"
-msgstr ""
-
-#: templates/includes/header.html:44
-msgid "Restaurant"
-msgstr ""
-
-#: templates/includes/header.html:45
-msgid "Offers"
-msgstr ""
-
-#: templates/includes/header.html:46
-msgid "Events"
-msgstr ""
-
-#: templates/includes/header.html:47
+#: templates/includes/header.html:40
 msgid "Gallery"
 msgstr ""
 
-#: templates/includes/header.html:48
-msgid "Booking"
-msgstr ""
-
-#: templates/includes/header.html:49
+#: templates/includes/header.html:41
 msgid "Terms Page"
 msgstr ""
 
-#: templates/includes/header.html:50
+#: templates/includes/header.html:42
 msgid "Privacy Page"
-msgstr ""
-
-#: templates/includes/header.html:53
-msgid "Contact"
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:16

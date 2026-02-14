@@ -21,11 +21,6 @@ class MainPageView(TemplateView):
 
 
 
-
-def about(request):
-    return render(request, 'main/about.html')
-
-
 class RoomListView(ListView):
     model = Room
     template_name = "main/rooms.html"

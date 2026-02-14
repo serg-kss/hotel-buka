@@ -1,0 +1,79 @@
+{% load static %}
+{% load i18n %}
+
+
+    <section id="events-cards" class="events-cards section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">{% trans "Events" %}</span>
+        <h2>{% trans "Events" %}</h2>
+        <p>{% trans "Celebrate special moments surrounded by nature. From private gatherings to corporate retreats, Wood Life offers a cozy and атмосферic mountain setting for unforgettable experiences." %}</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="event-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="event-header">
+                <div class="event-icon">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <img src="{% static "assets/img/hotel/celebration.png" %}" alt="Wedding Celebrations" class="img-fluid">
+              </div>
+              <div class="event-content">
+                <h4>{% trans "Private Celebrations" %}</h4>
+                <p>{% trans "Perfect for birthdays, small weddings, anniversaries, and family gatherings in a cozy mountain atmosphere. Enjoy privacy, nature, and warm evenings by the fire." %}</p>
+                <div class="event-features">
+                  <span class="feature-item"><i class="bi bi-balloon-heart"></i> {% trans "Private Events" %}</span>
+                  <span class="feature-item"><i class="bi bi-fire"></i> {% trans "BBQ &amp; Outdoor Area" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Event Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="event-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="event-header">
+                <div class="event-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <img src="{% static "assets/img/hotel/team.png" %}" alt="Corporate Retreats" class="img-fluid">
+              </div>
+              <div class="event-content">
+                <h4>{% trans "Corporate &amp; Team Retreats" %}</h4>
+                <p>{% trans "An inspiring mountain setting for team building, strategy sessions, and relaxing getaways. Fresh air, forest surroundings, and peaceful privacy create the ideal environment for productive gatherings." %}</p>
+                <div class="event-features">
+                  <span class="feature-item"><i class="bi bi-people"></i> {% trans "Team Building" %}</span>
+                  <span class="feature-item"><i class="bi bi-tree"></i> {% trans "Outdoor Activities" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Event Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="event-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="event-header">
+                <div class="event-icon">
+                  <i class="bi bi-star"></i>
+                </div>
+                <img src="{% static "assets/img/hotel/relax.png" %}" alt="VIP Gatherings" class="img-fluid">
+              </div>
+              <div class="event-content">
+                <h4>{% trans "Wellness &amp; Relax Days" %}</h4>
+                <p>{% trans "Recharge in our wood-fired sauna and traditional hot tubs under the open sky. A perfect escape from city stress in the heart of the Carpathians." %}</p>
+                <div class="event-features">
+                  <span class="feature-item"><i class="bi bi-droplet"></i> {% trans "Hot Tubs" %}</span>
+                  <span class="feature-item"><i class="bi bi-thermometer-sun"></i> {% trans "Wood-Fired Sauna" %}</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Event Item -->
+
+        </div>
+
+      </div>
+
+    </section>

@@ -1,0 +1,163 @@
+{% load static %}
+{% load i18n %}
+
+    <section id="location-cards" class="location-cards section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">{% trans "Location &amp; Activities" %}</span>
+        <h2>{% trans "Location &amp; Activities" %}</h2>
+        <p>{% trans "Discover the beauty of the Carpathians just minutes from Wood Life. From scenic waterfalls and mountain trails to famous resorts and cultural spots — every day here brings a new adventure." %}</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-8">
+            <div class="row gy-4">
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="area-highlight">
+                  <div class="area-image-wrapper">
+                    <img src="{% static "assets/img/hotel/yaremche.jpg" %}" alt="Entertainment District" class="img-fluid">
+                    <div class="area-badge">
+                      <i class="bi bi-car-front"></i>
+                      <span>{% trans "10 min by car" %}</span>
+                    </div>
+                  </div>
+                  <div class="area-info">
+                    <h5>{% trans "Yaremche (famous mountain resort)" %}</h5>
+                    <p>{% trans "A popular tourist town with scenic nature, waterfalls, markets and cultural spots" %}</p>
+                    <div class="quick-stats">
+                      <span><i class="bi bi-water"></i> {% trans "Nature &amp; Waterfalls" %}</span>
+                      <span><i class="bi bi-snow"></i> {% trans "Ski &amp; Outdoor Activities" %}</span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Area Highlight -->
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="area-highlight">
+                  <div class="area-image-wrapper">
+                    <img src="{% static "assets/img/hotel/divochi-waterfall.jpg" %}" alt="Waterfront Marina" class="img-fluid">
+                    <div class="area-badge">
+                      <i class="bi bi-car-front"></i>
+                      <span>12 {% trans "min by car" %}</span>
+                    </div>
+                  </div>
+                  <div class="area-info">
+                    <h5>{% trans "Maiden’s Tears Waterfall" %}</h5>
+                    <p>{% trans "A picturesque Carpathian waterfall hidden in the forest near Yaremche. An easy and scenic stop just minutes from Wood Life." %}</p>
+                    <div class="quick-stats">
+                      <span><i class="bi bi-water"></i> {% trans "Natural Waterfall" %}</span>
+                      <span><i class="bi bi-camera"></i> {% trans "Photo Spot" %}</span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Area Highlight -->
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                <div class="area-highlight">
+                  <div class="area-image-wrapper">
+                    <img src="{% static "assets/img/hotel/kanion.jpg" %}" alt="Historic Quarter" class="img-fluid">
+                    <div class="area-badge">
+                      <i class="bi bi-car-front"></i>
+                      <span>5 {% trans "by min car" %}</span>
+                    </div>
+                  </div>
+                  <div class="area-info">
+                    <h5>{% trans "Chemehivskyi Canyon" %}</h5>
+                    <p>{% trans "A breathtaking natural canyon with crystal-clear mountain water, rock formations, and peaceful forest surroundings." %}</p>
+                    <div class="quick-stats">
+                      <span><i class="bi bi-water"></i> {% trans "Mountain River" %}</span>
+                      <span><i class="bi bi-camera"></i> {% trans "Scenic Photo Spot" %}</span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Area Highlight -->
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                <div class="area-highlight">
+                  <div class="area-image-wrapper">
+                    <img src="{% static "assets/img/hotel/huk-waterfall.jpg" %}" alt="Shopping Plaza" class="img-fluid">
+                    <div class="area-badge">
+                      <i class="bi bi-car-front"></i>
+                      <span>20 {% trans "min by car" %}</span>
+                    </div>
+                  </div>
+                  <div class="area-info">
+                    <h5>{% trans "Zhenetskyi Huk Waterfall" %}</h5>
+                    <p>{% trans "One of the most impressive waterfalls in the Carpathians, cascading from a height of around 15 meters." %}</p>
+                    <div class="quick-stats">
+                      <span><i class="bi bi-water"></i> {% trans "15m Waterfall" %}</span>
+                      <span><i class="bi bi-tree"></i> {% trans "Forest Trail" %}</span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Area Highlight -->
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="location-overview">
+              <div class="overview-header">
+                <div class="location-marker">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <h3>{% trans "Prime Location in the Heart of the Carpathians" %}</h3>
+                <p class="overview-subtitle">{% trans "Wood Life is located in Mykulychyn — a peaceful mountain village surrounded by forests, rivers, and breathtaking landscapes. Close to popular туристических локаций, yet away from city noise." %}</p>
+              </div>
+
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <div class="benefit-icon">
+                    <i class="bi bi-train-front"></i>
+                  </div>
+                  <div class="benefit-content">
+                    <h6>{% trans "Close to Yaremche" %}</h6>
+                    <span>{% trans "Only 10 minutes by car to the famous mountain resort with waterfalls, markets and restaurants." %}</span>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">
+                    <i class="bi bi-airplane"></i>
+                  </div>
+                  <div class="benefit-content">
+                    <h6>{% trans "Nature &amp; Waterfalls Nearby" %}</h6>
+                    <span>{% trans "Devychi Slozy and other scenic waterfalls just 5–15 minutes away." %}</span>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">
+                    <i class="bi bi-car-front"></i>
+                  </div>
+                  <div class="benefit-content">
+                    <h6>{% trans "Mountain &amp; Forest Surroundings" %}</h6>
+                    <span>{% trans "Direct access to hiking trails, fresh air and panoramic views." %}</span>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">
+                    <i class="bi bi-compass"></i>
+                  </div>
+                  <div class="benefit-content">
+                    <h6>{% trans "Free Private Parking" %}</h6>
+                    <span>{% trans "Secure on-site parking available for all guests." %}</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="{% url "main:location" %}" class="location-guide-btn">
+                <span>{% trans "View Full Location Guide" %}</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>

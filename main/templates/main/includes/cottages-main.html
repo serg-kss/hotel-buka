@@ -1,0 +1,157 @@
+{% load static %}
+{% load i18n %}
+
+    <section id="rooms-showcase" class="rooms-showcase section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">{% trans "Our Wooden Cottages" %}</span>
+        <h2>{% trans "Our Wooden Cottages" %}</h2>
+        <p>{% trans "Escape to cozy wooden cabins surrounded by nature. Each cabin is thoughtfully designed to provide comfort, privacy, and a warm atmosphere — perfect for relaxing weekends, romantic getaways, or peaceful family stays." %}</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <div class="col-xl-8" data-aos="zoom-in" data-aos-delay="200">
+            <div class="hero-room-showcase">
+              <div class="showcase-image-container">
+                <img src="{% static "assets/img/hotel/room-14.webp" %}" alt="Grand Presidential Suite" class="img-fluid">
+                <div class="room-category-badge">
+                  <span>Presidential</span>
+                </div>
+                <div class="room-details-overlay">
+                  <div class="room-specs">
+                    <span class="spec-item">
+                      <i class="bi bi-people"></i>
+                      <span>6 Guests</span>
+                    </span>
+                    <span class="spec-item">
+                      <i class="bi bi-house"></i>
+                      <span>180m²</span>
+                    </span>
+                    <span class="spec-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <span>Top Floor</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="showcase-content">
+                <div class="room-title-section">
+                  <h2>Grand Presidential Suite</h2>
+                  <div class="room-rating">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <span class="rating-text">5.0 Excellence</span>
+                  </div>
+                </div>
+                <p class="room-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="amenities-grid">
+                  <div class="amenity-item">
+                    <i class="bi bi-wifi"></i>
+                    <span>Premium WiFi</span>
+                  </div>
+                  <div class="amenity-item">
+                    <i class="bi bi-tv"></i>
+                    <span>Smart TV</span>
+                  </div>
+                  <div class="amenity-item">
+                    <i class="bi bi-cup-hot"></i>
+                    <span>Coffee Bar</span>
+                  </div>
+                  <div class="amenity-item">
+                    <i class="bi bi-snow"></i>
+                    <span>Climate Control</span>
+                  </div>
+                </div>
+                <div class="booking-section">
+                  <div class="price-display">
+                    <span class="currency">$</span>
+                    <span class="amount">649</span>
+                    <span class="period">per night</span>
+                  </div>
+                  <a href="room-details.html" class="primary-booking-btn">Reserve Suite</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Hero Room -->
+
+          <div class="col-xl-4">
+            <div class="room-list-container">
+              <div class="standard-room-card" data-aos="slide-left" data-aos-delay="250">
+                <div class="card-image">
+                  <img src="{% static "assets/img/hotel/room-6.webp" %}" alt="Executive Room" class="img-fluid">
+                  <div class="view-link">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Executive Business Room</h4>
+                  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+                  <div class="features-list">
+                    <span><i class="bi bi-briefcase"></i>Work Space</span>
+                    <span><i class="bi bi-building"></i>City Views</span>
+                  </div>
+                  <div class="booking-row">
+                    <div class="price">$329<small>/night</small></div>
+                    <a href="room-details.html" class="book-link">Book</a>
+                  </div>
+                </div>
+              </div><!-- End Standard Room -->
+
+              <div class="standard-room-card" data-aos="slide-left" data-aos-delay="300">
+                <div class="card-image">
+                  <img src="{% static "assets/img/hotel/room-19.webp" %}" alt="Garden View" class="img-fluid">
+                  <div class="view-link">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Garden View Deluxe</h4>
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+                  <div class="features-list">
+                    <span><i class="bi bi-tree"></i>Garden View</span>
+                    <span><i class="bi bi-door-open"></i>Private Terrace</span>
+                  </div>
+                  <div class="booking-row">
+                    <div class="price">$269<small>/night</small></div>
+                    <a href="room-details.html" class="book-link">Book</a>
+                  </div>
+                </div>
+              </div><!-- End Standard Room -->
+
+              <div class="standard-room-card" data-aos="slide-left" data-aos-delay="350">
+                <div class="card-image">
+                  <img src="{% static "assets/img/hotel/room-12.webp" %}" alt="Family Suite" class="img-fluid">
+                  <div class="view-link">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Family Comfort Suite</h4>
+                  <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+                  <div class="features-list">
+                    <span><i class="bi bi-people"></i>Family Space</span>
+                    <span><i class="bi bi-controller"></i>Kids Area</span>
+                  </div>
+                  <div class="booking-row">
+                    <div class="price">$419<small>/night</small></div>
+                    <a href="room-details.html" class="book-link">Book</a>
+                  </div>
+                </div>
+              </div><!-- End Standard Room -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>

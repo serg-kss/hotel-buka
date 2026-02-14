@@ -1,16 +1,15 @@
 {% load static %}
 {% load i18n %}
 
-    <!-- Testimonials Section -->
+
     {% if testimonials %}
     <section id="testimonials" class="testimonials section light-background">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <span class="description-title">{% trans "Testimonials" %}</span>
-        <h2>{% trans "Testimonials" %}</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+        <h2>{% trans "What Our Guests Say" %}</h2>
+        <p>{% trans "The most valuable reward for us is the experience of our guests. Thank you for your trust, kind words, and unforgettable moments spent at Wood Life." %}</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -19,7 +18,7 @@
           <div class="row g-4">
 
             {% for item in testimonials %}
-            <!-- Testimonial Item -->
+         
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="testimonial-card">
                 <div class="quote-mark">
@@ -34,7 +33,7 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End Testimonial Item -->
+            </div>
             {% endfor %}
 
           </div>
@@ -43,5 +42,5 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->     
+    </section>
     {% endif %}

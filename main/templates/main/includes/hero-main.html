@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+
+    <section id="hotel-hero" class="hotel-hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="hero-content">
+              <h1>{% trans "Luxury Redefined in Nature" %}</h1>
+              <p class="lead">{% trans "Experience the perfect balance of comfort, privacy, and natural beauty at Wood Life. Wake up surrounded by forest silence, breathe in fresh mountain air, and unwind in your private wooden retreat. Every detail is designed to make your stay peaceful, cozy, and unforgettable." %}</p>
+              <div class="hero-features">
+                <div class="feature-item">
+                  <i class="bi bi-wifi"></i>
+                  <span>{% trans "Complimentary" %} WiFi</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-car-front"></i>
+                  <span>{% trans "Free Parking" %}</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-fire"></i>
+                  <span>{% trans "Wood-Fired Sauna" %}</span>
+                </div>
+              </div>
+              <div class="hero-buttons">
+                <a href="{% url "main:rooms" %}" class="btn btn-outline">{% trans "View Cottages" %}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-images">
+              <div class="main-image">
+                <img src="{% static "assets/img/hotel/hotel-hero-main.png" %}" alt="Luxury Hotel" class="img-fluid">
+              </div>
+              <div class="floating-card" data-aos="zoom-in" data-aos-delay="400">
+               <div class="d-flex justify-content-center align-items-center">
+                <h6 class="d-flex align-items-center gap-2 m-0">
+                  {% trans "Crafted for Comfort" %}
+                  <i class="bi bi-house-heart"></i>
+                </h6>
+               </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
