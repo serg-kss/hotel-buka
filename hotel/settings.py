@@ -144,9 +144,12 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = "/var/data/media"
 MEDIA_URL = "/media/"
 
+if DEBUG:
+    MEDIA_ROOT = BASE_DIR / "media"
+else:
+    MEDIA_ROOT = Path("/var/data/media")
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
