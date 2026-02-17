@@ -201,3 +201,49 @@ class SocialMedia(models.Model):
     class Meta:
         verbose_name = _("Соц-мережі")
         verbose_name_plural = _("Соц-мережі")
+
+class GalleryMainPage(models.Model):
+    img = models.ImageField(
+        _("Фото"),
+        upload_to="gal/main/",
+        blank=True,
+        null=True
+    )
+    alt_uk = models.CharField(_("Опис (укр)"), max_length=100, default="Фото Wood Life")
+    alt_en = models.CharField(_("Опис (en)"), max_length=100, default="Photo Wood Life")
+    class Meta:
+        verbose_name = _("Фото головна сторінка")
+        verbose_name_plural = _("Фото головна сторінка")
+
+    def __str__(self):
+        return f"Фото #{self.id}"
+    
+class GalleryPage(models.Model):
+    class Category(models.TextChoices):
+        ROOMS = "rooms", _("Rooms")
+        AMENITIES = "amenities", _("Amenities")
+        INTERIOR = "interior", _("Interior")
+        EXTERIOR = "exterior", _("Exterior")
+
+    img = models.ImageField(
+        _("Фото"),
+        upload_to="gal/gal/",
+        blank=True,
+        null=True
+    )
+
+    category = models.CharField(
+        _("Категорія"),
+        max_length=20,
+        choices=Category.choices,
+        default=Category.ROOMS
+    )   
+
+    alt_uk = models.CharField(_("Опис (укр)"), max_length=100, default="Фото Wood Life")
+    alt_en = models.CharField(_("Опис (en)"), max_length=100, default="Photo Wood Life")
+    class Meta:
+        verbose_name = _("Фото галерея")
+        verbose_name_plural = _("Фото галерея")
+
+    def __str__(self):
+        return f"Фото #{self.id}"

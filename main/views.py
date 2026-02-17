@@ -1,7 +1,8 @@
+import random
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import ListView, DetailView, TemplateView
-from .models import Room, ContactMessages, Testimonials
+from .models import Room, ContactMessages, Testimonials, GalleryMainPage, GalleryPage
 from django.db import DatabaseError
 
 
@@ -12,11 +13,24 @@ class MainPageView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         try:
+            rooms = []
             testimonials = Testimonials.objects.all()
+            photo = GalleryMainPage.objects.all()
+            rooms_qs = Room.objects.all()
+            count = rooms_qs.count()
+            if count > 3:
+                random_indexes = random.sample(range(count), 3)
+                rooms = [rooms_qs[i] for i in random_indexes]
+            else:
+                rooms = rooms_qs
         except DatabaseError:
             testimonials = []
+            photo = []
+            rooms = []
 
         context["testimonials"] = testimonials
+        context["photo"] = photo
+        context["rooms"] = rooms
         return context
 
 
@@ -115,9 +129,19 @@ def terms(request):
 def privacy(request):
     return render(request, 'main/privacy.html')
 
-def gallery(request):
-    return render(request, 'main/gallery.html')
+class GalleryView(TemplateView):
+    template_name = "main/gallery.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        try:
+            photo = GalleryPage.objects.all()
+        except DatabaseError:
+            photo = []
+
+        context["photo"] = photo
+        return context
 class Contact(View):
 
     def get(self, request):

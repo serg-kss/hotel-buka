@@ -23,7 +23,7 @@
                   <div class="room-footer">
                     <div class="room-price">
                       <span class="price-from">{% trans "From" %}</span>
-                      <span class="price-amount">{{room.price}}</span>
+                      <span class="price-amount">{{room.price|floatformat:0 }}</span>
                       <span class="price-period">/ {% trans "night" %}</span>
                     </div>
                     <a href="{% url 'main:room' room.slug %}" class="btn-room-details">{% trans "View Details" %}</a>

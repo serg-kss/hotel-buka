@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages, Testimonials
+from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages, Testimonials, GalleryMainPage, GalleryPage
 from .admin_mixins import SingletonAdmin
 
 
@@ -10,6 +10,14 @@ class SiteSettingsAdmin(SingletonAdmin):
 
 @admin.register(SocialMedia)
 class SocialMediaAdmin(SingletonAdmin):
+    pass
+
+@admin.register(GalleryMainPage)
+class GalleryMainPageAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(GalleryPage)
+class GalleryPageAdmin(admin.ModelAdmin):
     pass
 
 class RoomImageInline(admin.TabularInline):

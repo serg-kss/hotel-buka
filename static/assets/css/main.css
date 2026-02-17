@@ -3070,14 +3070,14 @@ section,
 
 .gallery-showcase .gallery-item img {
   width: 100%;
-  height: 250px;
+  height: 350px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 @media (max-width: 576px) {
   .gallery-showcase .gallery-item img {
-    height: 200px;
+    height: 350px;
   }
 }
 
@@ -3556,7 +3556,7 @@ section,
 .rooms-2 .rooms-grid .room-card .room-image {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 500px;
 }
 
 .rooms-2 .rooms-grid .room-card .room-image img {
