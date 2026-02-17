@@ -67,7 +67,7 @@ class Room(models.Model):
     # --- Главное изображение ---
     main_image = models.ImageField(
         _("Головне фото"),
-        upload_to="rooms/main/",
+        upload_to="hotel/",
         blank=True,
         null=True
     )
