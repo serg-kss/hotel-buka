@@ -4,6 +4,7 @@ from django.views import View
 from django.views.generic import ListView, DetailView, TemplateView
 from .models import Room, ContactMessages, Testimonials, GalleryMainPage, GalleryPage
 from django.db import DatabaseError
+from collections import defaultdict
 
 
 class MainPageView(TemplateView):
@@ -108,6 +109,18 @@ class RoomDetailView(DetailView):
     context_object_name = "room"
     slug_field = "slug"
     slug_url_kwarg = "slug"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        room = self.object
+
+        grouped_amenities = defaultdict(list)
+
+        for amenity in room.amenities.all():
+            grouped_amenities[amenity.category].append(amenity)
+
+        context["grouped_amenities"] = dict(grouped_amenities)
+
+        return context
 
 
 def amenities(request):

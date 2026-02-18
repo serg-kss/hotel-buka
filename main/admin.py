@@ -47,7 +47,7 @@ class RoomAdmin(admin.ModelAdmin):
 @admin.register(Amenity)
 class AmenityAdmin(admin.ModelAdmin):
 
-    list_display = ("name_uk", "name_en", "icon_class")
+    list_display = ("name_uk", "name_en", "icon_class", "category")
     search_fields = ("name_uk", "name_en")
 
 

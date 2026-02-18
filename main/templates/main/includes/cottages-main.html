@@ -16,28 +16,28 @@
           <div class="col-xl-8" data-aos="zoom-in" data-aos-delay="200">
             <div class="hero-room-showcase">
               <div class="showcase-image-container">
-                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="Grand Presidential Suite" class="img-fluid">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="Wood life - Scandinavia house" class="img-fluid">
                 <div class="room-category-badge">
-                  <span>{% trans "Presidential" %}</span>
+                  <span>{% trans "Scandinavia" %}</span>
                 </div>
                 <div class="room-details-overlay">
                   <div class="room-specs">
                     <span class="spec-item">
                       <i class="bi bi-people"></i>
-                      <span>6 {% trans "Guests" %}</span>
+                      <span>4 {% trans "Guests" %}</span>
                     </span>
                     <span class="spec-item">
                       <i class="bi bi-house"></i>
-                      <span>180m²</span>
+                      <span>50m²</span>
                     </span>
                   </div>
                 </div>
               </div>
               <div class="showcase-content">
                 <div class="room-title-section">
-                  <h2>{% trans "Grand Presidential Suite" %}</h2>
+                  <h2>{% trans "Scandinavia" %}</h2>
                 </div>
-                <p class="room-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p class="room-description">{% trans "Scandinavia Double +2 is a cozy Scandinavian-style cottage with a terrace and swing, designed for a relaxing mountain escape. A fireplace, автономous heating, underfloor heating, and modern amenities ensure comfort in every season. Perfect for couples or families with children." %}</p>
                 <div class="amenities-grid">
                   <div class="amenity-item">
                     <i class="bi bi-wifi"></i>
@@ -57,11 +57,6 @@
                   </div>
                 </div>
                 <div class="booking-section">
-                  <div class="price-display">
-                    <span class="currency">₴</span>
-                    <span class="amount">649</span>
-                    <span class="period">{% trans "per night" %}</span>
-                  </div>
                   <a href="{% url "main:rooms" %}" class="primary-booking-btn">{% trans "View Cottages" %}</a>
                 </div>
               </div>
@@ -81,10 +76,10 @@
                 </div>
                 <div class="card-content">
                   <h4>{{room.name}}</h4>
-                  <p>{{room.description|truncatechars:30}}</p>
+                  <p>{{room.sub_title|truncatechars:80}}</p>
                   <div class="features-list">
-                    <span><i class="bi bi-briefcase"></i>Work Space</span>
-                    <span><i class="bi bi-building"></i>City Views</span>
+                    <span><i class="bi bi-people"></i> {% trans "Up to" %} {{room.capacity}} {%trans "guests" %}</span>
+                    <span><i class="bi bi-grid"></i> {{room.square}} m2</span>
                   </div>
                   <div class="booking-row">
                     <div class="price">{{room.price|floatformat:0 }}₴<small>/ {% trans "night" %}</small></div>

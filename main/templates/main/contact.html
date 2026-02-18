@@ -7,7 +7,7 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">{% trans "Contact" %}</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Get in Touch" %}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
@@ -47,7 +47,7 @@
                 <i class="bi bi-telephone"></i>
               </div>
               <div class="info-content">
-                <h4>Phone &amp; Email</h4>
+                <h4>{% trans "Phone" %} &amp; Email</h4>
                 <p>{{site_phone| default:""}}</p>
                 <p>{{site_email| default:"test@gmail.com"}}</p>
               </div>
@@ -59,32 +59,32 @@
         <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-10">
             <div class="contact-form-wrapper">
-              <h2 class="text-center mb-4">{% trans "Send a Message" %}</h2>
+              <h2 class="text-center mb-4">{% trans "Send a Message or Comment" %}</h2>
 
               <form action="{% url "main:contact" %}" method="POST" class="php-email-form">
                 {% csrf_token %}
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="name" placeholder="Your Name" required="">
+                      <input type="text" class="form-control" name="name" placeholder="{% trans "Your Name" %}" required>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                      <input type="email" class="form-control" name="email" placeholder="Email" required>
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      <input type="text" class="form-control" name="subject" placeholder="{% trans "Subject" %}" required>
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="Your Message" rows="6" required=""></textarea>
+                      <textarea class="form-control" name="message" placeholder="{% trans "Your Message" %}" rows="6" required></textarea>
                     </div>
                   </div>
 
@@ -95,7 +95,7 @@
                   </div>
 
                   <div class="col-12 text-center">
-                    <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                    <button type="submit" class="btn-submit">{% trans "SEND MESSAGE" %}</button>
                   </div>
                 </div>
               </form>

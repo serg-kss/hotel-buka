@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-14 17:30+0200\n"
+"POT-Creation-Date: 2026-02-19 00:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,10 @@ msgstr ""
 
 #: booking/templates/booking/booking.html:12
 #: booking/templates/booking/booking_success.html:12
-#: main/templates/main/contact.html:13 main/templates/main/room.html:12
-#: main/templates/main/rooms.html:13 templates/includes/footer.html:24
-#: templates/includes/header.html:34
+#: main/templates/main/amenities.html:14 main/templates/main/contact.html:13
+#: main/templates/main/gallery.html:11 main/templates/main/location.html:12
+#: main/templates/main/room.html:13 main/templates/main/rooms.html:13
+#: templates/includes/footer.html:24 templates/includes/header.html:34
 msgid "Home"
 msgstr ""
 
@@ -66,6 +67,7 @@ msgid "Check-out"
 msgstr ""
 
 #: booking/templates/booking/booking_success.html:62
+#: main/templates/main/includes/cottages-main.html:27
 msgid "Guests"
 msgstr ""
 
@@ -73,7 +75,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: booking/templates/booking/booking_success.html:72 main/models.py:177
+#: booking/templates/booking/booking_success.html:72 main/models.py:241
 msgid "Email"
 msgstr ""
 
@@ -141,7 +143,7 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: main/models.py:9 main/models.py:159
+#: main/models.py:9 main/models.py:223
 msgid "Message"
 msgstr ""
 
@@ -162,14 +164,14 @@ msgid "Коментарі"
 msgstr ""
 
 #: main/models.py:37
-msgid "Назва номера (укр)"
+msgid "Назва котеджу (укр)"
 msgstr ""
 
 #: main/models.py:38
-msgid "Назва номера (англ)"
+msgid "Назва котеджу (англ)"
 msgstr ""
 
-#: main/models.py:40
+#: main/models.py:40 main/models.py:276 main/models.py:306
 msgid "Опис (укр)"
 msgstr ""
 
@@ -177,139 +179,278 @@ msgstr ""
 msgid "Опис (англ)"
 msgstr ""
 
+#: main/models.py:43
+msgid "Текст під назвою (укр)"
+msgstr ""
+
+#: main/models.py:44
+msgid "Текст під назвою (англ)"
+msgstr ""
+
+#: main/models.py:46
+msgid "Кількіть людей прописом (укр)"
+msgstr ""
+
+#: main/models.py:47
+msgid "Кількіть людей прописом (англ)"
+msgstr ""
+
+#: main/models.py:49
+msgid "Коментар (укр)"
+msgstr ""
+
+#: main/models.py:50
+msgid "Коментар (англ)"
+msgstr ""
+
+#: main/models.py:52
+msgid "Коментар Імʼя (укр)"
+msgstr ""
+
+#: main/models.py:53
+msgid "Коментар Імʼя (англ)"
+msgstr ""
+
+#: main/models.py:55
+msgid "Тварини (укр)"
+msgstr ""
+
+#: main/models.py:56
+msgid "Тварини (англ)"
+msgstr ""
+
 #: main/models.py:58
-msgid "Ціна"
+msgid "Прибирання в котеджі (укр)"
 msgstr ""
 
 #: main/models.py:59
+msgid "Прибирання в котеджі (англ)"
+msgstr ""
+
+#: main/models.py:100
+msgid "Ціна"
+msgstr ""
+
+#: main/models.py:101
 msgid "Знижка (%)"
 msgstr ""
 
-#: main/models.py:62
+#: main/models.py:104
 msgid "Площа (м²)"
 msgstr ""
 
-#: main/models.py:65
+#: main/models.py:107
 msgid "Кількість гостей"
 msgstr ""
 
-#: main/models.py:69
+#: main/models.py:110
+msgid "Наявність генератора"
+msgstr ""
+
+#: main/models.py:116
 msgid "Головне фото"
 msgstr ""
 
-#: main/models.py:78 main/models.py:152
+#: main/models.py:125 main/models.py:216
 msgid "Зручності"
 msgstr ""
 
-#: main/models.py:86
+#: main/models.py:133
 msgid "Активний"
 msgstr ""
 
-#: main/models.py:104
-msgid "Номер"
+#: main/models.py:151
+msgid "Котедж"
 msgstr ""
 
-#: main/models.py:105
-msgid "Номери"
+#: main/models.py:152
+msgid "Котеджі"
 msgstr ""
 
-#: main/models.py:117
+#: main/models.py:164 main/models.py:271 main/models.py:293
 msgid "Фото"
 msgstr ""
 
-#: main/models.py:125
-msgid "Фото номера"
-msgstr ""
-
-#: main/models.py:126
-msgid "Фото номерів"
-msgstr ""
-
-#: main/models.py:130
-msgid "Назва (укр)"
-msgstr ""
-
-#: main/models.py:131
-msgid "Назва (англ)"
-msgstr ""
-
-#: main/models.py:142
-msgid "CSS іконка (bi class)"
-msgstr ""
-
-#: main/models.py:151
-msgid "Зручність"
-msgstr ""
-
-#: main/models.py:156
-msgid "Client's name"
-msgstr ""
-
-#: main/models.py:158
-msgid "Subject"
-msgstr ""
-
-#: main/models.py:165 main/models.py:166
-msgid "Повідомлення"
-msgstr ""
-
-#: main/models.py:170
-msgid "Address (Ukrainian)"
-msgstr ""
-
-#: main/models.py:171
-msgid "Address (English)"
+#: main/models.py:172
+msgid "Фото котеджу"
 msgstr ""
 
 #: main/models.py:173
-msgid "City (Ukrainian)"
+msgid "Фото котеджів"
 msgstr ""
 
-#: main/models.py:174
-msgid "City (English)"
+#: main/models.py:183 main/templates/main/room.html:119
+msgid "Sleeping"
 msgstr ""
 
-#: main/models.py:176
-msgid "Phone"
+#: main/models.py:184 main/templates/main/room.html:120
+msgid "Technology"
 msgstr ""
 
-#: main/models.py:179
-msgid "Check-in time"
+#: main/models.py:185 main/templates/main/amenities.html:15
+#: main/templates/main/room.html:121
+msgid "Comfort"
 msgstr ""
 
-#: main/models.py:180
-msgid "Check-out time"
-msgstr ""
-
-#: main/models.py:182
-msgid "Google Maps link"
+#: main/models.py:186 main/templates/main/room.html:122
+msgid "Bathroom"
 msgstr ""
 
 #: main/models.py:188
-msgid "Настройка сайту"
+msgid "Назва (укр)"
 msgstr ""
 
 #: main/models.py:189
+msgid "Назва (англ)"
+msgstr ""
+
+#: main/models.py:192 main/models.py:300
+msgid "Категорія"
+msgstr ""
+
+#: main/models.py:199
+msgid "CSS іконка (bi class)"
+msgstr ""
+
+#: main/models.py:215
+msgid "Зручність"
+msgstr ""
+
+#: main/models.py:220
+msgid "Client's name"
+msgstr ""
+
+#: main/models.py:222 main/templates/main/contact.html:81
+msgid "Subject"
+msgstr ""
+
+#: main/models.py:229 main/models.py:230
+msgid "Повідомлення"
+msgstr ""
+
+#: main/models.py:234
+msgid "Address (Ukrainian)"
+msgstr ""
+
+#: main/models.py:235
+msgid "Address (English)"
+msgstr ""
+
+#: main/models.py:237
+msgid "City (Ukrainian)"
+msgstr ""
+
+#: main/models.py:238
+msgid "City (English)"
+msgstr ""
+
+#: main/models.py:240 main/templates/main/contact.html:50
+msgid "Phone"
+msgstr ""
+
+#: main/models.py:243
+msgid "Check-in time"
+msgstr ""
+
+#: main/models.py:244
+msgid "Check-out time"
+msgstr ""
+
+#: main/models.py:246
+msgid "Google Maps link"
+msgstr ""
+
+#: main/models.py:252
+msgid "Настройка сайту"
+msgstr ""
+
+#: main/models.py:253
 msgid "Настройки сайту"
 msgstr ""
 
-#: main/models.py:202 main/models.py:203
+#: main/models.py:266 main/models.py:267
 msgid "Соц-мережі"
 msgstr ""
 
-#: main/templates/main/contact.html:10 main/templates/main/contact.html:14
-#: main/templates/main/location.html:63 templates/includes/header.html:45
+#: main/models.py:277 main/models.py:307
+msgid "Опис (en)"
+msgstr ""
+
+#: main/models.py:279 main/models.py:280
+msgid "Фото головна сторінка"
+msgstr ""
+
+#: main/models.py:287 main/templates/main/gallery.html:25
+msgid "Rooms"
+msgstr ""
+
+#: main/models.py:288 main/templates/main/gallery.html:26
+#: main/templates/main/includes/amenities.html:10
+#: main/templates/main/includes/amenities.html:11
+#: templates/includes/footer.html:26 templates/includes/header.html:36
+msgid "Amenities"
+msgstr ""
+
+#: main/models.py:289 main/templates/main/gallery.html:27
+msgid "Interior"
+msgstr ""
+
+#: main/models.py:290 main/templates/main/gallery.html:28
+msgid "Exterior"
+msgstr ""
+
+#: main/models.py:309 main/models.py:310
+msgid "Фото галерея"
+msgstr ""
+
+#: main/templates/main/amenities.html:11
+msgid "Comfort &amp; Relaxation"
+msgstr ""
+
+#: main/templates/main/contact.html:10
+msgid "Get in Touch"
+msgstr ""
+
+#: main/templates/main/contact.html:14 main/templates/main/location.html:63
+#: templates/includes/header.html:45
 msgid "Contact"
 msgstr ""
 
-#: main/templates/main/contact.html:38 main/templates/main/location.html:9
-#: main/templates/main/location.html:13 templates/includes/footer.html:27
-#: templates/includes/header.html:37
+#: main/templates/main/contact.html:38 main/templates/main/location.html:13
+#: templates/includes/footer.html:27 templates/includes/header.html:38
 msgid "Location"
 msgstr ""
 
 #: main/templates/main/contact.html:62
-msgid "Send a Message"
+msgid "Send a Message or Comment"
+msgstr ""
+
+#: main/templates/main/contact.html:69
+msgid "Your Name"
+msgstr ""
+
+#: main/templates/main/contact.html:87
+msgid "Your Message"
+msgstr ""
+
+#: main/templates/main/contact.html:98
+msgid "SEND MESSAGE"
+msgstr ""
+
+#: main/templates/main/gallery.html:8
+msgid "In the Carpathian Heart"
+msgstr ""
+
+#: main/templates/main/gallery.html:12 templates/includes/header.html:37
+msgid "Gallery"
+msgstr ""
+
+#: main/templates/main/gallery.html:24
+msgid "All Photos"
+msgstr ""
+
+#: main/templates/main/gallery.html:50
+msgid "We are going to show our photos soon. Sorry!"
 msgstr ""
 
 #: main/templates/main/includes/about-main.html:13
@@ -358,12 +499,6 @@ msgstr ""
 msgid "Experience"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:10
-#: main/templates/main/includes/amenities.html:11
-#: templates/includes/footer.html:26 templates/includes/header.html:36
-msgid "Amenities"
-msgstr ""
-
 #: main/templates/main/includes/amenities.html:12
 msgid ""
 "Everything you need for a comfortable and relaxing stay surrounded by "
@@ -391,47 +526,43 @@ msgstr ""
 msgid "Kitchenette"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:33
-msgid "Private Bathroom"
-msgstr ""
-
-#: main/templates/main/includes/amenities.html:48
+#: main/templates/main/includes/amenities.html:47
 msgid "Wood-Fired Sauna &amp; Hot Tubs"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:49
+#: main/templates/main/includes/amenities.html:48
 msgid ""
 "Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by "
 "nature. Warm water, fresh forest air, and the quiet of the mountains create "
 "the perfect atmosphere to unwind after an active day."
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:51
+#: main/templates/main/includes/amenities.html:50
 #: main/templates/main/includes/events-main.html:69
 #: main/templates/main/includes/hero-main.html:25
 msgid "Wood-Fired Sauna"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:52
+#: main/templates/main/includes/amenities.html:51
 msgid "Outdoor Hot Tubs"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:67
+#: main/templates/main/includes/amenities.html:66
 msgid "Free Secure Parking"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:68
+#: main/templates/main/includes/amenities.html:67
 msgid ""
 "We offer complimentary on-site parking within our private territory. Your "
 "vehicle stays safely parked just steps away from your cabin, so you can "
 "relax and enjoy your stay without any worries."
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:70
+#: main/templates/main/includes/amenities.html:69
 msgid "Free of charge"
 msgstr ""
 
-#: main/templates/main/includes/amenities.html:71
+#: main/templates/main/includes/amenities.html:70
 msgid "Private &amp; Secure Area"
 msgstr ""
 
@@ -445,6 +576,53 @@ msgid ""
 "Escape to cozy wooden cabins surrounded by nature. Each cabin is "
 "thoughtfully designed to provide comfort, privacy, and a warm atmosphere — "
 "perfect for relaxing weekends, romantic getaways, or peaceful family stays."
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:21
+#: main/templates/main/includes/cottages-main.html:38
+msgid "Scandinavia"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:40
+msgid ""
+"Scandinavia Double +2 is a cozy Scandinavian-style cottage with a terrace "
+"and swing, designed for a relaxing mountain escape. A fireplace, автономous "
+"heating, underfloor heating, and modern amenities ensure comfort in every "
+"season. Perfect for couples or families with children."
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:52
+msgid "Coffee Bar"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:56
+msgid "Climate Control"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:60
+#: main/templates/main/includes/hero-main.html:29
+msgid "View Cottages"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:81
+#: main/templates/main/includes/room_cards_loop.html:21
+#: main/templates/main/room.html:43
+msgid "Up to"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:81
+#: main/templates/main/includes/room_cards_loop.html:21
+#: main/templates/main/room.html:43
+msgid "guests"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:85
+#: main/templates/main/includes/room_cards_loop.html:28
+msgid "night"
+msgstr ""
+
+#: main/templates/main/includes/cottages-main.html:86
+msgid "View"
 msgstr ""
 
 #: main/templates/main/includes/events-main.html:9
@@ -511,7 +689,7 @@ msgstr ""
 msgid "Hot Tubs"
 msgstr ""
 
-#: main/templates/main/includes/gallery-main.html:109
+#: main/templates/main/includes/gallery-main.html:62
 msgid "Discover Our Full Gallery"
 msgstr ""
 
@@ -535,11 +713,11 @@ msgstr ""
 msgid "Free Parking"
 msgstr ""
 
-#: main/templates/main/includes/hero-main.html:29
-msgid "View Cottages"
+#: main/templates/main/includes/hero-main.html:30
+msgid "Watch Overview"
 msgstr ""
 
-#: main/templates/main/includes/hero-main.html:42
+#: main/templates/main/includes/hero-main.html:43
 msgid "Crafted for Comfort"
 msgstr ""
 
@@ -686,41 +864,49 @@ msgid "Secure on-site parking available for all guests."
 msgstr ""
 
 #: main/templates/main/includes/location-main.html:153
-msgid "View Full Location Guide"
+msgid "View on Map"
 msgstr ""
 
-#: main/templates/main/includes/room_cards_loop.html:16
-msgid "Up to"
-msgstr ""
-
-#: main/templates/main/includes/room_cards_loop.html:16
-msgid "guests"
-msgstr ""
-
-#: main/templates/main/includes/room_cards_loop.html:23
+#: main/templates/main/includes/room_cards_loop.html:26
 msgid "From"
 msgstr ""
 
-#: main/templates/main/includes/room_cards_loop.html:25
-msgid "night"
-msgstr ""
-
-#: main/templates/main/includes/room_cards_loop.html:27
+#: main/templates/main/includes/room_cards_loop.html:30
 msgid "View Details"
 msgstr ""
 
-#: main/templates/main/includes/testimonials.html:10
+#: main/templates/main/includes/testimonials.html:9
 msgid "Testimonials"
 msgstr ""
 
-#: main/templates/main/includes/testimonials.html:11
+#: main/templates/main/includes/testimonials.html:10
 msgid "What Our Guests Say"
 msgstr ""
 
-#: main/templates/main/includes/testimonials.html:12
+#: main/templates/main/includes/testimonials.html:11
 msgid ""
 "The most valuable reward for us is the experience of our guests. Thank you "
 "for your trust, kind words, and unforgettable moments spent at Wood Life."
+msgstr ""
+
+#: main/templates/main/location.html:9
+msgid "Where We Are"
+msgstr ""
+
+#: main/templates/main/location.html:32
+msgid "Prime Location"
+msgstr ""
+
+#: main/templates/main/location.html:34
+msgid "Wood Life Experience"
+msgstr ""
+
+#: main/templates/main/location.html:35
+msgid ""
+"Wood Life is located in the heart of the Carpathian Mountains, in the "
+"picturesque village of Mykulychyn. Surrounded by forests, mountains, and "
+"fresh air, it offers the perfect balance of modern comfort and peaceful "
+"nature retreat."
 msgstr ""
 
 #: main/templates/main/location.html:43
@@ -731,35 +917,99 @@ msgstr ""
 msgid "Train Access"
 msgstr ""
 
-#: main/templates/main/room.html:9 main/templates/main/room.html:13
-msgid "Room Details"
+#: main/templates/main/location.html:54
+msgid "Mykulychyn - 5 min"
 msgstr ""
 
-#: main/templates/main/room.html:56
+#: main/templates/main/location.html:54
+msgid "Yaremche - 10 min"
+msgstr ""
+
+#: main/templates/main/room.html:10
+msgid "Inside the Cottage"
+msgstr ""
+
+#: main/templates/main/room.html:14
+msgid "Cottage"
+msgstr ""
+
+#: main/templates/main/room.html:58
+msgid "per night"
+msgstr ""
+
+#: main/templates/main/room.html:60
 msgid "Book Now"
 msgstr ""
 
-#: main/templates/main/rooms.html:10 main/templates/main/rooms.html:14
-msgid "Rooms"
+#: main/templates/main/room.html:67
+msgid "A Closer Look"
+msgstr ""
+
+#: main/templates/main/room.html:93
+msgid "Where Your Escape Begins"
+msgstr ""
+
+#: main/templates/main/room.html:102
+msgid "Guest's Experience"
+msgstr ""
+
+#: main/templates/main/room.html:112
+msgid "Everything You Need for a Comfortable Stay"
+msgstr ""
+
+#: main/templates/main/room.html:145
+msgid "Policies"
+msgstr ""
+
+#: main/templates/main/room.html:148
+msgid "Services"
+msgstr ""
+
+#: main/templates/main/room.html:156
+msgid "Check-in / Check-out"
+msgstr ""
+
+#: main/templates/main/room.html:157
+msgid "Check-in: 13:00"
+msgstr ""
+
+#: main/templates/main/room.html:157
+msgid "Check-out: 12:00"
+msgstr ""
+
+#: main/templates/main/room.html:160
+msgid "Pets"
+msgstr ""
+
+#: main/templates/main/room.html:170
+msgid "Room Service"
+msgstr ""
+
+#: main/templates/main/room.html:171
+msgid "Available 11:00 - 13:00 daily"
+msgstr ""
+
+#: main/templates/main/room.html:174
+msgid "Housekeeping"
+msgstr ""
+
+#: main/templates/main/rooms.html:10
+msgid "Choose Your Cottage"
+msgstr ""
+
+#: main/templates/main/rooms.html:14
+msgid "Cottages "
 msgstr ""
 
 #: main/templates/main/rooms.html:28
-msgid "Price Range"
-msgstr ""
-
-#: main/templates/main/rooms.html:30
-msgid "All Prices"
-msgstr ""
-
-#: main/templates/main/rooms.html:39
 msgid "Guest Capacity"
 msgstr ""
 
-#: main/templates/main/rooms.html:41
+#: main/templates/main/rooms.html:30
 msgid "Any Capacity"
 msgstr ""
 
-#: main/templates/main/rooms.html:66
+#: main/templates/main/rooms.html:54
 msgid "Load More Rooms"
 msgstr ""
 
@@ -787,12 +1037,8 @@ msgstr ""
 msgid "Privacy policy"
 msgstr ""
 
-#: templates/includes/header.html:38
+#: templates/includes/header.html:39
 msgid "Info"
-msgstr ""
-
-#: templates/includes/header.html:40
-msgid "Gallery"
 msgstr ""
 
 #: templates/includes/header.html:41
