@@ -25,7 +25,11 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
             <div class="room-header-image">
-              <img src="{% static "assets/img/hotel/room-15.webp" %}" alt="Deluxe Ocean View Suite" class="img-fluid rounded">
+              {% with first_image=room.images.first %}
+                {% if first_image %}
+                    <img src="{{ first_image.image.url }}" alt="Suite Interior" class="img-fluid rounded">
+                {% endif %}
+              {% endwith %}
               <div class="room-badge">
                 <span class="text-white">Premium Suite</span>
               </div>
@@ -60,25 +64,24 @@
 
         <!-- Room Gallery -->
         <div class="room-gallery mb-5" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="section-subtitle mb-4">Room Gallery</h3>
+          <h3 class="section-subtitle mb-4">{% trans "Room Gallery" %}</h3>
           <div class="gallery-grid">
             <div class="gallery-main">
-              <a href="{% static "assets/img/hotel/room-12.webp" %}" class="glightbox">
-                <img src="{% static "assets/img/hotel/room-12.webp" %}" alt="Suite Interior" class="img-fluid">
-              </a>
+              {% for image in room.images.all %}
+                {% if forloop.counter == 2 %}
+                  <a href="{{ image.image.url }}" class="glightbox">
+                    <img src="{{ image.image.url }}" alt="Suite Interior" class="img-fluid">
+                  </a>
+                {% endif %}
+              {% endfor %}
+
             </div>
             <div class="gallery-thumbnails">
-              <a href="{% static "assets/img/hotel/room-8.webp" %}" class="glightbox">
-                <img src="{% static "assets/img/hotel/room-8.webp" %}" alt="Bedroom View" class="img-fluid">
-              </a>
-              <a href="{% static "assets/img/hotel/room-6.webp" %}" class="glightbox">
-                <img src="{% static "assets/img/hotel/room-6.webp" %}" alt="Living Area" class="img-fluid">
-              </a>
-              <a href="{% static "assets/img/hotel/room-18.webp" %}" class="glightbox">
-                <img src="{% static "assets/img/hotel/room-18.webp" %}" alt="Ocean View" class="img-fluid">
-              </a>
-              <a href="{% static "assets/img/hotel/dining-4.webp" %}" class="glightbox">
-                <img src="{% static "assets/img/hotel/dining-4.webp" %}" alt="Bathroom" class="img-fluid">
+              {% for img in room.images.all %}
+              <a href="{{img.image.url}}" class="glightbox">
+                <img src="{{img.image.url}}" alt="Bedroom View" class="img-fluid">
+              </a>              
+              {% endfor %}
               </a>
             </div>
           </div>

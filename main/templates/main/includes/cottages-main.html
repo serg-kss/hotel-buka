@@ -67,10 +67,10 @@
               </div>
             </div>
           </div><!-- End Hero Room -->
-          {% for room in rooms %}
           <div class="col-xl-4">
             <div class="room-list-container">
-              <div class="standard-room-card" data-aos="slide-left" data-aos-delay="250">
+              {% for room in rooms %}
+              <div class="standard-room-card" data-aos="slide-left" data-aos-delay="150">
                 <div class="card-image">
                   {% if room.main_image %}
                     <img src="{{ room.main_image.url }}" alt="Wood Life cottage" class="img-fluid">
@@ -92,10 +92,9 @@
                   </div>
                 </div>
               </div><!-- End Standard Room -->
-
+              {% endfor %}
             </div>
           </div>          
-          {% endfor %}
 
 
         </div>

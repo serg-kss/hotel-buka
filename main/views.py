@@ -109,13 +109,6 @@ class RoomDetailView(DetailView):
     slug_field = "slug"
     slug_url_kwarg = "slug"
 
-    def get_queryset(self):
-        return (
-            Room.objects
-            .filter(is_active=True)
-            .prefetch_related("amenities", "images")
-        )
-
 
 def amenities(request):
     return render(request, 'main/amenities.html')
