@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19 00:53+0200\n"
+"POT-Creation-Date: 2026-02-19 01:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -405,6 +405,85 @@ msgstr ""
 
 #: main/templates/main/amenities.html:11
 msgid "Comfort &amp; Relaxation"
+msgstr ""
+
+#: main/templates/main/amenities.html:101
+msgid "Everything for Your Perfect Stay"
+msgstr ""
+
+#: main/templates/main/amenities.html:108
+msgid "Free Wi-Fi"
+msgstr ""
+
+#: main/templates/main/amenities.html:109
+msgid "Stay Connected, Even in Nature"
+msgstr ""
+
+#: main/templates/main/amenities.html:117
+msgid "Private Parking on the Property"
+msgstr ""
+
+#: main/templates/main/amenities.html:118
+msgid ""
+"Park comfortably within our secure private area and enjoy your stay without "
+"any worries."
+msgstr ""
+
+#: main/templates/main/amenities.html:126
+msgid "Energy Independent Cottages"
+msgstr ""
+
+#: main/templates/main/amenities.html:127
+msgid ""
+"Equipped with generators and solar panels for uninterrupted comfort in any "
+"situation."
+msgstr ""
+
+#: main/templates/main/amenities.html:135
+msgid "Here for You"
+msgstr ""
+
+#: main/templates/main/amenities.html:136
+msgid ""
+"From local tips to booking experiences, our team is happy to assist you "
+"throughout your stay."
+msgstr ""
+
+#: main/templates/main/amenities.html:144
+msgid "BBQ &amp; Outdoor Dining"
+msgstr ""
+
+#: main/templates/main/amenities.html:145
+msgid ""
+"Enjoy cozy evenings with a private barbecue area and outdoor dining space "
+"surrounded by nature."
+msgstr ""
+
+#: main/templates/main/amenities.html:153
+msgid "In-Room Safe"
+msgstr ""
+
+#: main/templates/main/amenities.html:154
+msgid ""
+"A secure personal safe is available in every cottage for your peace of mind."
+msgstr ""
+
+#: main/templates/main/amenities.html:162
+msgid "Everyone is Welcome"
+msgstr ""
+
+#: main/templates/main/amenities.html:163
+msgid ""
+"We’re happy to welcome guests from near and far to experience the beauty of "
+"the Carpathians."
+msgstr ""
+
+#: main/templates/main/amenities.html:171
+msgid "Bring Your Companion"
+msgstr ""
+
+#: main/templates/main/amenities.html:172
+msgid "Your four-legged friend is welcome to enjoy the mountains with you."
 msgstr ""
 
 #: main/templates/main/contact.html:10

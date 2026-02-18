@@ -4257,13 +4257,6 @@ section,
   margin-bottom: 0;
 }
 
-.amenities .amenities-grid {
-  background: var(--surface-color);
-  border-radius: 16px;
-  padding: 50px 40px;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
 .amenities .amenities-grid h3 {
   font-size: 32px;
   font-weight: 700;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19 00:53+0200\n"
+"POT-Creation-Date: 2026-02-19 01:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -411,6 +411,96 @@ msgstr ""
 #: main/templates/main/amenities.html:11
 msgid "Comfort &amp; Relaxation"
 msgstr "Комфорт і відпочинок"
+
+#: main/templates/main/amenities.html:101
+msgid "Everything for Your Perfect Stay"
+msgstr "Все для вашого ідеального відпочинку"
+
+#: main/templates/main/amenities.html:108
+msgid "Free Wi-Fi"
+msgstr "Безкоштовний Wi-Fi"
+
+#: main/templates/main/amenities.html:109
+msgid "Stay Connected, Even in Nature"
+msgstr "Залишайтеся на зв’язку навіть серед природи"
+
+#: main/templates/main/amenities.html:117
+msgid "Private Parking on the Property"
+msgstr "Приватна парковка на території"
+
+#: main/templates/main/amenities.html:118
+msgid ""
+"Park comfortably within our secure private area and enjoy your stay without "
+"any worries."
+msgstr ""
+"Залишайте авто на охоронюваній приватній території та насолоджуйтеся "
+"відпочинком без зайвих турбот."
+
+#: main/templates/main/amenities.html:126
+msgid "Energy Independent Cottages"
+msgstr "Енергонезалежні котеджі"
+
+#: main/templates/main/amenities.html:127
+msgid ""
+"Equipped with generators and solar panels for uninterrupted comfort in any "
+"situation."
+msgstr ""
+"Оснащені генераторами та сонячними панелями для безперервного комфорту за "
+"будь-яких умов."
+
+#: main/templates/main/amenities.html:135
+msgid "Here for You"
+msgstr "Ми поруч"
+
+#: main/templates/main/amenities.html:136
+msgid ""
+"From local tips to booking experiences, our team is happy to assist you "
+"throughout your stay."
+msgstr ""
+"Від порад щодо відпочинку до бронювання розваг — ми раді допомогти вам "
+"протягом усього перебування."
+
+#: main/templates/main/amenities.html:144
+msgid "BBQ &amp; Outdoor Dining"
+msgstr "BBQ та відпочинок на свіжому повітрі"
+
+#: main/templates/main/amenities.html:145
+msgid ""
+"Enjoy cozy evenings with a private barbecue area and outdoor dining space "
+"surrounded by nature."
+msgstr ""
+"Насолоджуйтеся затишними вечорами з приватною зоною барбекю та місцем для "
+"відпочинку просто неба серед природи."
+
+#: main/templates/main/amenities.html:153
+msgid "In-Room Safe"
+msgstr "Сейф у котеджі"
+
+#: main/templates/main/amenities.html:154
+msgid ""
+"A secure personal safe is available in every cottage for your peace of mind."
+msgstr ""
+"У кожному котеджі є персональний сейф для збереження ваших цінних речей."
+
+#: main/templates/main/amenities.html:162
+msgid "Everyone is Welcome"
+msgstr "Ми раді кожному гостю"
+
+#: main/templates/main/amenities.html:163
+msgid ""
+"We’re happy to welcome guests from near and far to experience the beauty of "
+"the Carpathians."
+msgstr ""
+"Ми з радістю приймаємо гостей звідусіль, щоб разом відчути красу Карпат."
+
+#: main/templates/main/amenities.html:171
+msgid "Bring Your Companion"
+msgstr "Подорожуйте разом"
+
+#: main/templates/main/amenities.html:172
+msgid "Your four-legged friend is welcome to enjoy the mountains with you."
+msgstr ""
+"Ваш чотирилапий друг може розділити з вами відпочинок у горах."
 
 #: main/templates/main/contact.html:10
 msgid "Get in Touch"
