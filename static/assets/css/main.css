@@ -7099,85 +7099,34 @@ body {
   position: relative;
   background:
     linear-gradient(
-      rgba(255,255,255,0.78),
-      rgba(255,255,255,0.82)
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.88)
     ),
     url("/static/assets/img/hotel/forest.jpeg") center center / cover fixed no-repeat;
 }
 
-/* мягкая глубина */
+
+
+/* ===== Секции как premium-карточки ===== */
+section {
+  background: rgba(230, 228, 226, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  margin: 60px auto;
+  padding: 70px 50px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+  max-width: 1500px;
+}
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: radial-gradient(
     circle at center,
-    transparent 55%,
-    rgba(0,0,0,0.03) 100%
+    transparent 45%,
+    rgba(0,0,0,0.06) 100%
   );
   pointer-events: none;
   z-index: -1;
-}
-
-
-/* ===== Секции как premium-карточки ===== */
-section {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(8px);
-  border-radius: 24px;
-  margin: 60px auto;
-  padding: 70px 50px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
-}
-
-/* ===== Hero немного выделяем ===== */
-#hotel-hero {
-  background: rgba(255,255,255,0.92);
-  border-radius: 30px;
-}
-
-/* ===== Заголовки ===== */
-h1, h2, h3 {
-  color: var(--forest-dark);
-}
-
-.lead {
-  color: #4c5b52;
-}
-
-/* ===== Иконки в hero ===== */
-.hero-features .feature-item i {
-  color: var(--forest-accent);
-  font-size: 1.2rem;
-}
-
-/* ===== Кнопки ===== */
-.btn-primary {
-  background-color: var(--forest-dark);
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: var(--forest-accent);
-}
-
-.btn-outline {
-  border: 1px solid var(--forest-dark);
-  color: var(--forest-dark);
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background: var(--forest-dark);
-  color: #fff;
-}
-
-
-/* ===== Мобильная адаптация ===== */
-@media (max-width: 992px) {
-  section {
-    margin: 40px 20px;
-    padding: 50px 25px;
-  }
 }
