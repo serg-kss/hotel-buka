@@ -32,8 +32,15 @@
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="hero-images">
-              <div class="main-image">
-                <img src="{% static "assets/img/hotel/hotel-hero-main.png" %}" alt="Luxury Hotel" class="img-fluid">
+              <div class="main-image d-block d-md-none">
+                <img src="{% static 'assets/img/hotel/hotel-hero-main-mob.png' %}" 
+                    alt="Luxury Hotel" 
+                    class="img-fluid">
+              </div>
+              <div class="main-image d-none d-md-block">
+                <img src="{% static 'assets/img/hotel/hotel-hero-main.png' %}" 
+                    alt="Luxury Hotel" 
+                    class="img-fluid">
               </div>
               <div class="floating-card" data-aos="zoom-in" data-aos-delay="400">
                <div class="d-flex justify-content-center align-items-center">
