@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 14:27+0200\n"
+"POT-Creation-Date: 2026-02-20 23:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -371,20 +371,20 @@ msgstr ""
 msgid "Фото котеджів"
 msgstr ""
 
-#: main/models.py:197 main/templates/main/room.html:122
+#: main/models.py:197 main/templates/main/room.html:123
 msgid "Sleeping"
 msgstr "Спальні умови"
 
-#: main/models.py:198 main/templates/main/room.html:123
+#: main/models.py:198 main/templates/main/room.html:124
 msgid "Technology"
 msgstr "Технічне оснащення"
 
 #: main/models.py:199 main/templates/main/amenities.html:17
-#: main/templates/main/room.html:124
+#: main/templates/main/room.html:125
 msgid "Comfort"
 msgstr "Комфорт"
 
-#: main/models.py:200 main/templates/main/room.html:125
+#: main/models.py:200 main/templates/main/room.html:126
 msgid "Bathroom"
 msgstr "Ванна кімната"
 
@@ -742,7 +742,19 @@ msgstr "У серці Карпат"
 msgid "All Photos"
 msgstr "Усі Фото"
 
-#: main/templates/main/gallery.html:53
+#: main/templates/main/gallery.html:32
+msgid "Territory"
+msgstr "Територія"
+
+#: main/templates/main/gallery.html:33
+msgid "Nature"
+msgstr "Краєвид"
+
+#: main/templates/main/gallery.html:58
+msgid "Load More Photos"
+msgstr "Показати більше фото"
+
+#: main/templates/main/gallery.html:64
 msgid "We are going to show our photos soon. Sorry!"
 msgstr "Ми скоро покажемо наші фотографії. Вибачте!"
 
@@ -1530,75 +1542,75 @@ msgstr "за ніч"
 msgid "Book Now"
 msgstr "Забронювати"
 
-#: main/templates/main/room.html:70
-msgid "A Closer Look"
-msgstr "Погляд ближче"
-
-#: main/templates/main/room.html:96
+#: main/templates/main/room.html:71
 msgid "Where Your Escape Begins"
 msgstr "Місце, де починається Ваш відпочинок"
 
-#: main/templates/main/room.html:105
+#: main/templates/main/room.html:80
 msgid "Guest's Experience"
 msgstr "Досвід наших клієнтів"
 
-#: main/templates/main/room.html:115
+#: main/templates/main/room.html:91
+msgid "A Closer Look"
+msgstr "Погляд ближче"
+
+#: main/templates/main/room.html:116
 msgid "Everything You Need for a Comfortable Stay"
 msgstr "Продумано до деталей"
 
-#: main/templates/main/room.html:148
+#: main/templates/main/room.html:149
 msgid "Policies"
 msgstr "Інформація"
 
-#: main/templates/main/room.html:151
+#: main/templates/main/room.html:152
 msgid "Services"
 msgstr "Послуги"
 
-#: main/templates/main/room.html:159
+#: main/templates/main/room.html:160
 msgid "Additional items"
 msgstr "За бажанням додатково"
 
-#: main/templates/main/room.html:160
+#: main/templates/main/room.html:161
 msgid "iron with board"
 msgstr "праска з дошкою"
 
-#: main/templates/main/room.html:161
+#: main/templates/main/room.html:162
 msgid "disposable slippers"
 msgstr "одноразові тапочки"
 
-#: main/templates/main/room.html:162
+#: main/templates/main/room.html:163
 msgid "shower gel"
 msgstr "гель для душу"
 
-#: main/templates/main/room.html:163
+#: main/templates/main/room.html:164
 msgid "towels"
 msgstr "рушники"
 
-#: main/templates/main/room.html:167
+#: main/templates/main/room.html:168
 msgid "Check-in / Check-out"
 msgstr "Реєстрація заїзду / Виїзду"
 
-#: main/templates/main/room.html:168
+#: main/templates/main/room.html:169
 msgid "Check-in: 13:00"
 msgstr "Заїзд: 13:00"
 
-#: main/templates/main/room.html:168
+#: main/templates/main/room.html:169
 msgid "Check-out: 12:00"
 msgstr "Виїзд: 12:00"
 
-#: main/templates/main/room.html:171
+#: main/templates/main/room.html:172
 msgid "Pets"
 msgstr "Тварини"
 
-#: main/templates/main/room.html:181
+#: main/templates/main/room.html:182
 msgid "Room Service"
 msgstr "Обслуговування номерів"
 
-#: main/templates/main/room.html:182
+#: main/templates/main/room.html:183
 msgid "Available 11:00 - 13:00 daily"
 msgstr "Щодня з 11:00 до 13:00"
 
-#: main/templates/main/room.html:185
+#: main/templates/main/room.html:186
 msgid "Housekeeping"
 msgstr "Прибирання"
 
@@ -1819,7 +1831,7 @@ msgstr ""
 msgid "Contact Support"
 msgstr "Зв’язатися з нами"
 
-#: main/views.py:166
+#: main/views.py:172
 msgid "Message sent successfully! Thank you 🙌"
 msgstr "Повідомлення успішно надіслано! Дякуємо 🙌"
 

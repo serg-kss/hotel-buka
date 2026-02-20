@@ -146,10 +146,16 @@ class GalleryView(TemplateView):
 
         try:
             photo = GalleryPage.objects.all()
+            total_photo = photo.count()
+            limit = int(self.request.GET.get("limit", 9))
         except DatabaseError:
             photo = []
+        
 
-        context["photo"] = photo
+        context["photo"] = photo[:limit]
+        context["limit"] = limit
+        context["total_rooms"] = total_photo
+        context["has_more"] = limit < total_photo
         return context
 class Contact(View):
 

@@ -29,6 +29,8 @@
             <li data-filter=".filter-amenities">{% trans "Amenities" %}</li>
             <li data-filter=".filter-interior">{% trans "Interior" %}</li>
             <li data-filter=".filter-exterior">{% trans "Exterior" %}</li>
+            <li data-filter=".filter-territory">{% trans "Territory" %}</li>
+            <li data-filter=".filter-nature">{% trans "Nature" %}</li>
           </ul>
                
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -48,6 +50,15 @@
             {% endfor %}
           </div>
         </div>
+        {% if has_more %}
+        <div class="load-more-section text-center col-xl-2 col-lg-3 mt-4">
+          <a href="?limit={{ limit|add:9 }}"
+            class="btn-load-more">
+            <i class="bi bi-arrow-down-circle"></i>
+            {% trans "Load More Photos" %}
+          </a>
+        </div>
+        {% endif %}
       </div>
       {% else %}
       <p class="container">{% trans "We are going to show our photos soon. Sorry!" %}</p>

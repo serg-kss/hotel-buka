@@ -65,31 +65,6 @@
           </div>
         </div>
 
- 
-        <div class="room-gallery mb-5" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="section-subtitle mb-4">{% trans "A Closer Look" %}</h3>
-          <div class="gallery-grid">
-            <div class="gallery-main">
-              {% for image in room.images.all %}
-                {% if forloop.counter == 2 %}
-                  <a href="{{ image.image.url }}" class="glightbox">
-                    <img src="{{ image.image.url }}" alt="Suite Interior" class="img-fluid">
-                  </a>
-                {% endif %}
-              {% endfor %}
-
-            </div>
-            <div class="gallery-thumbnails">
-              {% for img in room.images.all %}
-              <a href="{{img.image.url}}" class="glightbox">
-                <img src="{{img.image.url}}" alt="Bedroom View" class="img-fluid">
-              </a>              
-              {% endfor %}
-              </a>
-            </div>
-          </div>
-        </div>
-
         <div class="row mb-5">
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <div class="room-description">
@@ -110,6 +85,32 @@
             </div>
           </div>
         </div>
+        
+        
+        <div class="room-gallery mb-5" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="section-subtitle mb-4">{% trans "A Closer Look" %}</h3>
+          <div class="gallery-grid">
+            <div class="gallery-main">
+              {% for image in room.images.all %}
+                {% if forloop.counter == 2 %}
+                  <a href="{{ image.image.url }}" class="glightbox">
+                    <img src="{{ image.image.url }}" alt="Suite Interior" class="img-fluid">
+                  </a>
+                {% endif %}
+              {% endfor %}
+
+            </div>
+            <div class="gallery-thumbnails">
+             {% for img in room.images.all|slice:"2:" %}
+              <a href="{{ img.image.url }}" class="glightbox">
+                <img src="{{ img.image.url }}" alt="Bedroom View" class="img-fluid">
+              </a>
+             {% endfor %}
+              </a>
+            </div>
+          </div>
+        </div>
+
 
         <div class="room-amenities mb-5" data-aos="fade-up" data-aos-delay="200">
           <h3 class="section-subtitle mb-4">{% trans "Everything You Need for a Comfortable Stay" %}</h3>

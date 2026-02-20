@@ -308,6 +308,8 @@ class GalleryPage(models.Model):
         AMENITIES = "amenities", _("Amenities")
         INTERIOR = "interior", _("Interior")
         EXTERIOR = "exterior", _("Exterior")
+        TERRITORY = "territory", _("Territory")
+        NATURE = "nature", _("Nature")
 
     img = models.ImageField(
         _("Фото"),
