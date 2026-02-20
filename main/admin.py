@@ -1,12 +1,15 @@
 from django.contrib import admin
-from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages, Testimonials, GalleryMainPage, GalleryPage
+from .models import SiteSettings, SocialMedia, RoomImage, Room, Amenity, ContactMessages, Testimonials, GalleryMainPage, GalleryPage, HomeSEO
 from .admin_mixins import SingletonAdmin
 
+
+@admin.register(HomeSEO)
+class HomeSEOAdmin(SingletonAdmin):
+    pass
 
 @admin.register(SiteSettings)
 class SiteSettingsAdmin(SingletonAdmin):
     pass
-
 
 @admin.register(SocialMedia)
 class SocialMediaAdmin(SingletonAdmin):
@@ -32,8 +35,6 @@ class RoomAdmin(admin.ModelAdmin):
         "room_name_uk",
         "price",
         "capacity",
-        "is_active",
-        "order",
     )
 
     list_filter = ("is_active", "capacity")

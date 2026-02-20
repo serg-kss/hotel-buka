@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://woodlifeua.com/uk/sitemap.xml
+Sitemap: https://woodlifeua.com/en/sitemap.xml
+

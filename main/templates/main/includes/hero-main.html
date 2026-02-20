@@ -2,14 +2,12 @@
 {% load i18n %}
 
     <section id="hotel-hero" class="hotel-hero section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 align-items-center">
-
+        <h1>{% trans "Cottages in Mykulychyn – Wood Life Hotel, Carpathian Mountain Retreat" %}</h1>
+        <div class="row gy-4 align-items-center mt-4">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1>{% trans "Luxury Redefined in Nature" %}</h1>
+              <h2>{% trans "Luxury Redefined in Nature" %}</h2>
               <p class="lead">{% trans "Experience the perfect balance of comfort, privacy, and natural beauty at Wood Life. Wake up surrounded by forest silence, breathe in fresh mountain air, and unwind in your private wooden retreat. Every detail is designed to make your stay peaceful, cozy, and unforgettable." %}</p>
               <div class="hero-features">
                 <div class="feature-item">
@@ -27,7 +25,7 @@
               </div>
               <div class="hero-buttons">
                 <a href="{% url "main:rooms" %}" class="btn btn-primary">{% trans "View Cottages" %}</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox"> <i class="bi bi-play-circle"> </i><span>{% trans "Watch Overview" %}</span></a>
+                {% if site_youtube != '' %}<a href="{{site_youtube}}" class="btn btn-outline glightbox"> <i class="bi bi-play-circle"> </i><span>{% trans "Watch Overview" %}</span></a>{% endif %}
               </div>
             </div>
           </div>

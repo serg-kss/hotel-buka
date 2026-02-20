@@ -4,6 +4,22 @@ from django.utils.text import slugify
 from django.utils import translation
 
 
+class HomeSEO(models.Model):
+
+    # Ukrainian
+    title_uk = models.CharField("Title (UK)", max_length=255, blank=True)
+    description_uk = models.TextField("Description (UK)", blank=True)
+
+    # English
+    title_en = models.CharField("Title (EN)", max_length=255, blank=True)
+    description_en = models.TextField("Description (EN)", blank=True)
+
+    og_image = models.ImageField("OG Image", upload_to="seo/", blank=True)
+
+    def __str__(self):
+        return "SEO"
+
+
 class Testimonials(models.Model):
     name_uk = models.CharField(_("Name"), max_length=30, default="")
     message_uk = models.TextField(_("Message"), default="")
@@ -31,6 +47,7 @@ class Testimonials(models.Model):
     class Meta:
         verbose_name = _("Коментар")
         verbose_name_plural = _("Коментарі")
+
 
 class Room(models.Model):
 
@@ -152,6 +169,7 @@ class Room(models.Model):
         verbose_name_plural = _("Котеджі")
         ordering = ["order"]
 
+
 class RoomImage(models.Model):
 
     room = models.ForeignKey(
@@ -171,10 +189,6 @@ class RoomImage(models.Model):
     class Meta:
         verbose_name = _("Фото котеджу")
         verbose_name_plural = _("Фото котеджів")
-
-from django.db import models
-from django.utils.translation import gettext_lazy as _
-from django.utils import translation
 
 
 class Amenity(models.Model):
@@ -215,6 +229,7 @@ class Amenity(models.Model):
         verbose_name = _("Зручність")
         verbose_name_plural = _("Зручності")
 
+
 class ContactMessages(models.Model):
 
     name = models.CharField(_("Client's name"), max_length=20)
@@ -228,6 +243,7 @@ class ContactMessages(models.Model):
     class Meta:
         verbose_name = _("Повідомлення")
         verbose_name_plural = _("Повідомлення")
+
 
 class SiteSettings(models.Model):
 
@@ -252,12 +268,14 @@ class SiteSettings(models.Model):
         verbose_name = _("Настройка сайту")
         verbose_name_plural = _("Настройки сайту")
 
+
 class SocialMedia(models.Model):
 
-    twitter = models.CharField("Twitter (X)", max_length=100, blank=True)
-    instagram = models.CharField("Instagram", max_length=100, blank=True)
-    facebook = models.CharField("Facebook", max_length=100, blank=True)
-    linkedin = models.CharField("Linked In", max_length=100, blank=True)
+    twitter = models.CharField("Twitter (X)", max_length=150, blank=True, default="")
+    instagram = models.CharField("Instagram", max_length=150, blank=True, default="")
+    facebook = models.CharField("Facebook", max_length=150, blank=True, default="")
+    linkedin = models.CharField("Linked In", max_length=150, blank=True, default="")
+    youtube = models.CharField("YouTube", max_length=200, blank=True, default="")
 
     def __str__(self):
         return "Соц-мережі"
@@ -265,6 +283,7 @@ class SocialMedia(models.Model):
     class Meta:
         verbose_name = _("Соц-мережі")
         verbose_name_plural = _("Соц-мережі")
+
 
 class GalleryMainPage(models.Model):
     img = models.ImageField(
@@ -281,6 +300,7 @@ class GalleryMainPage(models.Model):
 
     def __str__(self):
         return f"Фото #{self.id}"
+    
     
 class GalleryPage(models.Model):
     class Category(models.TextChoices):

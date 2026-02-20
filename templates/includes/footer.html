@@ -46,22 +46,19 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+            © Copyright <strong><span>Wood Life</span></strong>. All Rights Reserved
           </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+          <div class="credits text-start">
+            Designed by <a style="color: white" href="https://bootstrapmade.com/">BootstrapMade</a> | <a style="color: white" href="https://bootstrapmade.com/tools/">DevTools</a><br>
+            Created by <a style="color: white" href="https://bootstrapmade.com/">GhostSystems Lab</a>
           </div>
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="{{site_twitter| default:"#"}}"><i class="bi bi-twitter-x"></i></a>
-          <a href="{{site_facebook| default:"#"}}"><i class="bi bi-facebook"></i></a>
-          <a href="{{site_instagram| default:"#"}}"><i class="bi bi-instagram"></i></a>
-          <a href="{{site_linkedin| default:"#"}}"><i class="bi bi-linkedin"></i></a>
+          {% if site_twitter != '' %}<a href="{{site_twitter}}"><i class="bi bi-twitter-x"></i></a>{% endif %}
+          {% if site_facebook != '' %}<a href="{{site_facebook| default:"#"}}"><i class="bi bi-facebook"></i></a>{% endif %}
+          {% if site_instagram != '' %}<a href="{{site_instagram| default:"#"}}"><i class="bi bi-instagram"></i></a>{% endif %}
+          {% if site_linkedin != '' %}<a href="{{site_linkedin| default:"#"}}"><i class="bi bi-linkedin"></i></a>{% endif %}
         </div>
 
       </div>

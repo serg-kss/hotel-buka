@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% block title %}
+  {% trans "Cottages in Mykulychyn | Wood Life Carpathians" %}
+{% endblock %}
+
 
 {% block content %}
 
-    <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">{% trans "Choose Your Cottage" %}</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Cottages for Rent in Mykulychyn – Wood Life" %}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
@@ -15,15 +18,16 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Rooms 2 Section -->
+
     <section id="rooms-2" class="rooms-2 section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-center">{% trans "Choose Your Cottage" %}</h2>
+      <div class="container mt-3" data-aos="fade-up" data-aos-delay="100">
         <form method="get">
           <div class="room-filters">
             <div class="row g-3 align-items-center">
-              <!-- Capacity -->
+             
               <div class="col-lg-3 col-md-6">
                 <label class="form-label">{% trans "Guest Capacity" %}</label>
                 <select name="capacity" class="form-select" onchange="this.form.submit()">
@@ -38,7 +42,7 @@
         </form>
 
         <div class="rooms-grid" data-aos="fade-up" data-aos-delay="300">
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             {% include "main/includes/room_cards_loop.html" %}
           </div>
         </div>
@@ -57,6 +61,6 @@
         {% endif %}
       </div>
 
-    </section><!-- /Rooms 2 Section -->
+    </section>
 
 {% endblock content %}

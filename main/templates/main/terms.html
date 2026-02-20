@@ -1,160 +1,123 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% block title %}
+  {% trans "Terms &amp; Conditions | Wood Life Mykulychyn" %}
+{% endblock %}
 
 
 {% block content %}
 
-    <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Terms</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Terms &amp; Conditions" %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url "main:index" %}">Home</a></li>
-            <li class="current">Terms</li>
+            <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
+            <li class="current">{% trans "Terms" %}</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Terms Of Service Section -->
     <section id="terms-of-service" class="terms-of-service section">
 
       <div class="container" data-aos="fade-up">
-        <!-- Page Header -->
         <div class="tos-header text-center" data-aos="fade-up">
-          <span class="last-updated">Last Updated: February 27, 2025</span>
-          <h2>Terms of Service</h2>
-          <p>Please read these terms of service carefully before using our services</p>
+          <span class="last-updated">{% trans "Last Updated: February 27, 2025" %}</span>
+          <h2>{% trans "Terms &amp; Conditions" %}</h2>
         </div>
 
-        <!-- Content -->
         <div class="tos-content" data-aos="fade-up" data-aos-delay="200">
-          <!-- Agreement Section -->
-          <div id="agreement" class="content-section">
-            <h3>1. Agreement to Terms</h3>
-            <p>By accessing our website and services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.</p>
+          <div class="content-section">
+            <h3>1. {% trans "General Information" %}</h3>
+            <p>{% trans "These Terms &amp; Conditions govern your use of the Wood Life website and services." %}</p>
             <div class="info-box">
               <i class="bi bi-info-circle"></i>
-              <p>These terms apply to all users, visitors, and others who access or use our services.</p>
+              <p>{% trans "By using this website or submitting a booking request, you agree to these Terms." %}</p>
             </div>
           </div>
 
-          <!-- Intellectual Property -->
-          <div id="intellectual-property" class="content-section">
-            <h3>2. Intellectual Property Rights</h3>
-            <p>Our service and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+          <div class="content-section">
+            <h3>2. {% trans "Booking Requests" %}</h3>
+            <p>{% trans "Submitting a booking form on our website does not constitute automatic confirmation." %}</p>
+            <p>{% trans "A reservation becomes valid only after:" %}</p>
             <ul class="list-items">
-              <li>All content is our exclusive property</li>
-              <li>You may not copy or modify the content</li>
-              <li>Our trademarks may not be used without permission</li>
-              <li>Content is for personal, non-commercial use only</li>
+              <li>{% trans "Direct confirmation from our team" %}</li>
+              <li>{% trans "Agreement on dates and availability" %}</li>
+            </ul>
+            <p>{% trans "We reserve the right to refuse or cancel a booking request at our discretion." %}</p>
+          </div>
+
+          <div class="content-section">
+            <h3>3. {% trans "Payments" %}</h3>
+            <p>{% trans "Payments are arranged directly between the guest and Wood Life." %}</p>
+            <p>{% trans "If an advance payment is required, details will be provided individually." %}</p>
+          </div>
+
+          <div class="content-section">
+            <h3>4. {% trans "Guest Responsibilities" %}</h3>
+            <p>{% trans "Guests agree to:" %}</p>
+            <ul class="list-items">
+              <li>{% trans "Provide accurate booking information" %}</li>
+              <li>{% trans "Respect the property and surrounding nature" %}</li>
+              <li>{% trans "Follow house rules communicated during stay" %}</li>
+              <li>{% trans "Avoid causing damage to property" %}</li>
             </ul>
           </div>
 
-          <!-- User Accounts -->
-          <div id="user-accounts" class="content-section">
-            <h3>3. User Accounts</h3>
-            <p>When you create an account with us, you must provide accurate, complete, and current information. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account.</p>
-            <div class="alert-box">
-              <i class="bi bi-exclamation-triangle"></i>
-              <div class="alert-content">
-                <h5>Important Notice</h5>
-                <p>You are responsible for safeguarding the password and for all activities that occur under your account.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Prohibited Activities -->
-          <div id="prohibited" class="content-section">
-            <h3>4. Prohibited Activities</h3>
-            <p>You may not access or use the Service for any purpose other than that for which we make it available.</p>
-            <div class="prohibited-list">
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Systematic retrieval of data or content</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Publishing malicious content</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Engaging in unauthorized framing</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Attempting to gain unauthorized access</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Disclaimers -->
-          <div id="disclaimer" class="content-section">
-            <h3>5. Disclaimers</h3>
-            <p>Your use of our service is at your sole risk. The service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, whether express or implied.</p>
+          <div class="content-section">
+            <h3>5. {% trans "Use of Website" %}</h3>
             <div class="disclaimer-box">
-              <p>We do not guarantee that:</p>
+              <p>{% trans "You agree not to:" %}</p>
               <ul>
-                <li>The service will meet your requirements</li>
-                <li>The service will be uninterrupted or error-free</li>
-                <li>Results from using the service will be accurate</li>
-                <li>Any errors will be corrected</li>
+                <li>{% trans "Use the website for unlawful purposes" %}</li>
+                <li>{% trans "Attempt to gain unauthorized access" %}</li>
+                <li>{% trans "Copy or distribute website content without permission" %}</li>
               </ul>
             </div>
+            <p>{% trans "All original content, including text, branding, and custom photography, belongs to Wood Life unless otherwise stated. Third-party materials are used in accordance with applicable licenses." %}</p>
           </div>
 
-          <!-- Limitation of Liability -->
-          <div id="limitation" class="content-section">
-            <h3>6. Limitation of Liability</h3>
-            <p>In no event shall we be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages arising out of or in connection with your use of the service.</p>
+          <div class="content-section">
+            <h3>6. {% trans "Limitation of Liability" %}</h3>
+            <p>{% trans "Wood Life is not liable for:" %}</p>
+            <ul class="list-items">
+              <li>{% trans "Interruptions in website availability" %}</li>
+              <li>{% trans "External events beyond our control" %}</li>
+              <li>{% trans "Personal injury resulting from misuse of property" %}</li>
+            </ul>
           </div>
 
-          <!-- Indemnification -->
-          <div id="indemnification" class="content-section">
-            <h3>7. Indemnification</h3>
-            <p>You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, losses, and expenses arising out of your use of the service.</p>
+          <div class="content-section">
+            <h3>7. {% trans "Privacy" %}</h3>
+            <p>{% trans "Use of personal data is governed by our Privacy Policy." %}</p>
           </div>
 
-          <!-- Termination -->
-          <div id="termination" class="content-section">
-            <h3>8. Termination</h3>
-            <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+          <div class="content-section">
+            <h3>8. {% trans "Governing Law" %}</h3>
+            <p>{% trans "These Terms are governed by the laws of Ukraine." %}</p>
           </div>
 
-          <!-- Governing Law -->
-          <div id="governing-law" class="content-section">
-            <h3>9. Governing Law</h3>
-            <p>These Terms shall be governed by and construed in accordance with the laws of [Your Country], without regard to its conflict of law provisions.</p>
+          <div class="content-section">
+            <h3>9. {% trans "Changes to Terms" %}</h3>
+            <p>{% trans "We may update these Terms at any time. The latest version will always be available on this page." %}</p>
           </div>
 
-          <!-- Changes -->
-          <div id="changes" class="content-section">
-            <h3>10. Changes to Terms</h3>
-            <p>We reserve the right to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this page.</p>
-            <div class="notice-box">
-              <i class="bi bi-bell"></i>
-              <p>By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="tos-contact" data-aos="fade-up" data-aos-delay="300">
+        <div data-aos="fade-up" data-aos-delay="300">
           <div class="contact-box">
             <div class="contact-icon">
               <i class="bi bi-envelope"></i>
             </div>
             <div class="contact-content">
-              <h4>Questions About Terms?</h4>
-              <p>If you have any questions about these Terms, please contact us.</p>
-              <a href="#" class="contact-link">Contact Support</a>
+              <h4>{% trans "Questions About Terms?" %}</h4>
+              <p>{% trans "If you have any questions about these Terms, please contact us." %}</p>
+              <a href="{% url "main:contact" %}" class="contact-link">{% trans "Contact Support" %}</a>
             </div>
           </div>
         </div>
       </div>
 
-    </section><!-- /Terms Of Service Section -->
+    </section>
 
 {% endblock content %}

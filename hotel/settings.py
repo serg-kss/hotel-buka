@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'main',
     'booking',
 ]
+INSTALLED_APPS += ["django.contrib.sitemaps"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -68,6 +69,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
 
                 "main.context_processors.site_settings",
+                "main.context_processors.seo_context",
 
             ],
         },

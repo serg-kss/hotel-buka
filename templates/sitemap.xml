@@ -1,0 +1,21 @@
+{% load i18n %}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  {% for url in urlset %}
+    <url>
+      <loc>{{ url.location }}</loc>
+
+      {% for alt in url.alternates %}
+        <xhtml:link rel="alternate"
+                    hreflang="{{ alt.lang_code }}"
+                    href="{{ alt.location }}" />
+      {% endfor %}
+
+      <changefreq>{{ url.changefreq }}</changefreq>
+      <priority>{{ url.priority }}</priority>
+    </url>
+  {% endfor %}
+
+</urlset>

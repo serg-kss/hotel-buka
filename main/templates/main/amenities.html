@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
-
-
+{% block title %}
+  {% trans "Amenities &amp; Comfort | Wood Life Cottages Mykulychyn" %}
+{% endblock %}
+  
 {% block content %}
 
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">{% trans "Comfort &amp; Relaxation" %}</h1>
+        <h1 class="mb-2 mb-lg-0">{% trans "Amenities &amp; Comfort at Wood Life Cottages" %}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
@@ -28,15 +30,13 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="amenity-card">
               <div class="amenity-image">
-                <img src="{% static "assets/img/hotel/amenities-1.webp" %}" alt="Rooftop Pool" class="img-fluid">
+                <img src="{% static "assets/img/hotel/main-page-about-right.png" %}" alt="Rooftop Pool" class="img-fluid">
               </div>
               <div class="amenity-content">
-                <h3>Infinity Pool &amp; Sun Deck</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <h3>{% trans "Fully Equipped Cabins" %}</h3>
+                <p>{% trans "Our wooden cabins are designed for comfortable stays in any season. Each cottage includes high-speed Wi-Fi, a private bathroom, and a fully equipped kitchenette — everything you need to feel at home while surrounded by nature." %}</p>
                 <ul class="amenity-features">
-                  <li><i class="bi bi-clock"></i> Open 6 AM - 10 PM</li>
-                  <li><i class="bi bi-droplet"></i> Heated pool year-round</li>
-                  <li><i class="bi bi-cup-hot"></i> Poolside bar service</li>
+                  <li><i class="bi bi-clock"></i> {% trans "Open" %} 24/7</li>
                 </ul>
               </div>
             </div>
@@ -45,15 +45,13 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="amenity-card">
               <div class="amenity-image">
-                <img src="{% static "assets/img/hotel/amenities-2.webp" %}" alt="Spa Wellness" class="img-fluid">
+                <img src="{% static "assets/img/hotel/pool.png" %}" alt="Spa Wellness" class="img-fluid">
               </div>
               <div class="amenity-content">
-                <h3>Luxury Spa &amp; Wellness</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                <h3>{% trans "Wood-Fired Sauna &amp; Hot Tubs" %}</h3>
+                <p>{% trans "Relax in our traditional wood-fired sauna and outdoor hot tubs surrounded by nature. Warm water, fresh forest air, and the quiet of the mountains create the perfect atmosphere to unwind after an active day." %}</p>
                 <ul class="amenity-features">
-                  <li><i class="bi bi-calendar2-check"></i> Book treatments online</li>
-                  <li><i class="bi bi-heart"></i> Couples massage rooms</li>
-                  <li><i class="bi bi-flower1"></i> Organic spa products</li>
+                  <li><i class="bi bi bi-water"></i> {% trans "Outdoor Hot Tubs" %}</li>
                 </ul>
               </div>
             </div>
@@ -62,15 +60,19 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="amenity-card">
               <div class="amenity-image">
-                <img src="{% static "assets/img/hotel/dining-3.webp" %}" alt="Fine Dining" class="img-fluid">
+                <img src="{% static "assets/img/hotel/celebration.png" %}" alt="Fine Dining" class="img-fluid">
               </div>
               <div class="amenity-content">
-                <h3>Signature Restaurant</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <h3>{% trans "Relax in Nature" %}</h3>
+                <p>
+                  {% trans "Discover cozy gazebos, wooden swings, and peaceful spots designed for quiet mornings, warm evenings, and unforgettable moments in the mountains." %}
+                </p>
                 <ul class="amenity-features">
-                  <li><i class="bi bi-award"></i> Michelin-starred chef</li>
-                  <li><i class="bi bi-wine"></i> Award-winning wine cellar</li>
-                  <li><i class="bi bi-moon-stars"></i> Open Tuesday - Sunday</li>
+                  <li><i class="bi bi-house"></i> {% trans "Comfortable wooden gazebos" %}</li>
+                  <li><i class="bi bi-heart"></i> {% trans "Relaxing lounge areas" %}</li>
+                  <li><i class="bi bi-tree"></i> {% trans "Surrounded by forest and fresh air" %}</li>
+                </ul>
+
                 </ul>
               </div>
             </div>
@@ -79,15 +81,18 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
             <div class="amenity-card">
               <div class="amenity-image">
-                <img src="{% static "assets/img/hotel/amenities-4.webp" %}" alt="Fitness Center" class="img-fluid">
+                <img src="{% static "assets/img/hotel/yaremche.jpg" %}" alt="Fitness Center" class="img-fluid">
               </div>
               <div class="amenity-content">
-                <h3>24/7 Fitness Center</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                <h3>{% trans "In the Heart of the Carpathians" %}</h3>
+                <p>
+                  {% trans "Step outside and immerse yourself in fresh mountain air, scenic landscapes, and unforgettable views. From peaceful forest walks to iconic Carpathian attractions, there’s always something beautiful to explore." %}
+                </p>
+
                 <ul class="amenity-features">
-                  <li><i class="bi bi-lightning"></i> State-of-the-art equipment</li>
-                  <li><i class="bi bi-person-check"></i> Personal trainers available</li>
-                  <li><i class="bi bi-shield-check"></i> Complimentary towels</li>
+                  <li><i class="bi bi-signpost-2"></i> {% trans "Popular attractions nearby" %}</li>
+                  <li><i class="bi bi-tree"></i> {% trans "Direct access to nature" %}</li>
+                  <li><i class="bi bi-sun"></i> {% trans "Fresh air and open mountain views" %}</li>
                 </ul>
               </div>
             </div>

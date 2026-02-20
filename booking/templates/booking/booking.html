@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% block title %}
+  {% trans "Cottage Booking | Wood Life Carpathians" %}
+{% endblock %}
 
 {% block content %}
-    <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">{% trans "Booking" %}</h1>
+        <h1>{% trans "Book Your Cottage in Mykulychyn" %}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url "main:index" %}">{% trans "Home" %}</a></li>
@@ -14,9 +16,8 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Booking Section -->
     <section id="booking" class="booking section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -24,8 +25,8 @@
         <div class="reservation-wrapper">
 
           <div class="reservation-header text-center" data-aos="fade-up" data-aos-delay="200">
-            <h2>Reserve Your Stay</h2>
-            <p class="lead">Experience unmatched hospitality with our streamlined booking process</p>
+            <h2>{% trans "Reserve Your Stay at " %} {{room}}</h2>
+            <p class="lead">{% trans "Submit your request and we will confirm your stay shortly. Wood Life offers private wooden cottages in the heart of the Carpathian Mountains." %}</p>
           </div>
 
           <div class="booking-grid">
@@ -38,64 +39,68 @@
 
             <div class="hotel-showcase" data-aos="fade-left" data-aos-delay="400">
               <div class="showcase-image">
-                <img src="{% static "assets/img/hotel/showcase-1.webp" %}" alt="Hotel luxury showcase" class="img-fluid">
+                <img src="{% static "assets/img/hotel/booking.jpeg" %}" alt="Booking | Wood Life Carpathians" class="img-fluid">
               </div>
 
               <div class="hotel-highlights">
-                <h3>Why Choose Our Hotel</h3>
+                <h3>{% trans "Why choose Wood Life Carpathians" %}</h3>
+
                 <div class="highlights-grid">
+
+                  <!-- Service -->
                   <div class="highlight-item">
                     <div class="highlight-icon">
-                      <i class="bi bi-wifi"></i>
+                      <i class="bi bi-stars"></i>
                     </div>
                     <div class="highlight-content">
-                      <h5>Premium Connectivity</h5>
-                      <p>High-speed internet access in all areas</p>
+                      <h5>{% trans "Excellent Service" %}</h5>
+                      <p>{% trans "Professional hospitality and attentive support for a truly comfortable stay." %}</p>
                     </div>
                   </div>
+
+                  <!-- Equipped Cottages -->
                   <div class="highlight-item">
                     <div class="highlight-icon">
-                      <i class="bi bi-clock"></i>
+                      <i class="bi bi-house-heart"></i>
                     </div>
                     <div class="highlight-content">
-                      <h5>24/7 Service</h5>
-                      <p>Round-the-clock assistance and support</p>
+                      <h5>{% trans "Fully Equipped Cottages" %}</h5>
+                      <p>{% trans "Modern cottages with everything you need, including autonomous heating for year-round comfort." %}</p>
                     </div>
                   </div>
+
+                  <!-- Location & Nature -->
                   <div class="highlight-item">
                     <div class="highlight-icon">
-                      <i class="bi bi-car-front"></i>
+                      <i class="bi bi-tree"></i>
                     </div>
                     <div class="highlight-content">
-                      <h5>Valet Parking</h5>
-                      <p>Complimentary parking with valet service</p>
+                      <h5>{% trans "Prime Location &amp; Nature" %}</h5>
+                      <p>{% trans "Private territory with all amenities surrounded by the breathtaking Carpathian Mountains." %}</p>
                     </div>
                   </div>
-                  <div class="highlight-item">
-                    <div class="highlight-icon">
-                      <i class="bi bi-heart-pulse"></i>
-                    </div>
-                    <div class="highlight-content">
-                      <h5>Wellness Center</h5>
-                      <p>Full-service spa and fitness facilities</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
 
+
               <div class="booking-guarantees">
+
                 <div class="guarantee-item">
                   <i class="bi bi-shield-check"></i>
-                  <span>Secure Booking</span>
+                  <span>{% trans "Secure Booking" %}</span>
                 </div>
+
                 <div class="guarantee-item">
-                  <i class="bi bi-arrow-clockwise"></i>
-                  <span>Flexible Cancellation</span>
+                  <i class="bi bi-arrow-repeat"></i>
+                  <span>{% trans "Flexible Cancellation" %}</span>
                 </div>
+
                 <div class="guarantee-item">
-                  <i class="bi bi-telephone"></i>
-                  <span>24/7 Support</span>
+                  <i class="bi bi-headset"></i>
+                  <span>{% trans "24/7 Support" %}</span>
                 </div>
+
               </div>
             </div>
 
@@ -105,6 +110,6 @@
 
       </div>
 
-    </section><!-- /Booking Section -->
+    </section>
 
 {% endblock content %}

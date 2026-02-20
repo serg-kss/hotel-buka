@@ -5,6 +5,8 @@ from django.views.generic import ListView, DetailView, TemplateView
 from .models import Room, ContactMessages, Testimonials, GalleryMainPage, GalleryPage
 from django.db import DatabaseError
 from collections import defaultdict
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
 
 class MainPageView(TemplateView):
@@ -32,6 +34,7 @@ class MainPageView(TemplateView):
         context["testimonials"] = testimonials
         context["photo"] = photo
         context["rooms"] = rooms
+        context["count"] = count
         return context
 
 
@@ -160,5 +163,5 @@ class Contact(View):
             subject = request.POST.get("subject"),
             message = request.POST.get("message")
         )
-
-        return redirect("main:contact")
+        messages.success(request, _("Message sent successfully! Thank you 🙌"))
+        return redirect("main:index")
