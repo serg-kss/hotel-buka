@@ -17,7 +17,7 @@
         </nav>
       </div>
     </div>
-    <section id="gallery" class="gallery section">
+    <section id="gallery" class="gallery section  mt-5">
       <h2 class="text-center">{% trans "In the Carpathian Heart" %}</h2>
       {% if photo %}
       <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
@@ -51,7 +51,7 @@
           </div>
         </div>
         {% if has_more %}
-        <div class="load-more-section text-center col-xl-2 col-lg-3 mt-4">
+        <div class="load-more-section text-center col-xl-2 col-lg-3 mt-4 mb-4">
           <a href="?limit={{ limit|add:9 }}"
             class="btn-load-more">
             <i class="bi bi-arrow-down-circle"></i>

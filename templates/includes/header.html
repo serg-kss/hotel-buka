@@ -29,26 +29,56 @@
           <img src="{% static "assets/img/logo.png" %}" alt="Wood Life" width="220" height="100">
         </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="{% url "main:index" %}" class="active">{% trans "Home" %}</a></li>
-            <li><a href="{% url "main:rooms" %}">{% trans "Cottages" %}</a></li>
-            <li><a href="{% url "main:amenities" %}">{% trans "Amenities" %}</a></li>
-            <li><a href="{% url "main:gallery" %}">{% trans "Gallery" %}</a></li>
-            <li><a href="{% url "main:location" %}">{% trans "Location" %}</a></li>
-            <li class="dropdown"><a href="#"><span>{% trans "Info" %}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="{% url "main:terms" %}">{% trans "Terms Page" %}</a></li>
-                <li><a href="{% url "main:privacy" %}">{% trans "Privacy Page" %}</a></li>
-              </ul>
-            </li>
-            <li><a href="{% url "main:contact" %}">{% trans "Contact" %}</a></li>
+       <nav id="navmenu" class="navmenu">
+        {% with current_url=request.resolver_match.url_name %}
+        <ul>
 
-            {% include "includes/language_switch.html" %}
+          <li>
+            <a href="{% url 'main:index' %}"
+              class="{% if current_url == 'index' %}active{% endif %}">
+              {% trans "Home" %}
+            </a>
+          </li>
 
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+          <li>
+            <a href="{% url 'main:rooms' %}"
+              class="{% if current_url == 'rooms' %}active{% endif %}">
+              {% trans "Cottages" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'main:amenities' %}"
+              class="{% if current_url == 'amenities' %}active{% endif %}">
+              {% trans "Amenities" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'main:gallery' %}"
+              class="{% if current_url == 'gallery' %}active{% endif %}">
+              {% trans "Gallery" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'main:location' %}"
+              class="{% if current_url == 'location' %}active{% endif %}">
+              {% trans "Location" %}
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'main:contact' %}"
+              class="{% if current_url == 'contact' %}active{% endif %}">
+              {% trans "Contact" %}
+            </a>
+          </li>
+          {% include "includes/language_switch.html" %}
+        </ul>
+        {% endwith %}
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+       </nav>
 
       </div>
 

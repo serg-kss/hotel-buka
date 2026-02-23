@@ -7,8 +7,12 @@ from django.db import DatabaseError
 from collections import defaultdict
 from django.contrib import messages
 from django.utils.translation import gettext as _
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers
 
 
+@method_decorator(cache_page(60 * 30), name="dispatch")
 class MainPageView(TemplateView):
     template_name = "main/index.html"
 
@@ -38,7 +42,7 @@ class MainPageView(TemplateView):
         return context
 
 
-
+@method_decorator(cache_page(60 * 30), name="dispatch")
 class RoomListView(ListView):
     model = Room
     template_name = "main/rooms.html"
@@ -125,19 +129,31 @@ class RoomDetailView(DetailView):
 
         return context
 
-
+@vary_on_headers("Accept-Language")
+@cache_page(60 * 30)
 def amenities(request):
     return render(request, 'main/amenities.html')
 
+
+@vary_on_headers("Accept-Language")
+@cache_page(60 * 30)
 def location(request):
     return render(request, 'main/location.html')
 
+
+@vary_on_headers("Accept-Language")
+@cache_page(60 * 30)
 def terms(request):
     return render(request, 'main/terms.html')
 
+
+@vary_on_headers("Accept-Language")
+@cache_page(60 * 30)
 def privacy(request):
     return render(request, 'main/privacy.html')
 
+
+@method_decorator(cache_page(60 * 30), name="dispatch")
 class GalleryView(TemplateView):
     template_name = "main/gallery.html"
 

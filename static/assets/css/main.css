@@ -25,7 +25,7 @@
   --default-color: #40524d; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0d1f1a; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #013731; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #f2f6f4; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -62,10 +62,63 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
+  position: relative;
+  background-color: #f4f7f5;
+  overflow-x: hidden;
+}
+
+/* органический фон */
+body::before {
+  will-change: transform;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(1, 55, 49, 0.08) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(1, 55, 49, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(0, 120, 100, 0.08) 0%,
+      transparent 60%
+    );
+  animation: moveMist 40s ease-in-out infinite alternate;
+}
+@keyframes moveMist {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    transform: translateY(-20px) translateX(20px);
+  }
+}
+
+/* слой шума */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: url("/static/assets/img/bg/noise.png") repeat;
+  background-size: 30px 30px;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
 a {
@@ -143,22 +196,50 @@ h6 {
 
 /*--------------------------------------------------------------
 # Global Header
+
 --------------------------------------------------------------*/
+
 .header {
   --background-color: #013731;
   --heading-color: #ffffff;
+
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
+
+  position: relative;
+  overflow: visible;
+
+  /* базовый зелёный градиент */
+  background: radial-gradient(
+    circle at 30% 40%,
+    #0b4d3a 0%,
+    #013731 60%,
+    #022d28 100%
+  );
 }
 
-.header .topbar {
-  background-color: var(--background-color);
-  height: 40px;
-  padding: 0;
-  font-size: 14px;
-  transition: all 0.5s;
+/* слой шума */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/static/assets/img/bg/noise.png") repeat;
+  background-size: 30px 30px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;   /* ВАЖНО */
+}
+
+/* чтобы контент был поверх шума */
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.navmenu {
+  position: relative;
+  z-index: 5;
 }
 
 .header .topbar .contact-info i {
@@ -374,6 +455,7 @@ h6 {
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
+    width: calc(100% - 40px);   /* ключевой момент */
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -484,15 +566,46 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
+  --footer-dark: #012f29;
+  --footer-darker: #011f1b;
+
   color: var(--default-color);
-  background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  overflow: hidden;
+
+  /* глубокий зелёный градиент */
+  background: radial-gradient(
+    circle at 30% 30%,
+    #0a4a39 0%,
+    var(--footer-dark) 55%,
+    var(--footer-darker) 100%
+  );
 }
 
+/* слой шума */
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("/static/assets/img/bg/noise.png") repeat;
+  background-size: 30px 30px;
+
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* чтобы контент был поверх */
+.footer > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* верхняя часть футера */
 .footer .footer-top {
-  background-color: color-mix(in srgb, var(--background-color), white 5%);
-  padding-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .footer .footer-about .logo {
@@ -593,8 +706,7 @@ h6 {
 .footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
-  color: var(--accent-color);
+  color: var(--contrast-color);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -606,8 +718,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -699,15 +810,47 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 25px 0;
+  --background-color: #013731;
+  --heading-color: #ffffff;
+
+  color: #ffffff;
+  padding: 40px 0;
+
   position: relative;
+  overflow: hidden;
+
+  /* ТОТ ЖЕ градиент что у header */
+  background: radial-gradient(
+    circle at 30% 40%,
+    #0b4d3a 0%,
+    #013731 60%,
+    #022d28 100%
+  );
 }
 
+/* тот же шум */
+.page-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("/static/assets/img/bg/noise.png") repeat;
+  background-size: 30px 30px;
+
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* контент поверх */
+.page-title > * {
+  position: relative;
+  z-index: 2;
+}
 .page-title h1 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
+  color: #ffffff;
+  margin: 0;
 }
 
 .page-title .breadcrumbs ol {
@@ -715,33 +858,32 @@ h6 {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 12px 0 0 0;
   font-size: 14px;
-  font-weight: 400;
+  color: rgba(255,255,255,0.75);
 }
 
 .page-title .breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
-  content: "/";
-  display: inline-block;
-  padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.page-title .breadcrumbs ol li a {
+  color: rgba(255,255,255,0.75);
 }
 
+.page-title .breadcrumbs ol li a:hover {
+  color: #ffffff;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  padding-right: 10px;
+  color: rgba(255,255,255,0.4);
+}
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
-section,
-.section {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 90px;
-  overflow: clip;
-}
+
 
 @media (max-width: 1199px) {
 
@@ -1949,9 +2091,6 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials {
-  /* Responsive Styles */
-}
 
 .testimonials .testimonials-wrapper {
   padding: 20px 0;
@@ -1959,7 +2098,6 @@ section,
 
 .testimonials .testimonial-card {
   position: relative;
-  background-color: var(--surface-color);
   border-radius: 12px;
   padding: 40px 30px 30px;
   height: 100%;
@@ -4952,9 +5090,6 @@ section,
 /*--------------------------------------------------------------
 # Booking Section
 --------------------------------------------------------------*/
-.booking {
-  background: color-mix(in srgb, var(--surface-color), var(--background-color) 50%);
-}
 
 .booking .reservation-wrapper {
   max-width: 1400px;
@@ -7087,39 +7222,5 @@ section,
   --wood-tone: #8c6a4a;
 }
 
-/* ===== Общий фон сайта ===== */
-body {
-  position: relative;
-  background:
-    linear-gradient(
-      rgba(255,255,255,0.85),
-      rgba(255,255,255,0.88)
-    ),
-    url("/static/assets/img/hotel/forest.jpeg") center center / cover fixed no-repeat;
-}
-
-
-
-/* ===== Секции как premium-карточки ===== */
-section {
-  background: rgba(230, 228, 226, 0.7);
-  backdrop-filter: blur(8px);
-  border-radius: 24px;
-  margin: 60px auto;
-  padding: 70px 50px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
-  max-width: 1500px;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 45%,
-    rgba(0,0,0,0.06) 100%
-  );
-  pointer-events: none;
-  z-index: -1;
-}
+/* ===== Общий фон сайта =====
+/* органический фон */

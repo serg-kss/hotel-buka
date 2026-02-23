@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 23:01+0200\n"
+"POT-Creation-Date: 2026-02-23 16:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 #: main/templates/main/gallery.html:14 main/templates/main/location.html:16
 #: main/templates/main/privacy.html:16 main/templates/main/room.html:16
 #: main/templates/main/rooms.html:16 main/templates/main/terms.html:16
-#: templates/includes/footer.html:24 templates/includes/header.html:34
+#: templates/includes/footer.html:24 templates/includes/header.html:39
 msgid "Home"
 msgstr ""
 
@@ -75,35 +75,35 @@ msgid ""
 "Professional hospitality and attentive support for a truly comfortable stay."
 msgstr ""
 
-#: booking/templates/booking/booking.html:67
+#: booking/templates/booking/booking.html:68
 msgid "Fully Equipped Cottages"
 msgstr ""
 
-#: booking/templates/booking/booking.html:68
+#: booking/templates/booking/booking.html:69
 msgid ""
 "Modern cottages with everything you need, including autonomous heating for "
 "year-round comfort."
 msgstr ""
 
-#: booking/templates/booking/booking.html:78
+#: booking/templates/booking/booking.html:79
 msgid "Prime Location &amp; Nature"
 msgstr ""
 
-#: booking/templates/booking/booking.html:79
+#: booking/templates/booking/booking.html:80
 msgid ""
 "Private territory with all amenities surrounded by the breathtaking "
 "Carpathian Mountains."
 msgstr ""
 
-#: booking/templates/booking/booking.html:91
+#: booking/templates/booking/booking.html:92
 msgid "Secure Booking"
 msgstr ""
 
-#: booking/templates/booking/booking.html:96
+#: booking/templates/booking/booking.html:97
 msgid "Flexible Cancellation"
 msgstr ""
 
-#: booking/templates/booking/booking.html:101
+#: booking/templates/booking/booking.html:102
 msgid "24/7 Support"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr ""
 msgid "Назва котеджу (англ)"
 msgstr ""
 
-#: main/models.py:57 main/models.py:295 main/models.py:326
+#: main/models.py:57 main/models.py:295 main/models.py:328
 msgid "Опис (укр)"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgstr ""
 msgid "Котеджі"
 msgstr ""
 
-#: main/models.py:182 main/models.py:290 main/models.py:313
+#: main/models.py:182 main/models.py:290 main/models.py:315
 msgid "Фото"
 msgstr ""
 
@@ -383,7 +383,7 @@ msgstr ""
 msgid "Назва (англ)"
 msgstr ""
 
-#: main/models.py:206 main/models.py:320
+#: main/models.py:206 main/models.py:322
 msgid "Категорія"
 msgstr ""
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "Соц-мережі"
 msgstr ""
 
-#: main/models.py:296 main/models.py:327
+#: main/models.py:296 main/models.py:329
 msgid "Опис (en)"
 msgstr ""
 
@@ -466,7 +466,7 @@ msgstr ""
 #: main/models.py:308 main/templates/main/gallery.html:29
 #: main/templates/main/includes/amenities.html:8
 #: main/templates/main/includes/amenities.html:9
-#: templates/includes/footer.html:26 templates/includes/header.html:36
+#: templates/includes/footer.html:26 templates/includes/header.html:53
 msgid "Amenities"
 msgstr ""
 
@@ -478,7 +478,15 @@ msgstr ""
 msgid "Exterior"
 msgstr ""
 
-#: main/models.py:329 main/models.py:330
+#: main/models.py:311 main/templates/main/gallery.html:32
+msgid "Territory"
+msgstr ""
+
+#: main/models.py:312 main/templates/main/gallery.html:33
+msgid "Nature"
+msgstr ""
+
+#: main/models.py:331 main/models.py:332
 msgid "Фото галерея"
 msgstr ""
 
@@ -658,7 +666,7 @@ msgid "Contact Wood Life – Mykulychyn, Carpathian Mountains"
 msgstr ""
 
 #: main/templates/main/contact.html:16 main/templates/main/location.html:68
-#: templates/includes/header.html:45
+#: templates/includes/header.html:74
 msgid "Contact"
 msgstr ""
 
@@ -667,7 +675,7 @@ msgid "Get in Touch"
 msgstr ""
 
 #: main/templates/main/contact.html:40 main/templates/main/location.html:17
-#: templates/includes/footer.html:27 templates/includes/header.html:38
+#: templates/includes/footer.html:27 templates/includes/header.html:67
 msgid "Location"
 msgstr ""
 
@@ -695,7 +703,7 @@ msgstr ""
 msgid "Gallery of Wood Life Cottages in Mykulychyn"
 msgstr ""
 
-#: main/templates/main/gallery.html:15 templates/includes/header.html:37
+#: main/templates/main/gallery.html:15 templates/includes/header.html:60
 msgid "Gallery"
 msgstr ""
 
@@ -705,14 +713,6 @@ msgstr ""
 
 #: main/templates/main/gallery.html:27
 msgid "All Photos"
-msgstr ""
-
-#: main/templates/main/gallery.html:32
-msgid "Territory"
-msgstr ""
-
-#: main/templates/main/gallery.html:33
-msgid "Nature"
 msgstr ""
 
 #: main/templates/main/gallery.html:58
@@ -729,24 +729,26 @@ msgstr ""
 
 #: main/templates/main/includes/about-main.html:14
 msgid ""
-"Wood Life is a private retreat nestled in nature, where handcrafted wooden "
-"cabins meet fresh mountain air and peaceful forest surroundings."
+"Wood Life is a collection of handcrafted log guest cottages located on the "
+"grounds of a private estate near the forest in the heart of the Carpathian "
+"Mountains. Here, cozy wooden homes blend perfectly with fresh mountain air, "
+"peaceful surroundings, and the authentic atmosphere of nature."
 msgstr ""
 
 #: main/templates/main/includes/about-main.html:15
 msgid ""
-"For over 10 years, we’ve been welcoming guests who seek comfort, privacy, "
-"and a genuine escape from the city rush. Our log cabins are built from "
-"natural wood, creating a warm and eco-friendly atmosphere that helps you "
-"truly unwind."
+"For over 5 years, we have been welcoming guests who value comfort, privacy, "
+"and a quiet escape from city life. Our natural wood cottages create a warm "
+"and eco-friendly environment designed for complete relaxation in every "
+"season."
 msgstr ""
 
 #: main/templates/main/includes/about-main.html:16
 msgid ""
-"On our private territory, you’ll find everything you need for a perfect stay "
-"— wood-fired sauna, cozy gazebos, barbecue areas, and quiet spaces to relax "
-"under the trees. Here, mornings begin with birdsong, evenings end by the "
-"fire, and every stay feels personal."
+"The property offers everything you need for a perfect stay: a wood-fired "
+"sauna, cozy gazebos, barbecue areas, and peaceful spaces surrounded by "
+"greenery. Mornings begin with birdsong, and evenings are filled with "
+"calmness and harmony with nature."
 msgstr ""
 
 #: main/templates/main/includes/about-main.html:21
@@ -938,7 +940,7 @@ msgid "Discover Our Full Gallery"
 msgstr ""
 
 #: main/templates/main/includes/hero-main.html:6
-msgid "Cottages in Mykulychyn – Wood Life Hotel, Carpathian Mountain Retreat"
+msgid "Cottages in Mykulychyn – Wood Life, Carpathian Mountain Retreat"
 msgstr ""
 
 #: main/templates/main/includes/hero-main.html:10
@@ -965,7 +967,7 @@ msgstr ""
 msgid "Watch Overview"
 msgstr ""
 
-#: main/templates/main/includes/hero-main.html:41
+#: main/templates/main/includes/hero-main.html:48
 msgid "Crafted for Comfort"
 msgstr ""
 
@@ -1708,7 +1710,7 @@ msgstr ""
 msgid "Contact Support"
 msgstr ""
 
-#: main/views.py:172
+#: main/views.py:188
 msgid "Message sent successfully! Thank you 🙌"
 msgstr ""
 
@@ -1720,7 +1722,7 @@ msgstr ""
 msgid "Useful Links"
 msgstr ""
 
-#: templates/includes/footer.html:25 templates/includes/header.html:35
+#: templates/includes/footer.html:25 templates/includes/header.html:46
 msgid "Cottages"
 msgstr ""
 
@@ -1734,18 +1736,6 @@ msgstr ""
 
 #: templates/includes/footer.html:36
 msgid "Privacy policy"
-msgstr ""
-
-#: templates/includes/header.html:39
-msgid "Info"
-msgstr ""
-
-#: templates/includes/header.html:41
-msgid "Terms Page"
-msgstr ""
-
-#: templates/includes/header.html:42
-msgid "Privacy Page"
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:16

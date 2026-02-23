@@ -3,7 +3,7 @@
 {% get_current_language as CURRENT_LANG %}
 
 {% if photo %}
-<section id="gallery-showcase" class="gallery-showcase section">
+<section id="gallery-showcase" class="gallery-showcase section mt-5">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -57,7 +57,7 @@
          </div>
         </div>
 
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-center mt-5 mb-5" data-aos="fade-up" data-aos-delay="300">
           <a href="{% url "main:gallery" %}" class="btn btn-gallery">
             <i class="bi bi-collection me-2"></i>{% trans "Discover Our Full Gallery" %}
           </a>
