@@ -28,7 +28,7 @@
             <div class="room-header-image">
               {% with first_image=room.images.first %}
                 {% if first_image %}
-                    <img src="{{ first_image.image.url }}" alt="Suite Interior" class="img-fluid rounded">
+                    <img src="{{ first_image.image.url }}" alt="{% trans "Interior of Wood Life cottage" %}" class="img-fluid rounded">
                 {% endif %}
               {% endwith %}
               <div class="room-badge">
@@ -94,7 +94,7 @@
               {% for image in room.images.all %}
                 {% if forloop.counter == 2 %}
                   <a href="{{ image.image.url }}" class="glightbox">
-                    <img src="{{ image.image.url }}" alt="Suite Interior" class="img-fluid">
+                    <img src="{{ image.image.url }}" alt="{% trans "Wood Life cottage" %}" class="img-fluid">
                   </a>
                 {% endif %}
               {% endfor %}
@@ -103,7 +103,7 @@
             <div class="gallery-thumbnails">
              {% for img in room.images.all|slice:"2:" %}
               <a href="{{ img.image.url }}" class="glightbox">
-                <img src="{{ img.image.url }}" alt="Bedroom View" class="img-fluid">
+                <img src="{{ img.image.url }}" alt="{% trans "Wood Life cottage" %}" class="img-fluid">
               </a>
              {% endfor %}
               </a>

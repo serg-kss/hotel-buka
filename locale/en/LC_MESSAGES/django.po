@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-23 16:07+0200\n"
+"POT-Creation-Date: 2026-02-23 20:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,6 +60,10 @@ msgstr ""
 msgid ""
 "Submit your request and we will confirm your stay shortly. Wood Life offers "
 "private wooden cottages in the heart of the Carpathian Mountains."
+msgstr ""
+
+#: booking/templates/booking/booking.html:42
+msgid "Booking | Wood Life Carpathians"
 msgstr ""
 
 #: booking/templates/booking/booking.html:46
@@ -498,6 +502,12 @@ msgstr ""
 msgid "Amenities &amp; Comfort at Wood Life Cottages"
 msgstr ""
 
+#: main/templates/main/amenities.html:33
+msgid ""
+"Interior of a wooden Wood Life cottage with kitchen and sleeping area in the "
+"Carpathians"
+msgstr ""
+
 #: main/templates/main/amenities.html:36
 #: main/templates/main/includes/amenities.html:26
 msgid "Fully Equipped Cabins"
@@ -513,6 +523,11 @@ msgstr ""
 
 #: main/templates/main/amenities.html:39
 msgid "Open"
+msgstr ""
+
+#: main/templates/main/amenities.html:48
+msgid ""
+"Wood-fired sauna and outdoor hot tub at Wood Life in the Carpathian Mountains"
 msgstr ""
 
 #: main/templates/main/amenities.html:51
@@ -531,6 +546,10 @@ msgstr ""
 #: main/templates/main/amenities.html:54
 #: main/templates/main/includes/amenities.html:49
 msgid "Outdoor Hot Tubs"
+msgstr ""
+
+#: main/templates/main/amenities.html:63
+msgid "Terrace of Wood Life cottage with mountain view in the Carpathians"
 msgstr ""
 
 #: main/templates/main/amenities.html:66
@@ -553,6 +572,10 @@ msgstr ""
 
 #: main/templates/main/amenities.html:73
 msgid "Surrounded by forest and fresh air"
+msgstr ""
+
+#: main/templates/main/amenities.html:84
+msgid "Ski resort in the Carpathians near Wood Life cottage"
 msgstr ""
 
 #: main/templates/main/amenities.html:87
@@ -763,6 +786,15 @@ msgstr ""
 msgid "Natural Wood Cabins"
 msgstr ""
 
+#: main/templates/main/includes/about-main.html:38
+#: main/templates/main/includes/cottages-main.html:18
+msgid "Interior of Wood Life cottage the Carpathian Mountains"
+msgstr ""
+
+#: main/templates/main/includes/about-main.html:41
+msgid "Territory of Wood Life the Carpathian Mountains"
+msgstr ""
+
 #: main/templates/main/includes/about-main.html:46
 msgid "Years"
 msgstr ""
@@ -779,6 +811,10 @@ msgid ""
 "help you unwind and enjoy your time in the mountains."
 msgstr ""
 
+#: main/templates/main/includes/amenities.html:20
+msgid "Interior of Wood Life cottage, the Carpathian Mountains"
+msgstr ""
+
 #: main/templates/main/includes/amenities.html:29
 msgid "High-Speed"
 msgstr ""
@@ -787,10 +823,18 @@ msgstr ""
 msgid "Kitchenette"
 msgstr ""
 
+#: main/templates/main/includes/amenities.html:39
+msgid "Outdoor hot tub at Wood Life cottage in the Carpathians"
+msgstr ""
+
 #: main/templates/main/includes/amenities.html:48
 #: main/templates/main/includes/events-main.html:69
 #: main/templates/main/includes/hero-main.html:23
 msgid "Wood-Fired Sauna"
+msgstr ""
+
+#: main/templates/main/includes/amenities.html:58
+msgid "Parking area at Wood Life cottage in the Carpathian Mountains"
 msgstr ""
 
 #: main/templates/main/includes/amenities.html:64
@@ -850,6 +894,11 @@ msgstr ""
 msgid "View Cottages"
 msgstr ""
 
+#: main/templates/main/includes/cottages-main.html:71
+#: main/templates/main/room.html:97 main/templates/main/room.html:106
+msgid "Wood Life cottage"
+msgstr ""
+
 #: main/templates/main/includes/cottages-main.html:82
 #: main/templates/main/includes/room_cards_loop.html:21
 #: main/templates/main/room.html:46
@@ -883,6 +932,10 @@ msgid ""
 "for unforgettable experiences."
 msgstr ""
 
+#: main/templates/main/includes/events-main.html:24
+msgid "Terrace of Wood Life cottage with a view of the Carpathian Mountains"
+msgstr ""
+
 #: main/templates/main/includes/events-main.html:27
 msgid "Private Celebrations"
 msgstr ""
@@ -902,6 +955,12 @@ msgstr ""
 msgid "BBQ &amp; Outdoor Area"
 msgstr ""
 
+#: main/templates/main/includes/events-main.html:43
+msgid ""
+"Wooden interior of Wood Life cottage for private events and corporate "
+"retreats"
+msgstr ""
+
 #: main/templates/main/includes/events-main.html:46
 msgid "Corporate &amp; Team Retreats"
 msgstr ""
@@ -919,6 +978,10 @@ msgstr ""
 
 #: main/templates/main/includes/events-main.html:50
 msgid "Outdoor Activities"
+msgstr ""
+
+#: main/templates/main/includes/events-main.html:62
+msgid "Cozy bedroom in Wood Life cottage for relaxation in the Carpathians"
 msgstr ""
 
 #: main/templates/main/includes/events-main.html:65
@@ -967,6 +1030,11 @@ msgstr ""
 msgid "Watch Overview"
 msgstr ""
 
+#: main/templates/main/includes/hero-main.html:37
+#: main/templates/main/includes/hero-main.html:42
+msgid "Exterior of Wood Life cottage the Carpathian Mountains"
+msgstr ""
+
 #: main/templates/main/includes/hero-main.html:48
 msgid "Crafted for Comfort"
 msgstr ""
@@ -981,6 +1049,10 @@ msgid ""
 "Discover the beauty of the Carpathians just minutes from Wood Life. From "
 "scenic waterfalls and mountain trails to famous resorts and cultural spots — "
 "every day here brings a new adventure."
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:21
+msgid "Yaremche ski resort in the Carpathian Mountains during winter"
 msgstr ""
 
 #: main/templates/main/includes/location-main.html:24
@@ -1003,6 +1075,10 @@ msgstr ""
 
 #: main/templates/main/includes/location-main.html:32
 msgid "Ski &amp; Outdoor Activities"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:41
+msgid "Divochi Slozy waterfall near Yaremche in the Carpathian Mountains"
 msgstr ""
 
 #: main/templates/main/includes/location-main.html:44
@@ -1028,6 +1104,10 @@ msgstr ""
 msgid "Photo Spot"
 msgstr ""
 
+#: main/templates/main/includes/location-main.html:61
+msgid "Chemihivskyi Canyon with a mountain river in the Carpathians"
+msgstr ""
+
 #: main/templates/main/includes/location-main.html:64
 msgid "by min car"
 msgstr ""
@@ -1048,6 +1128,10 @@ msgstr ""
 
 #: main/templates/main/includes/location-main.html:72
 msgid "Scenic Photo Spot"
+msgstr ""
+
+#: main/templates/main/includes/location-main.html:81
+msgid "Zhenetskyi Huk waterfall in the Carpathian Mountains"
 msgstr ""
 
 #: main/templates/main/includes/location-main.html:88
@@ -1115,6 +1199,10 @@ msgstr ""
 
 #: main/templates/main/includes/location-main.html:153
 msgid "View on Map"
+msgstr ""
+
+#: main/templates/main/includes/room_cards_loop.html:10
+msgid "Exterior of Wood Life cottage"
 msgstr ""
 
 #: main/templates/main/includes/room_cards_loop.html:26
@@ -1429,6 +1517,10 @@ msgstr ""
 msgid "Cottage"
 msgstr ""
 
+#: main/templates/main/room.html:31
+msgid "Interior of Wood Life cottage"
+msgstr ""
+
 #: main/templates/main/room.html:61
 msgid "per night"
 msgstr ""
@@ -1457,56 +1549,40 @@ msgstr ""
 msgid "Policies"
 msgstr ""
 
-#: main/templates/main/room.html:152
-msgid "Services"
-msgstr ""
-
-#: main/templates/main/room.html:160
+#: main/templates/main/room.html:157
 msgid "Additional items"
 msgstr ""
 
-#: main/templates/main/room.html:161
+#: main/templates/main/room.html:158
 msgid "iron with board"
 msgstr ""
 
-#: main/templates/main/room.html:162
+#: main/templates/main/room.html:159
 msgid "disposable slippers"
 msgstr ""
 
-#: main/templates/main/room.html:163
+#: main/templates/main/room.html:160
 msgid "shower gel"
 msgstr ""
 
-#: main/templates/main/room.html:164
+#: main/templates/main/room.html:161
 msgid "towels"
 msgstr ""
 
-#: main/templates/main/room.html:168
+#: main/templates/main/room.html:165
 msgid "Check-in / Check-out"
 msgstr ""
 
-#: main/templates/main/room.html:169
+#: main/templates/main/room.html:166
 msgid "Check-in: 13:00"
 msgstr ""
 
-#: main/templates/main/room.html:169
+#: main/templates/main/room.html:166
 msgid "Check-out: 12:00"
 msgstr ""
 
-#: main/templates/main/room.html:172
+#: main/templates/main/room.html:169
 msgid "Pets"
-msgstr ""
-
-#: main/templates/main/room.html:182
-msgid "Room Service"
-msgstr ""
-
-#: main/templates/main/room.html:183
-msgid "Available 11:00 - 13:00 daily"
-msgstr ""
-
-#: main/templates/main/room.html:186
-msgid "Housekeeping"
 msgstr ""
 
 #: main/templates/main/rooms.html:5
@@ -1736,6 +1812,10 @@ msgstr ""
 
 #: templates/includes/footer.html:36
 msgid "Privacy policy"
+msgstr ""
+
+#: templates/includes/header.html:29
+msgid "Wood Life cottages the Carpathian Mountains"
 msgstr ""
 
 #: venv/lib/python3.11/site-packages/django/contrib/messages/apps.py:16
