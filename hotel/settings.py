@@ -19,10 +19,14 @@ LOCALE_PATHS = [
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG")
 
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ["woodlifeua.com", "www.woodlifeua.com"]
 
 # Application definition
 
@@ -34,8 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    'main',
-    'booking',
+    'main.apps.MainConfig',
+    'booking.apps.BookingConfig',
+    "anymail",
 ]
 INSTALLED_APPS += ["django.contrib.sitemaps"]
 
@@ -167,3 +172,11 @@ CACHES = {
         "LOCATION": "unique-snowflake",
     }
 }
+
+EMAIL_BACKEND = "anymail.backends.resend.EmailBackend"
+
+ANYMAIL = {
+    "RESEND_API_KEY": os.getenv("RESEND_API_KEY"),  
+}
+
+DEFAULT_FROM_EMAIL = "noreply@woodlifeua.com"

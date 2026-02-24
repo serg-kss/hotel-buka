@@ -12,6 +12,7 @@ class BookingAdmin(admin.ModelAdmin):
         "check_out",
         "guests",
         "created_at",
+        "is_read",
     )
 
     list_filter = (
@@ -29,3 +30,4 @@ class BookingAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at",)
 
     ordering = ("-created_at",)
+

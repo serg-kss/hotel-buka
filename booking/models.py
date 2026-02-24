@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 from main.models import Room
 
 # Create your models here.
@@ -22,3 +22,11 @@ class Booking(models.Model):
     message = models.TextField(blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
+    is_read = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.full_name
+    
+    class Meta:
+        verbose_name = _("Бронювання")
+        verbose_name_plural = _("Бронювання")
