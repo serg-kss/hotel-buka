@@ -17,7 +17,7 @@ LOCALE_PATHS = [
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
@@ -27,6 +27,10 @@ if not DEBUG:
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ["woodlifeua.com", "www.woodlifeua.com"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://woodlifeua.com",
+    "https://www.woodlifeua.com",
+]
 
 # Application definition
 
