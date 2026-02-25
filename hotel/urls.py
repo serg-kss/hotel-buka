@@ -7,6 +7,7 @@ from django.views.generic import TemplateView
 from django.utils.translation import get_language_from_request
 from django.shortcuts import redirect
 from django.conf import settings
+from django.views.i18n import set_language
 
 
 def root_redirect(request):
