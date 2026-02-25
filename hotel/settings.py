@@ -26,7 +26,7 @@ if not DEBUG:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ["woodlifeua.com", "www.woodlifeua.com", "*"]
+ALLOWED_HOSTS = ["woodlifeua.com", "www.woodlifeua.com"]
 CSRF_TRUSTED_ORIGINS = [
     "https://woodlifeua.com",
     "https://www.woodlifeua.com",
@@ -160,7 +160,7 @@ MEDIA_URL = "/media/"
 if DEBUG:
     MEDIA_ROOT = BASE_DIR / "media"
 else:
-    MEDIA_ROOT = Path("/var/data")
+    MEDIA_ROOT = Path("/var/data/media")
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
